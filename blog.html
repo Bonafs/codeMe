@@ -111,7 +111,7 @@
             padding: 0.75rem 1.5rem;
             font-size: 1.1rem;
             cursor: pointer;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
             transition: opacity 0.2s;
         }
 
@@ -130,6 +130,7 @@
                 width: 95vw;
                 padding: 1rem;
             }
+
             .scroll-to-top {
                 right: 1rem;
                 bottom: 5rem;
@@ -138,6 +139,7 @@
             }
         }
     </style>
+
 </head>
 
 <body>
@@ -199,6 +201,11 @@
     </footer>
 
     <script>
+        // Toggle the burger menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
         // Set the current date in the date field on page load and restrict to today only
         const today = new Date().toISOString().split('T')[0];
         document.getElementById('postDate').value = today;
@@ -560,7 +567,7 @@
         });
 
         // Allow Enter to submit the blog post form from any input (except textarea)
-        document.getElementById('addPostForm').addEventListener('keydown', function(e) {
+        document.getElementById('addPostForm').addEventListener('keydown', function (e) {
             if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
                 this.requestSubmit();
             }
@@ -585,4 +592,5 @@
         });
     </script>
 </body>
+
 </html>
