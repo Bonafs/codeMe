@@ -115,6 +115,50 @@
             transition: opacity 0.2s;
         }
 
+        /* Burger icon and nav menu sizing for consistency across pages */
+        .burger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            margin-left: 1rem;
+            margin-right: 0.5rem;
+            z-index: 1100;
+            padding: 0.25rem 0.25rem;
+            background: transparent;
+            border: none;
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+        }
+        .burger div {
+            width: 28px;
+            height: 4px;
+            background-color: white;
+            margin: 4px 0;
+            border-radius: 2px;
+        }
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                flex-direction: column;
+                background-color: #333;
+                position: absolute;
+                top: 60px;
+                right: 10px;
+                width: 180px;
+                border-radius: 5px;
+                padding: 1rem 0.5rem;
+                margin: 0;
+                z-index: 1050;
+                box-shadow: 0 2px 8px rgba(0,0,0,0.15);
+            }
+            .nav-links.active {
+                display: flex;
+            }
+            .burger {
+                display: flex;
+            }
+        }
         @media (max-width: 600px) {
 
             .add-post input,
@@ -138,8 +182,18 @@
                 font-size: 1rem;
             }
         }
+        @media (max-width: 400px) {
+            .burger {
+                width: 36px;
+                height: 36px;
+            }
+            .nav-links {
+                width: 98vw;
+                right: 1vw;
+                padding: 0.5rem 0.1rem;
+            }
+        }
     </style>
-
 </head>
 
 <body>
@@ -592,5 +646,4 @@
         });
     </script>
 </body>
-
 </html>
