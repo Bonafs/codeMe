@@ -172,353 +172,361 @@
         <p>&copy; 2025 CodeMe. All rights reserved.</p>
     </footer>
 
-    <script>
-        // Set the current date in the date field on page load
-        document.getElementById('postDate').value = new Date().toISOString().split('T')[0];
+    <!-- ...existing code... -->
+<script>
+    // Set the current date in the date field on page load
+    document.getElementById('postDate').value = new Date().toISOString().split('T')[0];
 
-        // Store blog post references for search
-        let blogPostRefs = [];
+    // Store blog post references for search
+    let blogPostRefs = [];
 
-        // Add a new blog post
-        function addPost(event) {
-            if (event) event.preventDefault();
+    // Add a new blog post
+    function addPost(event) {
+        if (event) event.preventDefault();
 
-            document.getElementById('postAlert').innerHTML = '';
+        document.getElementById('postAlert').innerHTML = '';
 
-            const postTopic = document.getElementById('postTopic').value;
-            const postAuthor = document.getElementById('postAuthor').value;
-            const postDate = document.getElementById('postDate').value;
-            const postContent = document.getElementById('postContent').value;
-            const postConfirm = document.getElementById('postConfirm').checked;
+        const postTopic = document.getElementById('postTopic').value;
+        const postAuthor = document.getElementById('postAuthor').value;
+        const postDate = document.getElementById('postDate').value;
+        const postContent = document.getElementById('postContent').value;
+        const postConfirm = document.getElementById('postConfirm').checked;
 
-            if (!postTopic.trim()) {
-                document.getElementById('postTopic').focus();
-                return;
-            }
-            if (!postAuthor.trim()) {
-                document.getElementById('postAuthor').focus();
-                return;
-            }
-            if (!postDate) {
-                alert('The date is not set. Please refresh the page and try again.');
-                return;
-            }
-            if (!postContent.trim()) {
-                document.getElementById('postContent').focus();
-                return;
-            }
-            if (!postConfirm) {
-                document.getElementById('postAlert').innerHTML = `
-                    <span class="inline-alert">
-                        <input type="checkbox" id="postConfirmInline" onclick="document.getElementById('postConfirm').checked=this.checked;document.getElementById('postAlert').innerHTML='';" style="margin-right:0.5rem;">
-                        Please confirm you have checked your blog for accuracy, grammar, and spelling.
-                    </span>
-                `;
-                document.getElementById('postConfirmInline').focus();
-                return;
-            }
-
-            const blogPosts = document.getElementById('blogPosts');
-            const postDiv = document.createElement('div');
-            postDiv.className = 'blog-post';
-            postDiv.setAttribute('data-author', postAuthor);
-
-            // Assign a unique id for search navigation
-            const postId = 'blog-' + Date.now() + '-' + Math.floor(Math.random() * 10000);
-            postDiv.id = postId;
-
-            const postTitle = document.createElement('h3');
-            postTitle.textContent = `${postTopic} - by ${postAuthor} on ${postDate}`;
-            postDiv.appendChild(postTitle);
-
-            const postText = document.createElement('p');
-            postText.textContent = postContent;
-            postText.className = 'post-content';
-            postDiv.appendChild(postText);
-
-            const emojiContainer = document.createElement('div');
-            emojiContainer.className = 'emoji-container';
-            emojiContainer.innerHTML = `
-                <button onclick="incrementEmoji(this, '👍')">👍 <span class="emoji-count">0</span></button>
-                <button onclick="incrementEmoji(this, '❤️')">❤️ <span class="emoji-count">0</span></button>
-                <button onclick="incrementEmoji(this, '😂')">😂 <span class="emoji-count">0</span></button>
-                <button onclick="incrementEmoji(this, '😮')">😮 <span class="emoji-count">0</span></button>
-                <button onclick="incrementEmoji(this, '😢')">😢 <span class="emoji-count">0</span></button>
+        if (!postTopic.trim()) {
+            document.getElementById('postTopic').focus();
+            return;
+        }
+        if (!postAuthor.trim()) {
+            document.getElementById('postAuthor').focus();
+            return;
+        }
+        if (!postDate) {
+            alert('The date is not set. Please refresh the page and try again.');
+            return;
+        }
+        if (!postContent.trim()) {
+            document.getElementById('postContent').focus();
+            return;
+        }
+        if (!postConfirm) {
+            document.getElementById('postAlert').innerHTML = `
+                <span class="inline-alert">
+                    <input type="checkbox" id="postConfirmInline" onclick="document.getElementById('postConfirm').checked=this.checked;document.getElementById('postAlert').innerHTML='';" style="margin-right:0.5rem;">
+                    Please confirm you have checked your blog for accuracy, grammar, and spelling.
+                </span>
             `;
-            postDiv.appendChild(emojiContainer);
+            document.getElementById('postConfirmInline').focus();
+            return;
+        }
 
-            // Discuss section with comment name and date
-            const discussSection = document.createElement('div');
-            discussSection.className = 'discuss-section dynamic-modal-anchor';
-            discussSection.innerHTML = `
-                <h4>Discuss:</h4>
-                <div class="comments"></div>
-                <input type="text" class="comment-author" placeholder="Your First Name" required>
-                <input type="text" class="comment-date" readonly>
-                <textarea class="comment-input" placeholder="Write your comment here..." required></textarea>
-                <div style="margin-bottom: 1rem;">
-                    <input type="checkbox" class="comment-confirm" required style="margin-right:0.5rem;">
-                    <label>I've checked my comment for accuracy, grammar, and spelling.</label>
+        const blogPosts = document.getElementById('blogPosts');
+        const postDiv = document.createElement('div');
+        postDiv.className = 'blog-post';
+        postDiv.setAttribute('data-author', postAuthor);
+
+        // Assign a unique id for search navigation
+        const postId = 'blog-' + Date.now() + '-' + Math.floor(Math.random() * 10000);
+        postDiv.id = postId;
+
+        const postTitle = document.createElement('h3');
+        postTitle.textContent = `${postTopic} - by ${postAuthor} on ${postDate}`;
+        postDiv.appendChild(postTitle);
+
+        const postText = document.createElement('p');
+        postText.textContent = postContent;
+        postText.className = 'post-content';
+        postDiv.appendChild(postText);
+
+        const emojiContainer = document.createElement('div');
+        emojiContainer.className = 'emoji-container';
+        emojiContainer.innerHTML = `
+            <button onclick="incrementEmoji(this, '👍')">👍 <span class="emoji-count">0</span></button>
+            <button onclick="incrementEmoji(this, '❤️')">❤️ <span class="emoji-count">0</span></button>
+            <button onclick="incrementEmoji(this, '😂')">😂 <span class="emoji-count">0</span></button>
+            <button onclick="incrementEmoji(this, '😮')">😮 <span class="emoji-count">0</span></button>
+            <button onclick="incrementEmoji(this, '😢')">😢 <span class="emoji-count">0</span></button>
+        `;
+        postDiv.appendChild(emojiContainer);
+
+        // Discuss section with comment name and date
+        const discussSection = document.createElement('div');
+        discussSection.className = 'discuss-section dynamic-modal-anchor';
+        discussSection.innerHTML = `
+            <h4>Discuss:</h4>
+            <div class="comments"></div>
+            <input type="text" class="comment-author" placeholder="Your First Name" required>
+            <input type="text" class="comment-date" readonly>
+            <textarea class="comment-input" placeholder="Write your comment here..." required></textarea>
+            <div style="margin-bottom: 1rem;">
+                <input type="checkbox" class="comment-confirm" required style="margin-right:0.5rem;">
+                <label>I've checked my comment for accuracy, grammar, and spelling.</label>
+            </div>
+            <div class="commentAlert"></div>
+            <button class="comment-button" onclick="addComment(event, this)">Comment</button>
+        `;
+        postDiv.appendChild(discussSection);
+
+        // Set the current date for the comment date field
+        const commentDateField = discussSection.querySelector('.comment-date');
+        commentDateField.value = new Date().toISOString().split('T')[0];
+
+        const deleteButton = document.createElement('button');
+        deleteButton.textContent = 'Delete';
+        deleteButton.style.marginTop = '0.5rem';
+        deleteButton.style.backgroundColor = '#dc3545';
+        deleteButton.style.color = 'white';
+        deleteButton.style.border = 'none';
+        deleteButton.style.padding = '0.5rem 1rem';
+        deleteButton.style.borderRadius = '5px';
+        deleteButton.style.cursor = 'pointer';
+        deleteButton.onclick = () => blogPosts.removeChild(postDiv);
+        postDiv.appendChild(deleteButton);
+
+        blogPosts.appendChild(postDiv);
+
+        // Add to blogPostRefs for search
+        blogPostRefs.push({
+            id: postId,
+            title: postTopic,
+            element: postDiv
+        });
+
+        // Clear input fields
+        document.getElementById('postTopic').value = '';
+        document.getElementById('postAuthor').value = '';
+        document.getElementById('postContent').value = '';
+        document.getElementById('postConfirm').checked = false;
+    }
+
+    // Add a comment to the discuss section
+    function addComment(event, button) {
+        if (event) event.preventDefault();
+
+        const parent = button.parentElement;
+        const commentAuthorInput = parent.querySelector('.comment-author');
+        const commentAuthor = commentAuthorInput.value.trim();
+        const commentDate = parent.querySelector('.comment-date').value;
+        const commentInput = parent.querySelector('.comment-input');
+        const commentText = commentInput.value.trim();
+        const commentConfirm = parent.querySelector('.comment-confirm').checked;
+        const commentAlertDiv = parent.querySelector('.commentAlert');
+        commentAlertDiv.innerHTML = '';
+
+        if (!commentAuthor) {
+            commentAuthorInput.focus();
+            return;
+        }
+        if (!commentText) {
+            commentInput.focus();
+            return;
+        }
+        if (!commentConfirm) {
+            commentAlertDiv.innerHTML = `
+                <span class="inline-alert">
+                    <input type="checkbox" class="comment-confirm-inline" onclick="this.closest('div').parentElement.querySelector('.comment-confirm').checked=this.checked;this.closest('.inline-alert').remove();" style="margin-right:0.5rem;">
+                    Please confirm you have checked your comment for accuracy, grammar, and spelling.
+                </span>
+            `;
+            parent.querySelector('.comment-confirm-inline').focus();
+            return;
+        }
+
+        const commentsDiv = parent.querySelector('.comments');
+        const commentDiv = document.createElement('div');
+        commentDiv.className = 'comment';
+        commentDiv.setAttribute('data-author', commentAuthor);
+
+        const commentContent = document.createElement('span');
+        commentContent.innerHTML = `<strong>${commentAuthor}</strong> on ${commentDate}:<br>${commentText}`;
+        commentContent.className = 'comment-content';
+        commentDiv.appendChild(commentContent);
+
+        commentsDiv.appendChild(commentDiv);
+
+        // Clear comment fields
+        commentAuthorInput.value = '';
+        commentInput.value = '';
+        parent.querySelector('.comment-confirm').checked = false;
+    }
+
+    // Increment emoji count
+    function incrementEmoji(button, emoji) {
+        const countSpan = button.querySelector('.emoji-count');
+        countSpan.textContent = parseInt(countSpan.textContent) + 1;
+    }
+
+    // Blog search functionality
+    function searchBlogs() {
+        const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
+        document.getElementById('searchInput').value = ''; // Clear search box after search
+        if (!keyword) {
+            showModal([], true);
+            return;
+        }
+        // Find all blog posts with matching title (case-insensitive, all topics)
+        const matches = blogPostRefs.filter(ref => ref.title.toLowerCase().includes(keyword));
+        showModal(matches, false);
+    }
+
+    // Modal navigation state
+    let modalMatches = [];
+    let modalCurrentIndex = 0;
+
+    function showModal(matches, emptySearch) {
+        const modal = document.getElementById('searchModal');
+        modalMatches = matches;
+        modalCurrentIndex = 0;
+
+        // Remove any previous modal from DOM
+        document.querySelectorAll('.dynamic-modal-below').forEach(el => el.remove());
+
+        if (emptySearch) {
+            modal.innerHTML = `
+                <div class="modal-overlay"><div class="modal">
+                    <h3>Blog Search Results</h3>
+                    <div class="modal-instruction">Please enter a keyword to search blog titles.</div>
+                    <button class="modal-close" onclick="closeModal()">Close</button>
+                </div></div>
+            `;
+            modal.style.display = 'block';
+            modal.style.position = '';
+            return;
+        }
+
+        if (matches.length === 0) {
+            modal.innerHTML = `
+                <div class="modal-overlay"><div class="modal">
+                    <h3>Blog Search Results</h3>
+                    <div class="modal-instruction">No blogs found for your search.</div>
+                    <button class="modal-close" onclick="closeModal()">Close</button>
+                </div></div>
+            `;
+            modal.style.display = 'block';
+            modal.style.position = '';
+            return;
+        }
+
+        // Build modal content for multiple results
+        let html = `<div class="modal">
+            <h3>Blog Search Results</h3>
+            <div class="modal-instruction">Select blog(s) to view. Close this window when no longer required.</div>
+            <form class="modal-list">`;
+        matches.forEach((ref, idx) => {
+            html += `<label><input type="checkbox" class="modal-blog-check" value="${ref.id}"> ${ref.title}</label>`;
+        });
+        html += `</form>
+            <button onclick="goToCheckedBlogs(event)" style="margin-bottom:1rem;background:#007bff;color:#fff;border:none;padding:0.5rem 1rem;border-radius:5px;cursor:pointer;">Go to Selected Blogs</button>
+            <button class="modal-close" onclick="closeModal()">Close</button>
+        </div>`;
+
+        // Attach modal above the first matching blog or at the top if not found
+        let anchor = null;
+        if (matches.length > 0) {
+            anchor = document.getElementById(matches[0].id);
+        }
+        if (anchor) {
+            // Insert modal above the blog title
+            const dynamicDiv = document.createElement('div');
+            dynamicDiv.className = 'dynamic-modal-below';
+            dynamicDiv.innerHTML = html;
+            anchor.parentNode.insertBefore(dynamicDiv, anchor);
+            modal.style.display = 'none';
+        } else {
+            modal.innerHTML = `<div class="modal-overlay">${html}</div>`;
+            modal.style.display = 'block';
+            modal.style.position = '';
+        }
+    }
+
+    function closeModal() {
+        document.getElementById('searchModal').style.display = 'none';
+        document.querySelectorAll('.dynamic-modal-below').forEach(el => el.remove());
+    }
+
+    function goToCheckedBlogs(event) {
+        if (event) event.preventDefault();
+        // Get all checked blogs
+        const checks = document.querySelectorAll('.modal-blog-check:checked');
+        if (checks.length === 0) {
+            alert('Please select at least one blog to view.');
+            return;
+        }
+        // Build an array of blog ids in order
+        const blogIds = Array.from(checks).map(input => input.value);
+        // Start navigation
+        navigateBlogs(blogIds, 0);
+    }
+
+    function navigateBlogs(blogIds, idx) {
+        if (idx >= blogIds.length) {
+            closeModal();
+            return;
+        }
+        // Remove any previous modal
+        document.querySelectorAll('.dynamic-modal-below').forEach(el => el.remove());
+        // Scroll to blog
+        const blog = document.getElementById(blogIds[idx]);
+        if (blog) {
+            blog.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            blog.style.boxShadow = '0 0 0 3px #007bff';
+            setTimeout(() => blog.style.boxShadow = '', 2000);
+
+            // Show modal below this blog
+            const dynamicDiv = document.createElement('div');
+            dynamicDiv.className = 'dynamic-modal-below';
+            dynamicDiv.innerHTML = `
+                <div class="modal">
+                    <h3>Viewing Blog: ${blog.querySelector('h3').textContent}</h3>
+                    <div class="modal-instruction">Continue to next blog or close this window when no longer required.</div>
+                    <button onclick="navigateBlogs(['${blogIds.join("','")}'], ${idx + 1})" style="margin-bottom:1rem;background:#007bff;color:#fff;border:none;padding:0.5rem 1rem;border-radius:5px;cursor:pointer;" ${idx + 1 >= blogIds.length ? 'disabled' : ''}>Continue to Next Blog</button>
+                    <button class="modal-close" onclick="closeModal()">Close</button>
                 </div>
-                <div class="commentAlert"></div>
-                <button class="comment-button" onclick="addComment(event, this)">Comment</button>
             `;
-            postDiv.appendChild(discussSection);
-
-            // Set the current date for the comment date field
-            const commentDateField = discussSection.querySelector('.comment-date');
-            commentDateField.value = new Date().toISOString().split('T')[0];
-
-            const deleteButton = document.createElement('button');
-            deleteButton.textContent = 'Delete';
-            deleteButton.style.marginTop = '0.5rem';
-            deleteButton.style.backgroundColor = '#dc3545';
-            deleteButton.style.color = 'white';
-            deleteButton.style.border = 'none';
-            deleteButton.style.padding = '0.5rem 1rem';
-            deleteButton.style.borderRadius = '5px';
-            deleteButton.style.cursor = 'pointer';
-            deleteButton.onclick = () => blogPosts.removeChild(postDiv);
-            postDiv.appendChild(deleteButton);
-
-            blogPosts.appendChild(postDiv);
-
-            // Add to blogPostRefs for search
-            blogPostRefs.push({
-                id: postId,
-                title: postTopic,
-                element: postDiv
-            });
-
-            // Clear input fields
-            document.getElementById('postTopic').value = '';
-            document.getElementById('postAuthor').value = '';
-            document.getElementById('postContent').value = '';
-            document.getElementById('postConfirm').checked = false;
+            blog.parentNode.insertBefore(dynamicDiv, blog.nextSibling);
         }
+    }
 
-        // Add a comment to the discuss section
-        function addComment(event, button) {
-            if (event) event.preventDefault();
+    // Scroll to the top of the page
+    function scrollToTop() {
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
 
-            const parent = button.parentElement;
-            const commentAuthorInput = parent.querySelector('.comment-author');
-            const commentAuthor = commentAuthorInput.value.trim();
-            const commentDate = parent.querySelector('.comment-date').value;
-            const commentInput = parent.querySelector('.comment-input');
-            const commentText = commentInput.value.trim();
-            const commentConfirm = parent.querySelector('.comment-confirm').checked;
-            const commentAlertDiv = parent.querySelector('.commentAlert');
-            commentAlertDiv.innerHTML = '';
-
-            if (!commentAuthor) {
-                commentAuthorInput.focus();
-                return;
-            }
-            if (!commentText) {
-                commentInput.focus();
-                return;
-            }
-            if (!commentConfirm) {
-                commentAlertDiv.innerHTML = `
-                    <span class="inline-alert">
-                        <input type="checkbox" class="comment-confirm-inline" onclick="this.closest('div').parentElement.querySelector('.comment-confirm').checked=this.checked;this.closest('.inline-alert').remove();" style="margin-right:0.5rem;">
-                        Please confirm you have checked your comment for accuracy, grammar, and spelling.
-                    </span>
-                `;
-                parent.querySelector('.comment-confirm-inline').focus();
-                return;
-            }
-
-            const commentsDiv = parent.querySelector('.comments');
-            const commentDiv = document.createElement('div');
-            commentDiv.className = 'comment';
-            commentDiv.setAttribute('data-author', commentAuthor);
-
-            const commentContent = document.createElement('span');
-            commentContent.innerHTML = `<strong>${commentAuthor}</strong> on ${commentDate}:<br>${commentText}`;
-            commentContent.className = 'comment-content';
-            commentDiv.appendChild(commentContent);
-
-            commentsDiv.appendChild(commentDiv);
-
-            // Clear comment fields
-            commentAuthorInput.value = '';
-            commentInput.value = '';
-            parent.querySelector('.comment-confirm').checked = false;
+    // Show or hide the "Return to Top" button
+    window.addEventListener('scroll', () => {
+        const scrollToTopButton = document.getElementById('scrollToTop');
+        if (window.scrollY > 200) {
+            scrollToTopButton.style.display = 'block';
+        } else {
+            scrollToTopButton.style.display = 'none';
         }
+    });
 
-        // Increment emoji count
-        function incrementEmoji(button, emoji) {
-            const countSpan = button.querySelector('.emoji-count');
-            countSpan.textContent = parseInt(countSpan.textContent) + 1;
+    // Allow Enter to submit the blog post form from any input (except textarea)
+    document.getElementById('addPostForm').addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+            this.requestSubmit();
         }
+    });
 
-        // Blog search functionality
-        function searchBlogs() {
-            const keyword = document.getElementById('searchInput').value.trim().toLowerCase();
-            document.getElementById('searchInput').value = ''; // Clear search box after search
-            if (!keyword) {
-                showModal([], true);
-                return;
-            }
-            // Find all blog posts with matching title (case-insensitive, all topics)
-            const matches = blogPostRefs.filter(ref => ref.title.toLowerCase().includes(keyword));
-            showModal(matches, false);
-        }
-
-        // Modal navigation state
-        let modalMatches = [];
-        let modalCurrentIndex = 0;
-
-        function showModal(matches, emptySearch) {
-            const modal = document.getElementById('searchModal');
-            modalMatches = matches;
-            modalCurrentIndex = 0;
-
-            // Remove any previous modal from DOM
-            document.querySelectorAll('.dynamic-modal-below').forEach(el => el.remove());
-
-            if (emptySearch) {
-                modal.innerHTML = `
-                    <div class="modal-overlay"><div class="modal">
-                        <h3>Blog Search Results</h3>
-                        <div class="modal-instruction">Please enter a keyword to search blog titles.</div>
-                        <button class="modal-close" onclick="closeModal()">Close</button>
-                    </div></div>
-                `;
-                modal.style.display = 'block';
-                modal.style.position = '';
-                return;
-            }
-
-            if (matches.length === 0) {
-                modal.innerHTML = `
-                    <div class="modal-overlay"><div class="modal">
-                        <h3>Blog Search Results</h3>
-                        <div class="modal-instruction">No blogs found for your search.</div>
-                        <button class="modal-close" onclick="closeModal()">Close</button>
-                    </div></div>
-                `;
-                modal.style.display = 'block';
-                modal.style.position = '';
-                return;
-            }
-
-            // Build modal content for multiple results
-            let html = `<div class="modal">
-                <h3>Blog Search Results</h3>
-                <div class="modal-instruction">Select blog(s) to view. Close this window when no longer required.</div>
-                <form class="modal-list">`;
-            matches.forEach((ref, idx) => {
-                html += `<label><input type="checkbox" class="modal-blog-check" value="${ref.id}"> ${ref.title}</label>`;
-            });
-            html += `</form>
-                <button onclick="goToCheckedBlogs(event)" style="margin-bottom:1rem;background:#007bff;color:#fff;border:none;padding:0.5rem 1rem;border-radius:5px;cursor:pointer;">Go to Selected Blogs</button>
-                <button class="modal-close" onclick="closeModal()">Close</button>
-            </div>`;
-
-
-            // Attach modal above the first matching blog or at the top if not found
-            let anchor = null;
-            if (matches.length > 0) {
-                anchor = document.getElementById(matches[0].id);
-            }
-            if (anchor) {
-                // Insert modal above the blog title
-                const dynamicDiv = document.createElement('div');
-                dynamicDiv.className = 'dynamic-modal-below';
-                dynamicDiv.innerHTML = html;
-                anchor.parentNode.insertBefore(dynamicDiv, anchor);
-                modal.style.display = 'none';
-            } else {
-                modal.innerHTML = `<div class="modal-overlay">${html}</div>`;
-                modal.style.display = 'block';
-                modal.style.position = '';
-            }
-
-        }
-
-        function closeModal() {
-            document.getElementById('searchModal').style.display = 'none';
-            document.querySelectorAll('.dynamic-modal-below').forEach(el => el.remove());
-        }
-
-        function goToCheckedBlogs(event) {
-            if (event) event.preventDefault();
-            // Get all checked blogs
-            const checks = document.querySelectorAll('.modal-blog-check:checked');
-            if (checks.length === 0) {
-                alert('Please select at least one blog to view.');
-                return;
-            }
-            // Build an array of blog ids in order
-            const blogIds = Array.from(checks).map(input => input.value);
-            // Start navigation
-            navigateBlogs(blogIds, 0);
-        }
-
-        function navigateBlogs(blogIds, idx) {
-            if (idx >= blogIds.length) {
-                closeModal();
-                return;
-            }
-            // Remove any previous modal
-            document.querySelectorAll('.dynamic-modal-below').forEach(el => el.remove());
-            // Scroll to blog
-            const blog = document.getElementById(blogIds[idx]);
-            if (blog) {
-                blog.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                blog.style.boxShadow = '0 0 0 3px #007bff';
-                setTimeout(() => blog.style.boxShadow = '', 2000);
-
-                // Show modal below this blog
-                const dynamicDiv = document.createElement('div');
-                dynamicDiv.className = 'dynamic-modal-below';
-                dynamicDiv.innerHTML = `
-                    <div class="modal">
-                        <h3>Viewing Blog: ${blog.querySelector('h3').textContent}</h3>
-                        <div class="modal-instruction">Continue to next blog or close this window when no longer required.</div>
-                        <button onclick="navigateBlogs(['${blogIds.join("','")}'], ${idx + 1})" style="margin-bottom:1rem;background:#007bff;color:#fff;border:none;padding:0.5rem 1rem;border-radius:5px;cursor:pointer;" ${idx + 1 >= blogIds.length ? 'disabled' : ''}>Continue to Next Blog</button>
-                        <button class="modal-close" onclick="closeModal()">Close</button>
-                    </div>
-                `;
-                blog.parentNode.insertBefore(dynamicDiv, blog.nextSibling);
-            }
-        }
-
-        // Scroll to the top of the page
-        function scrollToTop() {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Show or hide the "Return to Top" button
-        window.addEventListener('scroll', () => {
-            const scrollToTopButton = document.getElementById('scrollToTop');
-            if (window.scrollY > 200) {
-                scrollToTopButton.style.display = 'block';
-            } else {
-                scrollToTopButton.style.display = 'none';
-            }
-
-            // Add event delegation for comment submission via Enter key
-            document.addEventListener('keydown', function (e) {
-                // Only trigger on Enter key, not Shift+Enter (for newlines in textarea)
-                if (e.key === 'Enter' && !e.shiftKey) {
-                    // If focus is on a comment textarea, submit comment
-                    const active = document.activeElement;
-                    if (active && active.classList.contains('comment-input')) {
-                        e.preventDefault();
-                        // Find the related comment button and trigger click
-                        const discussSection = active.closest('.discuss-section');
-                        if (discussSection) {
-                            const commentBtn = discussSection.querySelector('.comment-button');
-                            if (commentBtn) commentBtn.click();
-                        }
-                    }
+    // Add event delegation for comment submission via Enter key
+    document.addEventListener('keydown', function (e) {
+        // Only trigger on Enter key, not Shift+Enter (for newlines in textarea)
+        if (e.key === 'Enter' && !e.shiftKey) {
+            // If focus is on a comment textarea, submit comment
+            const active = document.activeElement;
+            if (active && active.classList.contains('comment-input')) {
+                e.preventDefault();
+                // Find the related comment button and trigger click
+                const discussSection = active.closest('.discuss-section');
+                if (discussSection) {
+                    const commentBtn = discussSection.querySelector('.comment-button');
+                    if (commentBtn) commentBtn.click();
                 }
-            });
-    </script>
+            }
+        }
+    });
+</script>
+<!-- ...existing code... -->
 </body>
 
 </html>
