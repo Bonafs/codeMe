@@ -2,8 +2,13 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-color: #121212; /* Dark mode background */
-    color: #ffffff; /* Light text for dark mode */
+    background-color: #f4f4f4; /* Match light mode of other pages */
+    color: #333;
+}
+
+body.dark-mode {
+    background-color: #222; /* Match dark mode of javascriptMe.html */
+    color: #fff;
 }
 
 nav {
@@ -72,17 +77,12 @@ nav h1 {
 }
 
 /* Dark Mode Styles */
-body.dark-mode {
-    background-color: #121212;
-    color: #ffffff;
-}
-
 body.dark-mode nav {
     background-color: #222;
 }
 
 body.dark-mode .nav-links a {
-    color: #ffffff;
+    color: #fff;
 }
 
 body.dark-mode .nav-links a.active {
@@ -122,23 +122,34 @@ footer {
 }
 
 .blog-post {
-    background-color: #1e1e1e; /* Dark mode card background */
+    background-color: #f8f9fa; /* Match light mode card background */
+    color: #333;
     padding: 1rem;
     margin-bottom: 1rem;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     word-wrap: break-word;
     overflow-wrap: break-word;
 }
 
 .blog-post h3 {
     margin: 0 0 0.5rem;
-    color: #ffffff; /* Light text for dark mode */
+    color: #333;
 }
 
 .blog-post p {
     margin: 0.5rem 0;
-    color: #dcdcdc; /* Slightly lighter text for readability */
+    color: #333;
+}
+
+body.dark-mode .blog-post {
+    background-color: #333; /* Match dark mode card background */
+    color: #f8f9fa;
+}
+
+body.dark-mode .blog-post h3,
+body.dark-mode .blog-post p {
+    color: #f8f9fa;
 }
 
 .add-post {
@@ -151,8 +162,15 @@ footer {
     padding: 0.5rem;
     border: 1px solid #ddd;
     border-radius: 5px;
-    background-color: #1e1e1e; /* Dark mode input background */
-    color: #ffffff; /* Light text for inputs */
+    background-color: #fff;
+    color: #333;
+}
+
+body.dark-mode .add-post input,
+body.dark-mode .add-post textarea {
+    background-color: #222;
+    color: #fff;
+    border: 1px solid #555;
 }
 
 .add-post button {
@@ -175,7 +193,7 @@ footer {
 .emoji-container button {
     background: none;
     border: none;
-    font-size: 1.125rem; /* Reduced to 75% of original size */
+    font-size: 1.125rem;
     cursor: pointer;
     margin-right: 0.5rem;
 }
