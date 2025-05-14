@@ -34,7 +34,7 @@
             <input type="text" id="postAuthor" placeholder="Enter your first name" required>
             <input type="text" id="postDate" readonly>
             <textarea id="postContent" placeholder="Write your blog post here..." required></textarea>
-            <button onclick="addPost()">Post</button>
+            <button onclick="addPost(event)">Post</button>
         </div>
 
         <div class="blog-posts" id="blogPosts">
@@ -49,16 +49,143 @@
     </footer>
 
     <script>
-        // Toggle the burger menu
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
+        // Set the current date in the date field on page load
+        document.getElementById('postDate').value = new Date().toISOString().split('T')[0];
+
+        // Add a new blog post
+        function addPost(event) {
+            if (event) event.preventDefault();
+
+            const postTopic = document.getElementById('postTopic').value;
+            const postAuthor = document.getElementById('postAuthor').value;
+            const postDate = document.getElementById('postDate').value;
+            const postContent = document.getElementById('postContent').value;
+
+            if (!postTopic.trim()) {
+                alert('Please enter a topic for your blog.');
+                return;
+            }
+            if (!postAuthor.trim()) {
+                alert('Please enter your first name.');
+                return;
+            }
+            if (!postDate) {
+                alert('The date is not set. Please refresh the page and try again.');
+                return;
+            }
+            if (!postContent.trim()) {
+                alert('Please write some content for your blog.');
+                return;
+            }
+
+            const blogPosts = document.getElementById('blogPosts');
+            const postDiv = document.createElement('div');
+            postDiv.className = 'blog-post';
+
+            const postTitle = document.createElement('h3');
+            postTitle.textContent = `${postTopic} - by ${postAuthor} on ${postDate}`;
+            postDiv.appendChild(postTitle);
+
+            const postText = document.createElement('p');
+            postText.textContent = postContent;
+            postDiv.appendChild(postText);
+
+            const emojiContainer = document.createElement('div');
+            emojiContainer.className = 'emoji-container';
+            emojiContainer.innerHTML = `
+                <button onclick="incrementEmoji(this, '👍')">👍 <span class="emoji-count">0</span></button>
+                <button onclick="incrementEmoji(this, '❤️')">❤️ <span class="emoji-count">0</span></button>
+                <button onclick="incrementEmoji(this, '😂')">😂 <span class="emoji-count">0</span></button>
+                <button onclick="incrementEmoji(this, '😮')">😮 <span class="emoji-count">0</span></button>
+                <button onclick="incrementEmoji(this, '😢')">😢 <span class="emoji-count">0</span></button>
+            `;
+            postDiv.appendChild(emojiContainer);
+
+            // Discuss section with comment name and date
+            const discussSection = document.createElement('div');
+            discussSection.className = 'discuss-section';
+            discussSection.innerHTML = `
+                <h4>Discuss:</h4>
+                <div class="comments"></div>
+                <input type="text" class="comment-author" placeholder="Your First Name" required>
+                <input type="text" class="comment-date" readonly>
+                <textarea class="comment-input" placeholder="Write your comment here..." required></textarea>
+                <button class="comment-button" onclick="addComment(event, this)">Comment</button>
+            `;
+            postDiv.appendChild(discussSection);
+
+            // Set the current date for the comment date field
+            const commentDateField = discussSection.querySelector('.comment-date');
+            commentDateField.value = new Date().toISOString().split('T')[0];
+
+            const deleteButton = document.createElement('button');
+            deleteButton.textContent = 'Delete';
+            deleteButton.style.marginTop = '0.5rem';
+            deleteButton.style.backgroundColor = '#dc3545';
+            deleteButton.style.color = 'white';
+            deleteButton.style.border = 'none';
+            deleteButton.style.padding = '0.5rem 1rem';
+            deleteButton.style.borderRadius = '5px';
+            deleteButton.style.cursor = 'pointer';
+            deleteButton.onclick = () => blogPosts.removeChild(postDiv);
+            postDiv.appendChild(deleteButton);
+
+            blogPosts.appendChild(postDiv);
+
+            // Clear input fields
+            document.getElementById('postTopic').value = '';
+            document.getElementById('postAuthor').value = '';
+            document.getElementById('postContent').value = '';
         }
 
-        // Toggle dark mode (optional functionality)
-        function toggleTheme() {
-            document.body.classList.toggle('dark-mode');
+        // Add a comment to the discuss section
+        function addComment(event, button) {
+            if (event) event.preventDefault();
+
+            const parent = button.parentElement;
+            const commentAuthor = parent.querySelector('.comment-author').value.trim();
+            const commentDate = parent.querySelector('.comment-date').value;
+            const commentInput = parent.querySelector('.comment-input');
+            const commentText = commentInput.value.trim();
+
+            if (!commentAuthor) {
+                alert('Please provide your name before posting.');
+                return;
+            }
+            if (!commentText) {
+                alert('Please write a comment before posting.');
+                return;
+            }
+
+            const commentsDiv = parent.querySelector('.comments');
+            const commentDiv = document.createElement('div');
+            commentDiv.className = 'comment';
+            commentDiv.innerHTML = `<strong>${commentAuthor}</strong> on ${commentDate}:<br>${commentText}`;
+
+            commentsDiv.appendChild(commentDiv);
+            commentInput.value = '';
         }
+
+        // Increment emoji count
+        function incrementEmoji(button, emoji) {
+            const countSpan = button.querySelector('.emoji-count');
+            countSpan.textContent = parseInt(countSpan.textContent) + 1;
+        }
+
+        // Scroll to the top of the page
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Show or hide the "Return to Top" button
+        window.addEventListener('scroll', () => {
+            const scrollToTopButton = document.getElementById('scrollToTop');
+            if (window.scrollY > 200) {
+                scrollToTopButton.style.display = 'block';
+            } else {
+                scrollToTopButton.style.display = 'none';
+            }
+        });
     </script>
 </body>
 </html>
