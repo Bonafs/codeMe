@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -73,6 +74,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav>
         <h1>Contact Us</h1>
@@ -111,6 +113,13 @@
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
+        // Allow Enter to submit the form from any input/textarea
+        document.getElementById('contactForm').addEventListener('keydown', function (e) {
+            if (e.key === 'Enter' && e.target.tagName !== 'TEXTAREA') {
+                this.requestSubmit();
+            }
+        });
     </script>
 </body>
+
 </html>
