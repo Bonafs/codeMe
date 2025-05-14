@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodeMe - Blog</title>
+    <link rel="stylesheet" href="static/css/blogstyle.css">
+    <script src="static/script.js" defer></script>
+</head>
+<body>
+    <nav>
+        <h1>Blog</h1>
+        <button onclick="toggleTheme()">Toggle Dark Mode</button>
+        <div class="burger" onclick="toggleMenu()">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+        <div class="nav-links">
+            <a href="index.html">HOME</a>
+            <a href="htmlMe.html">HTML</a>
+            <a href="cssMe.html">CSS</a>
+            <a href="javascriptMe.html">JAVASCRIPT</a>
+            <a href="pythonMe.html">PYTHON</a>
+            <a href="blog.html" class="active">BLOG</a>
+            <a href="contact.html">CONTACT</a>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="add-post">
+            <h2>Share Your Ideas</h2>
+            <input type="text" id="postTopic" placeholder="Enter the topic of your blog" required>
+            <input type="text" id="postAuthor" placeholder="Enter your first name" required>
+            <input type="text" id="postDate" readonly>
+            <textarea id="postContent" placeholder="Write your blog post here..." required></textarea>
+            <button onclick="addPost()">Post</button>
+        </div>
+
+        <div class="blog-posts" id="blogPosts">
+            <!-- Blog posts will be dynamically added here -->
+        </div>
+    </div>
+
+    <button class="scroll-to-top" id="scrollToTop" onclick="scrollToTop()">Return to Top</button>
+
+    <footer>
+        <p>&copy; 2025 CodeMe. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Toggle the burger menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Toggle dark mode (optional functionality)
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+    </script>
+</body>
+</html>

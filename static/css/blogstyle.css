@@ -1,0 +1,203 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #121212; /* Dark mode background */
+    color: #ffffff; /* Light text for dark mode */
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+
+nav h1 {
+    margin: 0;
+}
+
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+
+.nav-links a.active {
+    background-color: #007bff;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+
+/* Responsive Navbar Styles */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 150px;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
+/* Dark Mode Styles */
+body.dark-mode {
+    background-color: #121212;
+    color: #ffffff;
+}
+
+body.dark-mode nav {
+    background-color: #222;
+}
+
+body.dark-mode .nav-links a {
+    color: #ffffff;
+}
+
+body.dark-mode .nav-links a.active {
+    background-color: #0056b3;
+}
+
+nav, footer {
+    position: fixed;
+    width: 100%;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+    z-index: 1000;
+}
+
+nav {
+    top: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    bottom: 0;
+    text-align: center;
+}
+
+.container {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    padding: 1rem;
+}
+
+.blog-posts {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.blog-post {
+    background-color: #1e1e1e; /* Dark mode card background */
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+}
+
+.blog-post h3 {
+    margin: 0 0 0.5rem;
+    color: #ffffff; /* Light text for dark mode */
+}
+
+.blog-post p {
+    margin: 0.5rem 0;
+    color: #dcdcdc; /* Slightly lighter text for readability */
+}
+
+.add-post {
+    margin-bottom: 2rem;
+}
+
+.add-post input, .add-post textarea {
+    width: 100%;
+    margin-bottom: 1rem;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    background-color: #1e1e1e; /* Dark mode input background */
+    color: #ffffff; /* Light text for inputs */
+}
+
+.add-post button {
+    padding: 0.5rem 1rem;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.add-post button:hover {
+    background-color: #0056b3;
+}
+
+.emoji-container {
+    margin-top: 1rem;
+}
+
+.emoji-container button {
+    background: none;
+    border: none;
+    font-size: 1.125rem; /* Reduced to 75% of original size */
+    cursor: pointer;
+    margin-right: 0.5rem;
+}
+
+.emoji-container button.selected {
+    border: 2px solid #007bff;
+    border-radius: 50%;
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 80px;
+    right: 20px;
+    background-color: #007bff;
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    display: none;
+}
+
+.scroll-to-top:hover {
+    background-color: #0056b3;
+}
