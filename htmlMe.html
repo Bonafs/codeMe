@@ -1,13 +1,14 @@
+ <!-- Segment 1 of 20 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeMe -htmlMe</title>
+    <title>codeMe - htmlMe</title>
     <link rel="stylesheet" href="static/css/htmlMestyle.css">
     <script src="static/script.js" defer></script>
     <style>
-        /* Responsive Navbar Styles */
         nav {
             display: flex;
             justify-content: space-between;
@@ -49,7 +50,8 @@
             background-color: white;
             margin: 3px 0;
         }
-         @media (max-width: 768px) {
+
+        @media (max-width: 768px) {
             .nav-links {
                 display: none;
                 flex-direction: column;
@@ -69,10 +71,48 @@
             .burger {
                 display: flex;
             }
-        
+        }
+
+        .example-animate {
+            animation: fadeIn 1s;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .console-output {
+            background: #222;
+            color: #b8ffb8;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+            margin-top: 0.5rem;
+            font-family: 'Fira Mono', 'Consolas', monospace;
+        }
+
+        .explanation {
+            margin-bottom: 0.5rem;
+            color: #007bff;
+        }
+
+        .topic-section {
+            margin-bottom: 2.5rem;
+        }
+
+        .example-btn {
+            margin-bottom: 1rem;
         }
     </style>
 </head>
+
 <body>
     <nav>
         <h1>htmlMe</h1>
@@ -94,29 +134,2326 @@
     </nav>
 
     <div class="container">
-        <section>
-            <h2>HTML Elements</h2>
-            <p>HTML is the standard markup language for creating web pages.</p>
-            <pre>
-                &lt;!DOCTYPE html&gt;
-                &lt;html&gt;
-                    &lt;head&gt;
-                        &lt;title&gt;Page Title&lt;/title&gt;
-                    &lt;/head&gt;
-                    &lt;body&gt;
-                        &lt;h1&gt;This is a Heading&lt;/h1&gt;
-                        &lt;p&gt;This is a paragraph.&lt;/p&gt;
-                    &lt;/body&gt;
-                &lt;/html&gt;
-            </pre>
-        </section>
+        <h2>HTML Tutorial</h2>
+        <p>Explore HTML from beginner to advanced with interactive examples and explanations. Click "Show Examples" to
+            view code and simulated console outputs.</p>
+        <!-- Segment 2 of 20 -->
+        <!-- BEGINNER LEVEL -->
+        <div class="topic-section" id="intro-html">
+            <h3>Introduction to HTML</h3>
+            <div class="explanation">HTML (HyperText Markup Language) is the standard language for creating web pages
+                and web applications.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Defines the document as HTML5.</div>
+                    <pre>&lt;!DOCTYPE html&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but ensures standards mode.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Root element of an HTML page.</div>
+                    <pre>&lt;html lang="en"&gt; ... &lt;/html&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but required for all HTML documents.
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> The head contains meta info and the title for the browser
+                        tab.</div>
+                    <pre>&lt;head&gt;&lt;title&gt;My Page&lt;/title&gt;&lt;/head&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Browser tab shows: My Page</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> The body contains all visible page content.</div>
+                    <pre>&lt;body&gt;Hello, world!&lt;/body&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Hello, world!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Sets the character encoding for the document.</div>
+                    <pre>&lt;meta charset="UTF-8"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but ensures correct text display.
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Ensures proper scaling on mobile devices.</div>
+                    <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but enables responsive design.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Links an external CSS file.</div>
+                    <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but applies styles.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Links an external JavaScript file.</div>
+                    <pre>&lt;script src="main.js"&gt;&lt;/script&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but runs scripts.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> HTML comments are ignored by browsers.</div>
+                    <pre>&lt;!-- This is a comment --&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Sets the title in the browser tab.</div>
+                    <pre>&lt;title&gt;Welcome!&lt;/title&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Browser tab shows: Welcome!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Basic HTML document structure.</div>
+                    <pre>&lt;html&gt;&lt;head&gt;&lt;/head&gt;&lt;body&gt;&lt;/body&gt;&lt;/html&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output unless content is added to body.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Describes the page for search engines.</div>
+                    <pre>&lt;meta name="description" content="A sample HTML page"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but helps SEO.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Ensures compatibility with Internet Explorer.</div>
+                    <pre>&lt;meta http-equiv="X-UA-Compatible" content="IE=edge"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Specifies the author of the page.</div>
+                    <pre>&lt;meta name="author" content="Jane Doe"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Provides keywords for search engines.</div>
+                    <pre>&lt;meta name="keywords" content="HTML, tutorial, web"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Sets the favicon for the page.</div>
+                    <pre>&lt;link rel="icon" href="favicon.ico"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Favicon appears in browser tab.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Open Graph tag for social sharing.</div>
+                    <pre>&lt;meta property="og:title" content="HTML Tutorial"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but improves sharing.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Open Graph description for social sharing.</div>
+                    <pre>&lt;meta property="og:description" content="Learn HTML"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Open Graph image for social sharing.</div>
+                    <pre>&lt;meta property="og:image" content="image.png"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Tells search engines to index the page.</div>
+                    <pre>&lt;meta name="robots" content="index, follow"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+            </div>
+        </div>
+       
+        <!-- Segment 3 of 20 -->
+        <!-- BASIC ELEMENTS -->
+        <div class="topic-section" id="basic-elements">
+            <h3>Basic HTML Elements</h3>
+            <div class="explanation">HTML uses tags to structure content. Headings, paragraphs, lists, and more are all
+                elements.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Largest heading.</div>
+                    <pre>&lt;h1&gt;Main Heading&lt;/h1&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <h1>Main Heading</h1>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Second-level heading.</div>
+                    <pre>&lt;h2&gt;Subheading&lt;/h2&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <h2>Subheading</h2>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Third-level heading.</div>
+                    <pre>&lt;h3&gt;Section Heading&lt;/h3&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <h3>Section Heading</h3>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Paragraph element.</div>
+                    <pre>&lt;p&gt;This is a paragraph.&lt;/p&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <p>This is a paragraph.</p>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Line break.</div>
+                    <pre>&lt;br&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Line one.<br>Line two.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Horizontal rule.</div>
+                    <pre>&lt;hr&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <hr style="border:1px solid #007bff; width:80%; margin:auto;">
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Unordered (bulleted) list.</div>
+                    <pre>&lt;ul&gt;&lt;li&gt;Item 1&lt;/li&gt;&lt;li&gt;Item 2&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Ordered (numbered) list.</div>
+                    <pre>&lt;ol&gt;&lt;li&gt;First&lt;/li&gt;&lt;li&gt;Second&lt;/li&gt;&lt;/ol&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ol>
+                            <li>First</li>
+                            <li>Second</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Definition list.</div>
+                    <pre>&lt;dl&gt;&lt;dt&gt;HTML&lt;/dt&gt;&lt;dd&gt;Markup language&lt;/dd&gt;&lt;/dl&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <dl>
+                            <dt>HTML</dt>
+                            <dd>Markup language</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Bold text.</div>
+                    <pre>&lt;strong&gt;Important&lt;/strong&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <strong>Important</strong></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Italic text.</div>
+                    <pre>&lt;em&gt;Emphasized&lt;/em&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <em>Emphasized</em></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Highlighted text.</div>
+                    <pre>&lt;mark&gt;Highlighted&lt;/mark&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <mark>Highlighted</mark></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Small text.</div>
+                    <pre>&lt;small&gt;Small text&lt;/small&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <small>Small text</small></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Deleted text.</div>
+                    <pre>&lt;del&gt;Deleted&lt;/del&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <del>Deleted</del></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Inserted text.</div>
+                    <pre>&lt;ins&gt;Inserted&lt;/ins&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <ins>Inserted</ins></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Subscript text.</div>
+                    <pre>&lt;sub&gt;Subscript&lt;/sub&gt;</pre>
+                    <div class="console-output"><b>Output:</b> H<sub>2</sub>O</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Superscript text.</div>
+                    <pre>&lt;sup&gt;Superscript&lt;/sup&gt;</pre>
+                    <div class="console-output"><b>Output:</b> E = mc<sup>2</sup></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Preformatted text.</div>
+                    <pre>&lt;pre&gt;  Preformatted   &lt;/pre&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <pre>  Preformatted   </pre>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Inline code.</div>
+                    <pre>&lt;code&gt;let x = 5;&lt;/code&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <code>let x = 5;</code></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Blockquote for quotes.</div>
+                    <pre>&lt;blockquote&gt;A quote&lt;/blockquote&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <blockquote>A quote</blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 4 of 20 -->
+        <!-- ATTRIBUTES & FORMATTING -->
+        <div class="topic-section" id="attributes-formatting">
+            <h3>HTML Attributes & Formatting</h3>
+            <div class="explanation">Attributes provide additional information about elements. Formatting tags style
+                text.</div>
+            <button class="example-btn">Show Examples</button>    
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> The id attribute uniquely identifies an element.</div>
+                    <pre>&lt;p id="intro"&gt;Welcome!&lt;/p&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <p id="intro">Welcome!</p>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> The class attribute lets you style groups of elements.
+                    </div>
+                    <pre>&lt;p class="highlight"&gt;Important text.&lt;/p&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <p class="highlight">Important text.</p>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> The target attribute opens the link in a new tab.</div>
+                    <pre>&lt;a href="https://example.com" target="_blank"&gt;Visit Example&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://example.com" target="_blank">Visit
+                            Example</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> The alt attribute describes the image for accessibility.
+                    </div>
+                    <pre>&lt;img src="logo.png" alt="Logo"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80x40?text=Logo"
+                            alt="Logo"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> The value attribute sets the default value of an input.
+                    </div>
+                    <pre>&lt;input type="text" value="Default"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" value="Default"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> The disabled attribute disables a button.</div>
+                    <pre>&lt;button disabled&gt;Can't Click&lt;/button&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <button disabled>Can't Click</button></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> The checked attribute pre-selects a checkbox.</div>
+                    <pre>&lt;input type="checkbox" checked&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="checkbox" checked></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> The placeholder attribute shows a hint in the input.
+                    </div>
+                    <pre>&lt;input type="text" placeholder="Your name"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" placeholder="Your name"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> The min and max attributes set numeric limits.</div>
+                    <pre>&lt;input type="number" min="1" max="10"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="number" min="1" max="10"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> The title attribute shows a tooltip on hover.</div>
+                    <pre>&lt;a href="#" title="Tooltip text"&gt;Hover me&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#" title="Tooltip text">Hover me</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Width and height attributes set image size.</div>
+                    <pre>&lt;img src="photo.jpg" width="100" height="50"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/100x50" width="100"
+                            height="50"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> The required attribute makes a field mandatory.</div>
+                    <pre>&lt;input type="password" required&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="password" required></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> The autocomplete attribute helps browsers fill in
+                        fields.</div>
+                    <pre>&lt;input type="email" autocomplete="on"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="email" autocomplete="on"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> The multiple attribute allows selecting multiple files.
+                    </div>
+                    <pre>&lt;input type="file" multiple&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="file" multiple></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> The step attribute sets the increment for range inputs.
+                    </div>
+                    <pre>&lt;input type="range" min="0" max="100" step="10"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="range" min="0" max="100" step="10"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> The maxlength attribute limits input length.</div>
+                    <pre>&lt;input type="text" maxlength="5"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" maxlength="5"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> The value attribute can set a default date.</div>
+                    <pre>&lt;input type="date" value="2025-05-14"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="date" value="2025-05-14"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> The value attribute can set a default color.</div>
+                    <pre>&lt;input type="color" value="#ff0000"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="color" value="#ff0000"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> The readonly attribute prevents editing.</div>
+                    <pre>&lt;input type="text" readonly value="Can't edit"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" readonly value="Can't edit"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> The tabindex attribute sets tab order.</div>
+                    <pre>&lt;input type="text" tabindex="2"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" tabindex="2"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 5 of 20 -->
+        <!-- LINKS & NAVIGATION -->
+        <div class="topic-section" id="links-navigation">
+            <h3>Links & Navigation</h3>
+            <div class="explanation">Links connect pages and resources. Navigation elements organize site structure.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Anchor tag with absolute URL.</div>
+                    <pre>&lt;a href="https://www.example.com"&gt;Visit Example&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://www.example.com" target="_blank">Visit
+                            Example</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Anchor tag with relative URL.</div>
+                    <pre>&lt;a href="about.html"&gt;About Us&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="about.html">About Us</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Link to a section on the same page.</div>
+                    <pre>&lt;a href="#section1"&gt;Jump to Section 1&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#section1">Jump to Section 1</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Navigation bar using nav element.</div>
+                    <pre>&lt;nav&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt; | &lt;a href="contact.html"&gt;Contact&lt;/a&gt;&lt;/nav&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <nav><a href="home.html">Home</a> | <a href="contact.html">Contact</a></nav>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Email link using mailto.</div>
+                    <pre>&lt;a href="mailto:info@example.com"&gt;Email Us&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="mailto:info@example.com">Email Us</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Telephone link using tel.</div>
+                    <pre>&lt;a href="tel:+123456789"&gt;Call Us&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="tel:+123456789">Call Us</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Download link for a file.</div>
+                    <pre>&lt;a href="file.pdf" download&gt;Download PDF&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="file.pdf" download>Download PDF</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Link with JavaScript onclick event.</div>
+                    <pre>&lt;a href="#" onclick="alert('Clicked!')"&gt;Click Me&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#" onclick="alert('Clicked!')">Click Me</a>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Tab order with tabindex.</div>
+                    <pre>&lt;a href="#" tabindex="1"&gt;Tab Order&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#" tabindex="1">Tab Order</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Tooltip with title attribute.</div>
+                    <pre>&lt;a href="#" title="Tooltip"&gt;Hover for Tooltip&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#" title="Tooltip">Hover for Tooltip</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Navigation menu with list.</div>
+                    <pre>&lt;nav&gt;&lt;ul&gt;&lt;li&gt;&lt;a href="home.html"&gt;Home&lt;/a&gt;&lt;/li&gt;&lt;li&gt;&lt;a href="about.html"&gt;About&lt;/a&gt;&lt;/li&gt;&lt;/ul&gt;&lt;/nav&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <nav>
+                            <ul>
+                                <li><a href="home.html">Home</a></li>
+                                <li><a href="about.html">About</a></li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> External link with rel attribute for security.</div>
+                    <pre>&lt;a href="https://twitter.com" rel="noopener noreferrer" target="_blank"&gt;Twitter&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://twitter.com" rel="noopener noreferrer"
+                            target="_blank">Twitter</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Inline styled link.</div>
+                    <pre>&lt;a href="#" style="color:red;"&gt;Styled Link&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#" style="color:red;">Styled Link</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Accesskey for keyboard shortcut.</div>
+                    <pre>&lt;a href="#" accesskey="h"&gt;Hotkey Link&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#" accesskey="h">Hotkey Link</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Link with javascript:void(0).</div>
+                    <pre>&lt;a href="javascript:void(0);"&gt;No Action&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="javascript:void(0);">No Action</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Icon link with aria-label for accessibility.</div>
+                    <pre>&lt;a href="https://example.com" target="_blank" aria-label="Open Example"&gt;🔗&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://example.com" target="_blank"
+                            aria-label="Open Example">🔗</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> hreflang attribute for language.</div>
+                    <pre>&lt;a href="https://example.com" hreflang="fr"&gt;French Site&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://example.com" hreflang="fr">French
+                            Site</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Referrer policy for privacy.</div>
+                    <pre>&lt;a href="https://example.com" referrerpolicy="no-referrer"&gt;No Referrer&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://example.com"
+                            referrerpolicy="no-referrer">No Referrer</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Ping attribute for tracking.</div>
+                    <pre>&lt;a href="https://example.com" ping="https://tracker.com/ping"&gt;Ping Link&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://example.com"
+                            ping="https://tracker.com/ping">Ping Link</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Disabled link using pointer-events.</div>
+                    <pre>&lt;a href="https://example.com" style="pointer-events:none;"&gt;Disabled Link&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://example.com"
+                            style="pointer-events:none;">Disabled Link</a></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 6 of 20 -->
+        <!-- MEDIA ELEMENTS -->
+        <div class="topic-section" id="media-elements">
+            <h3>Images, Audio & Video</h3>
+            <div class="explanation">Media elements embed images, audio, and video into your web pages.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Basic image with alt text.</div>
+                    <pre>&lt;img src="logo.png" alt="Logo"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80x40?text=Logo"
+                            alt="Logo"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Image with width attribute.</div>
+                    <pre>&lt;img src="cat.jpg" alt="A cat" width="100"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://placekitten.com/100/60" alt="A cat"
+                            width="100"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Image with height attribute.</div>
+                    <pre>&lt;img src="dog.jpg" alt="A dog" height="60"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://place-puppy.com/80x60" alt="A dog"
+                            height="60"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Audio element with controls.</div>
+                    <pre>&lt;audio controls&gt;&lt;source src="sound.mp3" type="audio/mpeg"&gt;&lt;/audio&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <audio controls style="width:120px;">
+                            <source src="sound.mp3" type="audio/mpeg">Your browser does not support the audio element.
+                        </audio></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Video element with controls.</div>
+                    <pre>&lt;video width="160" height="90" controls&gt;&lt;source src="movie.mp4" type="video/mp4"&gt;&lt;/video&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <video width="160" height="90" controls>
+                            <source src="movie.mp4" type="video/mp4">Your browser does not support the video tag.
+                        </video></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Broken image with alt text fallback.</div>
+                    <pre>&lt;img src="broken.jpg" alt="Broken image"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="broken.jpg" alt="Broken image"
+                            onerror="this.style.display='none';"><span>Broken image</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Figure and figcaption for image caption.</div>
+                    <pre>&lt;figure&gt;&lt;img src="pic.jpg" alt="Pic"&gt;&lt;figcaption&gt;A caption&lt;/figcaption&gt;&lt;/figure&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <figure><img src="https://via.placeholder.com/80x40?text=Pic" alt="Pic">
+                            <figcaption>A caption</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Lazy loading image.</div>
+                    <pre>&lt;img src="photo.jpg" alt="Photo" loading="lazy"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80x40?text=Photo"
+                            alt="Photo" loading="lazy"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Responsive image with srcset and sizes.</div>
+                    <pre>&lt;img srcset="small.jpg 480w, large.jpg 800w" sizes="(max-width:600px) 480px, 800px" src="large.jpg" alt="Responsive"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img
+                            src="https://via.placeholder.com/80x40?text=Responsive" alt="Responsive"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Picture element for multiple sources.</div>
+                    <pre>&lt;picture&gt;&lt;source srcset="image.webp" type="image/webp"&gt;&lt;img src="image.jpg" alt="Picture"&gt;&lt;/picture&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <picture>
+                            <source srcset="image.webp" type="image/webp"><img
+                                src="https://via.placeholder.com/80x40?text=Picture" alt="Picture">
+                        </picture>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Iframe to embed another webpage.</div>
+                    <pre>&lt;iframe src="https://www.example.com" width="200" height="80"&gt;&lt;/iframe&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <iframe src="https://www.example.com" width="200"
+                            height="80" title="Example"></iframe></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Embed PDF or other resource.</div>
+                    <pre>&lt;embed src="file.pdf" width="100" height="60"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <embed src="file.pdf" width="100" height="60"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Object tag for embedding PDFs.</div>
+                    <pre>&lt;object data="file.pdf" type="application/pdf" width="100" height="60"&gt;&lt;/object&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <object data="file.pdf" type="application/pdf"
+                            width="100" height="60"></object></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Rounded avatar image with CSS.</div>
+                    <pre>&lt;img src="avatar.png" alt="Avatar" style="border-radius:50%;"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40x40?text=Avatar"
+                            alt="Avatar" style="border-radius:50%;"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> SVG image for scalable graphics.</div>
+                    <pre>&lt;img src="icon.svg" alt="SVG Icon"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img
+                            src="https://upload.wikimedia.org/wikipedia/commons/6/6b/Bitmap_VS_SVG.svg" alt="SVG Icon"
+                            width="40"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Autoplay and loop audio.</div>
+                    <pre>&lt;audio src="sound.mp3" autoplay loop&gt;&lt;/audio&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <audio src="sound.mp3" autoplay loop
+                            style="width:120px;"></audio></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Video with poster image.</div>
+                    <pre>&lt;video src="movie.mp4" poster="thumb.jpg" controls&gt;&lt;/video&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <video src="movie.mp4"
+                            poster="https://via.placeholder.com/160x90?text=Thumb" controls width="160"
+                            height="90"></video></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Decorative image with role="presentation".</div>
+                    <pre>&lt;img src="img.jpg" alt="Decorative" role="presentation"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img
+                            src="https://via.placeholder.com/80x40?text=Decorative" alt="Decorative"
+                            role="presentation"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> aria-hidden hides image from assistive tech.</div>
+                    <pre>&lt;img src="img.jpg" alt="" aria-hidden="true"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80x40?text=Hidden"
+                            alt="" aria-hidden="true"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> longdesc for detailed image description.</div>
+                    <pre>&lt;img src="img.jpg" alt="Description" longdesc="desc.html"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80x40?text=Desc"
+                            alt="Description"><a href="desc.html" target="_blank">Description</a></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 7 of 20 -->
+        <!-- TABLES -->
+        <div class="topic-section" id="tables">
+            <h3>Tables</h3>
+            <div class="explanation">Tables organize data into rows and columns using table, tr, th, and td elements.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Basic table structure.</div>
+                    <pre>&lt;table&gt;&lt;tr&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <td>Cell</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Table with header row.</div>
+                    <pre>&lt;table&gt;&lt;tr&gt;&lt;th&gt;Header&lt;/th&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <th>Header</th>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Table with multiple rows and columns.</div>
+                    <pre>&lt;table&gt;&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;C&lt;/td&gt;&lt;td&gt;D&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <td>A</td>
+                                <td>B</td>
+                            </tr>
+                            <tr>
+                                <td>C</td>
+                                <td>D</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Table with caption.</div>
+                    <pre>&lt;table&gt;&lt;caption&gt;My Table&lt;/caption&gt;&lt;tr&gt;&lt;td&gt;1&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <caption>My Table</caption>
+                            <tr>
+                                <td>1</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Table with colspan.</div>
+                    <pre>&lt;table&gt;&lt;tr&gt;&lt;td colspan="2"&gt;Wide&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <td colspan="2">Wide</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Table with rowspan.</div>
+                    <pre>&lt;table&gt;&lt;tr&gt;&lt;td rowspan="2"&gt;Tall&lt;/td&gt;&lt;td&gt;A&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <td rowspan="2">Tall</td>
+                                <td>A</td>
+                            </tr>
+                            <tr>
+                                <td>B</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Table with thead, tbody, tfoot.</div>
+                    <pre>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;H&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;C&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;F&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>H</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>C</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <td>F</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Table with scope attribute for accessibility.</div>
+                    <pre>&lt;table&gt;&lt;tr&gt;&lt;th scope="col"&gt;Name&lt;/th&gt;&lt;th scope="col"&gt;Age&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;Sam&lt;/td&gt;&lt;td&gt;30&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <th scope="col">Name</th>
+                                <th scope="col">Age</th>
+                            </tr>
+                            <tr>
+                                <td>Sam</td>
+                                <td>30</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Table with summary attribute (deprecated, but seen in
+                        legacy code).</div>
+                    <pre>&lt;table summary="Data summary"&gt;&lt;tr&gt;&lt;td&gt;X&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1" summary="Data summary">
+                            <tr>
+                                <td>X</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Table with border attribute.</div>
+                    <pre>&lt;table border="2"&gt;&lt;tr&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="2">
+                            <tr>
+                                <td>B</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Table with cell padding and spacing.</div>
+                    <pre>&lt;table cellpadding="4" cellspacing="2"&gt;&lt;tr&gt;&lt;td&gt;Pad&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table cellpadding="4" cellspacing="2" border="1">
+                            <tr>
+                                <td>Pad</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Table with style attribute.</div>
+                    <pre>&lt;table style="width:100%"&gt;&lt;tr&gt;&lt;td&gt;Full&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table style="width:100%" border="1">
+                            <tr>
+                                <td>Full</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Table with empty cells.</div>
+                    <pre>&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;Filled&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <td></td>
+                                <td>Filled</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Table with merged header cells.</div>
+                    <pre>&lt;table&gt;&lt;tr&gt;&lt;th colspan="2"&gt;Merged&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <th colspan="2">Merged</th>
+                            </tr>
+                            <tr>
+                                <td>A</td>
+                                <td>B</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Table with header and footer.</div>
+                    <pre>&lt;table&gt;&lt;thead&gt;&lt;tr&gt;&lt;th&gt;H&lt;/th&gt;&lt;/tr&gt;&lt;/thead&gt;&lt;tfoot&gt;&lt;tr&gt;&lt;td&gt;F&lt;/td&gt;&lt;/tr&gt;&lt;/tfoot&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <thead>
+                                <tr>
+                                    <th>H</th>
+                                </tr>
+                            </thead>
+                            <tfoot>
+                                <tr>
+                                    <td>F</td>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Table with multiple body sections.</div>
+                    <pre>&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;A&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;B&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tbody>
+                                <tr>
+                                    <td>A</td>
+                                </tr>
+                            </tbody>
+                            <tbody>
+                                <tr>
+                                    <td>B</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Table with id and class attributes.</div>
+                    <pre>&lt;table id="myTable" class="styled"&gt;&lt;tr&gt;&lt;td&gt;Cell&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table id="myTable" class="styled" border="1">
+                            <tr>
+                                <td>Cell</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Table with summary for accessibility.</div>
+                    <pre>&lt;table summary="Summary"&gt;&lt;tr&gt;&lt;td&gt;Info&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table summary="Summary" border="1">
+                            <tr>
+                                <td>Info</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Table with data-* attributes.</div>
+                    <pre>&lt;table data-info="extra"&gt;&lt;tr&gt;&lt;td&gt;Data&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table data-info="extra" border="1">
+                            <tr>
+                                <td>Data</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Table with ARIA roles.</div>
+                    <pre>&lt;table role="table"&gt;&lt;tr role="row"&gt;&lt;td role="cell"&gt;Cell&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table role="table" border="1">
+                            <tr role="row">
+                                <td role="cell">Cell</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 8 of 20 -->
+        <!-- FORMS -->
+        <div class="topic-section" id="forms">
+            <h3>Forms</h3>
+            <div class="explanation">Forms collect user input using elements like input, textarea, select, and button.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Basic form structure.</div>
+                    <pre>&lt;form action="/submit" method="post"&gt;...&lt;/form&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <form action="/submit" method="post">...</form>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Text input field.</div>
+                    <pre>&lt;input type="text" name="username"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" name="username"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Password input field.</div>
+                    <pre>&lt;input type="password" name="pwd"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="password" name="pwd"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Checkbox input.</div>
+                    <pre>&lt;input type="checkbox" name="subscribe"&gt; Subscribe</pre>
+                    <div class="console-output"><b>Output:</b> <input type="checkbox" name="subscribe"> Subscribe</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Radio button group.</div>
+                    <pre>&lt;input type="radio" name="gender" value="m"&gt; Male
+&lt;input type="radio" name="gender" value="f"&gt; Female</pre>
+                    <div class="console-output"><b>Output:</b> <input type="radio" name="gender" value="m"> Male
+                        <input type="radio" name="gender" value="f"> Female
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Submit button.</div>
+                    <pre>&lt;button type="submit"&gt;Send&lt;/button&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <button type="submit">Send</button></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Textarea for multi-line input.</div>
+                    <pre>&lt;textarea name="message"&gt;&lt;/textarea&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <textarea name="message"></textarea></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Select dropdown.</div>
+                    <pre>&lt;select name="country"&gt;&lt;option&gt;USA&lt;/option&gt;&lt;option&gt;Canada&lt;/option&gt;&lt;/select&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <select name="country">
+                            <option>USA</option>
+                            <option>Canada</option>
+                        </select></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> File input.</div>
+                    <pre>&lt;input type="file" name="resume"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="file" name="resume"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Label for input.</div>
+                    <pre>&lt;label for="email"&gt;Email:&lt;/label&gt; &lt;input id="email" type="email"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <label for="email">Email:</label> <input id="email"
+                            type="email"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Required input field.</div>
+                    <pre>&lt;input type="text" required&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" required></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Disabled input field.</div>
+                    <pre>&lt;input type="text" disabled value="Can't edit"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" disabled value="Can't edit"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Placeholder text in input.</div>
+                    <pre>&lt;input type="text" placeholder="Enter name"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" placeholder="Enter name"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Number input with min and max.</div>
+                    <pre>&lt;input type="number" min="1" max="10"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="number" min="1" max="10"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Date input.</div>
+                    <pre>&lt;input type="date"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="date"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Color input.</div>
+                    <pre>&lt;input type="color"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="color"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Range slider input.</div>
+                    <pre>&lt;input type="range" min="0" max="100"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="range" min="0" max="100"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Hidden input field.</div>
+                    <pre>&lt;input type="hidden" name="token" value="abc123"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="hidden" name="token" value="abc123"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Form with fieldset and legend.</div>
+                    <pre>&lt;fieldset&gt;&lt;legend&gt;Info&lt;/legend&gt;&lt;input type="text"&gt;&lt;/fieldset&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <fieldset>
+                            <legend>Info</legend><input type="text">
+                        </fieldset>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Datalist for input suggestions.</div>
+                    <pre>&lt;input list="browsers"&gt;&lt;datalist id="browsers"&gt;&lt;option value="Chrome"&gt;&lt;option value="Firefox"&gt;&lt;/datalist&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input list="browsers"><datalist id="browsers">
+                            <option value="Chrome">
+                            <option value="Firefox">
+                        </datalist></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 9 of 20 -->
+        <!-- SEMANTIC ELEMENTS -->
+        <div class="topic-section" id="semantic-elements">
+            <h3>Semantic Elements</h3>
+            <div class="explanation">Semantic elements clearly describe their meaning in a human- and machine-readable
+                way.</div>
+                <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Header for introductory content.</div>
+                    <pre>&lt;header&gt;Site Header&lt;/header&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <header>Site Header</header>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Main content of the document.</div>
+                    <pre>&lt;main&gt;Main Content&lt;/main&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <main>Main Content</main>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Section of related content.</div>
+                    <pre>&lt;section&gt;Section Content&lt;/section&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <section>Section Content</section>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Article for self-contained content.</div>
+                    <pre>&lt;article&gt;Article Content&lt;/article&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <article>Article Content</article>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Aside for tangential content.</div>
+                    <pre>&lt;aside&gt;Sidebar&lt;/aside&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <aside>Sidebar</aside>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Footer for page or section.</div>
+                    <pre>&lt;footer&gt;Site Footer&lt;/footer&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <footer>Site Footer</footer>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Navigation links.</div>
+                    <pre>&lt;nav&gt;&lt;a href="#"&gt;Home&lt;/a&gt;&lt;/nav&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <nav><a href="#">Home</a></nav>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Marking up a figure with caption.</div>
+                    <pre>&lt;figure&gt;&lt;img src="img.jpg"&gt;&lt;figcaption&gt;Caption&lt;/figcaption&gt;&lt;/figure&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <figure><img src="https://via.placeholder.com/80x40?text=img">
+                            <figcaption>Caption</figcaption>
+                        </figure>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Time element for dates/times.</div>
+                    <pre>&lt;time datetime="2025-05-14"&gt;May 14, 2025&lt;/time&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <time datetime="2025-05-14">May 14, 2025</time></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Address for contact info.</div>
+                    <pre>&lt;address&gt;123 Main St&lt;/address&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <address>123 Main St</address>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Marking up code blocks.</div>
+                    <pre>&lt;pre&gt;&lt;code&gt;console.log('Hi')&lt;/code&gt;&lt;/pre&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <pre><code>console.log('Hi')</code></pre>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Marking up keyboard input.</div>
+                    <pre>&lt;kbd&gt;Ctrl+C&lt;/kbd&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <kbd>Ctrl+C</kbd></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Marking up sample output.</div>
+                    <pre>&lt;samp&gt;Sample Output&lt;/samp&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <samp>Sample Output</samp></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Marking up variables.</div>
+                    <pre>&lt;var&gt;x&lt;/var&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <var>x</var></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Marking up progress bar.</div>
+                    <pre>&lt;progress value="70" max="100"&gt;70%&lt;/progress&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <progress value="70" max="100">70%</progress></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Marking up meter value.</div>
+                    <pre>&lt;meter value="0.6"&gt;60%&lt;/meter&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <meter value="0.6">60%</meter></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Marking up details/summary.</div>
+                    <pre>&lt;details&gt;&lt;summary&gt;More Info&lt;/summary&gt;Details here.&lt;/details&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <details>
+                            <summary>More Info</summary>Details here.
+                        </details>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Marking up a dialog box.</div>
+                    <pre>&lt;dialog open&gt;Dialog content&lt;/dialog&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <dialog open>Dialog content</dialog>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Marking up a mark element for highlights.</div>
+                    <pre>&lt;mark&gt;Highlight&lt;/mark&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <mark>Highlight</mark></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Marking up a blockquote with cite.</div>
+                    <pre>&lt;blockquote cite="https://example.com"&gt;Quote&lt;/blockquote&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <blockquote cite="https://example.com">Quote</blockquote>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 10 of 20 -->
+        <!-- LISTS -->
+        <div class="topic-section" id="lists">
+            <h3>Lists</h3>
+            <div class="explanation">Lists group related items together. HTML supports ordered, unordered, and
+                description lists.</div>
+                <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Unordered (bulleted) list.</div>
+                    <pre>&lt;ul&gt;&lt;li&gt;Apple&lt;/li&gt;&lt;li&gt;Banana&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li>Apple</li>
+                            <li>Banana</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Ordered (numbered) list.</div>
+                    <pre>&lt;ol&gt;&lt;li&gt;First&lt;/li&gt;&lt;li&gt;Second&lt;/li&gt;&lt;/ol&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ol>
+                            <li>First</li>
+                            <li>Second</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Nested lists.</div>
+                    <pre>&lt;ul&gt;&lt;li&gt;A&lt;ul&gt;&lt;li&gt;B&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li>A<ul>
+                                    <li>B</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Description list.</div>
+                    <pre>&lt;dl&gt;&lt;dt&gt;HTML&lt;/dt&gt;&lt;dd&gt;Markup&lt;/dd&gt;&lt;/dl&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <dl>
+                            <dt>HTML</dt>
+                            <dd>Markup</dd>
+                        </dl>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> List with custom start number.</div>
+                    <pre>&lt;ol start="5"&gt;&lt;li&gt;Five&lt;/li&gt;&lt;li&gt;Six&lt;/li&gt;&lt;/ol&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ol start="5">
+                            <li>Five</li>
+                            <li>Six</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> List with reversed order.</div>
+                    <pre>&lt;ol reversed&gt;&lt;li&gt;A&lt;/li&gt;&lt;li&gt;B&lt;/li&gt;&lt;/ol&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ol reversed>
+                            <li>A</li>
+                            <li>B</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> List with type attribute.</div>
+                    <pre>&lt;ol type="A"&gt;&lt;li&gt;Alpha&lt;/li&gt;&lt;li&gt;Beta&lt;/li&gt;&lt;/ol&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ol type="A">
+                            <li>Alpha</li>
+                            <li>Beta</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> List with value attribute.</div>
+                    <pre>&lt;ol&gt;&lt;li value="10"&gt;Ten&lt;/li&gt;&lt;li&gt;Eleven&lt;/li&gt;&lt;/ol&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ol>
+                            <li value="10">Ten</li>
+                            <li>Eleven</li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> List with class and id attributes.</div>
+                    <pre>&lt;ul class="fruits" id="fruit-list"&gt;&lt;li&gt;Apple&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul class="fruits" id="fruit-list">
+                            <li>Apple</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> List with data-* attributes.</div>
+                    <pre>&lt;ul data-info="list"&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul data-info="list">
+                            <li>Item</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> List with ARIA roles.</div>
+                    <pre>&lt;ul role="list"&gt;&lt;li role="listitem"&gt;Item&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul role="list">
+                            <li role="listitem">Item</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> List with inline style.</div>
+                    <pre>&lt;ul style="color:blue;"&gt;&lt;li&gt;Blue Item&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul style="color:blue;">
+                            <li>Blue Item</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> List with nested ordered and unordered lists.</div>
+                    <pre>&lt;ol&gt;&lt;li&gt;A&lt;ul&gt;&lt;li&gt;B&lt;/li&gt;&lt;/ul&gt;&lt;/li&gt;&lt;/ol&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ol>
+                            <li>A<ul>
+                                    <li>B</li>
+                                </ul>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> List with empty items.</div>
+                    <pre>&lt;ul&gt;&lt;li&gt;&lt;/li&gt;&lt;li&gt;Filled&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li></li>
+                            <li>Filled</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> List with custom marker.</div>
+                    <pre>&lt;ul style="list-style-type:square;"&gt;&lt;li&gt;Square&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul style="list-style-type:square;">
+                            <li>Square</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> List with image marker.</div>
+                    <pre>&lt;ul style="list-style-image:url('marker.png');"&gt;&lt;li&gt;Image Marker&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul style="list-style-image:url('https://via.placeholder.com/10');">
+                            <li>Image Marker</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> List with dir attribute (deprecated).</div>
+                    <pre>&lt;dir&gt;&lt;li&gt;Old List&lt;/li&gt;&lt;/dir&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li>Old List</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> List with menu attribute (deprecated).</div>
+                    <pre>&lt;menu&gt;&lt;li&gt;Menu Item&lt;/li&gt;&lt;/menu&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li>Menu Item</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> List with ARIA label.</div>
+                    <pre>&lt;ul aria-label="Fruits"&gt;&lt;li&gt;Apple&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul aria-label="Fruits">
+                            <li>Apple</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> List with lang attribute.</div>
+                    <pre>&lt;ul lang="fr"&gt;&lt;li&gt;Pomme&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul lang="fr">
+                            <li>Pomme</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 11 of 20 -->
+        <!-- BLOCK & INLINE ELEMENTS -->
+        <div class="topic-section" id="block-inline-elements">
+            <h3>Block & Inline Elements</h3>
+            <div class="explanation">Block elements start on a new line and take up the full width. Inline elements do
+                not start on a new line and only take up as much width as necessary.</div>
+            <button class="example-btn">Show Examples</button>   
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Block element: div.</div>
+                    <pre>&lt;div&gt;Block content&lt;/div&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div style="border:1px solid #007bff; padding:4px;">Block content</div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Inline element: span.</div>
+                    <pre>&lt;span&gt;Inline content&lt;/span&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <span style="background:#e0e0e0;">Inline content</span>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Block element: p.</div>
+                    <pre>&lt;p&gt;Paragraph&lt;/p&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <p>Paragraph</p>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Inline element: a.</div>
+                    <pre>&lt;a href="#"&gt;Link&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#">Link</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Block element: ul.</div>
+                    <pre>&lt;ul&gt;&lt;li&gt;Item&lt;/li&gt;&lt;/ul&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li>Item</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Inline element: img.</div>
+                    <pre>&lt;img src="logo.png" alt="Logo"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40x20?text=Logo"
+                            alt="Logo"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Block element: h1.</div>
+                    <pre>&lt;h1&gt;Heading&lt;/h1&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <h1>Heading</h1>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Inline element: strong.</div>
+                    <pre>&lt;strong&gt;Bold&lt;/strong&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <strong>Bold</strong></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Block element: blockquote.</div>
+                    <pre>&lt;blockquote&gt;Quote&lt;/blockquote&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <blockquote>Quote</blockquote>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Inline element: em.</div>
+                    <pre>&lt;em&gt;Italic&lt;/em&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <em>Italic</em></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Block element: form.</div>
+                    <pre>&lt;form&gt;...&lt;/form&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <form>...</form>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Inline element: input.</div>
+                    <pre>&lt;input type="text"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Block element: table.</div>
+                    <pre>&lt;table&gt;...&lt;/table&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <table border="1">
+                            <tr>
+                                <td>...</td>
+                            </tr>
+                        </table>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Inline element: label.</div>
+                    <pre>&lt;label&gt;Label&lt;/label&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <label>Label</label></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Block element: nav.</div>
+                    <pre>&lt;nav&gt;...&lt;/nav&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <nav>...</nav>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Inline element: abbr.</div>
+                    <pre>&lt;abbr title="HyperText Markup Language"&gt;HTML&lt;/abbr&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <abbr title="HyperText Markup Language">HTML</abbr></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Block element: section.</div>
+                    <pre>&lt;section&gt;Section&lt;/section&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <section>Section</section>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Inline element: cite.</div>
+                    <pre>&lt;cite&gt;Citation&lt;/cite&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <cite>Citation</cite></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Block element: article.</div>
+                    <pre>&lt;article&gt;Article&lt;/article&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <article>Article</article>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Inline element: q.</div>
+                    <pre>&lt;q&gt;Short quote&lt;/q&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <q>Short quote</q></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 12 of 20 -->
+        <!-- HTML ENTITIES -->
+        <div class="topic-section" id="html-entities">
+            <h3>HTML Entities</h3>
+            <div class="explanation">Entities are used to display reserved characters or symbols in HTML.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Less than symbol.</div>
+                    <pre>&amp;lt;</pre>
+                    <div class="console-output"><b>Output:</b> &lt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Greater than symbol.</div>
+                    <pre>&amp;gt;</pre>
+                    <div class="console-output"><b>Output:</b> &gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Ampersand symbol.</div>
+                    <pre>&amp;amp;</pre>
+                    <div class="console-output"><b>Output:</b> &amp;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Double quote symbol.</div>
+                    <pre>&amp;quot;</pre>
+                    <div class="console-output"><b>Output:</b> &quot;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Single quote symbol.</div>
+                    <pre>&amp;apos;</pre>
+                    <div class="console-output"><b>Output:</b> &apos;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Copyright symbol.</div>
+                    <pre>&amp;copy;</pre>
+                    <div class="console-output"><b>Output:</b> &copy;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Registered trademark symbol.</div>
+                    <pre>&amp;reg;</pre>
+                    <div class="console-output"><b>Output:</b> &reg;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Euro currency symbol.</div>
+                    <pre>&amp;euro;</pre>
+                    <div class="console-output"><b>Output:</b> &euro;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Non-breaking space.</div>
+                    <pre>&amp;nbsp;</pre>
+                    <div class="console-output"><b>Output:</b> &nbsp;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Em dash.</div>
+                    <pre>&amp;mdash;</pre>
+                    <div class="console-output"><b>Output:</b> &mdash;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> En dash.</div>
+                    <pre>&amp;ndash;</pre>
+                    <div class="console-output"><b>Output:</b> &ndash;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Trademark symbol.</div>
+                    <pre>&amp;trade;</pre>
+                    <div class="console-output"><b>Output:</b> &trade;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Section symbol.</div>
+                    <pre>&amp;sect;</pre>
+                    <div class="console-output"><b>Output:</b> &sect;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Pound sterling symbol.</div>
+                    <pre>&amp;pound;</pre>
+                    <div class="console-output"><b>Output:</b> &pound;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Yen symbol.</div>
+                    <pre>&amp;yen;</pre>
+                    <div class="console-output"><b>Output:</b> &yen;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Cent symbol.</div>
+                    <pre>&amp;cent;</pre>
+                    <div class="console-output"><b>Output:</b> &cent;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Degree symbol.</div>
+                    <pre>&amp;deg;</pre>
+                    <div class="console-output"><b>Output:</b> &deg;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Micro symbol.</div>
+                    <pre>&amp;micro;</pre>
+                    <div class="console-output"><b>Output:</b> &micro;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Paragraph symbol.</div>
+                    <pre>&amp;para;</pre>
+                    <div class="console-output"><b>Output:</b> &para;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Plus-minus symbol.</div>
+                    <pre>&amp;plusmn;</pre>
+                    <div class="console-output"><b>Output:</b> &plusmn;</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 13 of 20 -->
+        <!-- COMMENTS & DOCTYPE -->
+        <div class="topic-section" id="comments-doctype">
+            <h3>Comments & Doctype</h3>
+            <div class="explanation">Comments are ignored by browsers. The doctype tells browsers which HTML version to
+                use.</div>
+             <button class="example-btn">Show Examples</button>   
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> HTML comment.</div>
+                    <pre>&lt;!-- This is a comment --&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Doctype for HTML5.</div>
+                    <pre>&lt;!DOCTYPE html&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but enables standards mode.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Doctype for HTML 4.01 Strict.</div>
+                    <pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but sets HTML 4.01 Strict mode.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Doctype for XHTML 1.0 Strict.</div>
+                    <pre>&lt;!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but sets XHTML 1.0 Strict mode.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Using comments to explain code.</div>
+                    <pre>&lt;!-- Main navigation starts here --&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Conditional comments for IE (legacy).</div>
+                    <pre>&lt;!--[if IE]&gt; Special instructions for IE &lt;![endif]--&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Only visible in Internet Explorer.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Commenting out code.</div>
+                    <pre>&lt;!-- &lt;p&gt;This won't show&lt;/p&gt; --&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Multiline comment.</div>
+                    <pre>&lt;!--
+                    This is a
+                    multiline comment
+                    --&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Comment inside HTML elements.</div>
+                    <pre>&lt;p&gt;Hello &lt;!-- name --&gt;!&lt;/p&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <p>Hello !</p>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Doctype for HTML 3.2 (very old).</div>
+                    <pre>&lt;!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 3.2 Final//EN"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but sets HTML 3.2 mode.</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 14 of 20 -->
+        <!-- SCRIPT & STYLE ELEMENTS -->
+        <div class="topic-section" id="script-style-elements">
+            <h3>Script & Style Elements</h3>
+            <div class="explanation">The <code>&lt;script&gt;</code> and <code>&lt;style&gt;</code> elements let you add
+                JavaScript and CSS directly to your HTML.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Inline JavaScript with <code>&lt;script&gt;</code>.</div>
+                    <pre>&lt;script&gt;alert('Hello!')&lt;/script&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Runs JavaScript code (shows alert).</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> External JavaScript file.</div>
+                    <pre>&lt;script src="main.js"&gt;&lt;/script&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Loads and runs <code>main.js</code>.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Inline CSS with <code>&lt;style&gt;</code>.</div>
+                    <pre>&lt;style&gt;body { background: #eee; }&lt;/style&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Applies background color to the page.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> External CSS file.</div>
+                    <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Loads and applies <code>style.css</code>.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Script with <code>defer</code> attribute.</div>
+                    <pre>&lt;script src="main.js" defer&gt;&lt;/script&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Runs script after HTML is parsed.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Script with <code>async</code> attribute.</div>
+                    <pre>&lt;script src="main.js" async&gt;&lt;/script&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Runs script as soon as it loads.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Style block for custom classes.</div>
+                    <pre>&lt;style&gt;.highlight { color: red; }&lt;/style&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Elements with <code>class="highlight"</code> are red.
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Script block in the body.</div>
+                    <pre>&lt;body&gt;...&lt;script&gt;console.log('Loaded')&lt;/script&gt;&lt;/body&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Logs "Loaded" to the console.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Style block in the head.</div>
+                    <pre>&lt;head&gt;&lt;style&gt;h1 { font-size: 3em; }&lt;/style&gt;&lt;/head&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Makes all <code>&lt;h1&gt;</code> elements larger.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Script with type attribute.</div>
+                    <pre>&lt;script type="text/javascript"&gt;...&lt;/script&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Runs as JavaScript (default type).</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 15 of 20 -->
+        <!-- ACCESSIBILITY & ARIA -->
+        <div class="topic-section" id="accessibility-aria">
+            <h3>Accessibility & ARIA</h3>
+            <div class="explanation">Accessibility features and ARIA (Accessible Rich Internet Applications) attributes
+                help make web content usable for everyone.</div>
+            <button class="example-btn">Show Examples</button>   
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> alt attribute for images.</div>
+                    <pre>&lt;img src="logo.png" alt="Company Logo"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80x40?text=Logo"
+                            alt="Company Logo"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> aria-label for custom labels.</div>
+                    <pre>&lt;button aria-label="Close"&gt;X&lt;/button&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <button aria-label="Close">X</button></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> aria-hidden to hide from assistive tech.</div>
+                    <pre>&lt;span aria-hidden="true"&gt;★&lt;/span&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <span aria-hidden="true">★</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> role attribute for landmarks.</div>
+                    <pre>&lt;nav role="navigation"&gt;...&lt;/nav&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <nav role="navigation">...</nav>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> aria-live for dynamic content updates.</div>
+                    <pre>&lt;div aria-live="polite"&gt;New message!&lt;/div&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div aria-live="polite">New message!</div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> aria-checked for custom checkboxes.</div>
+                    <pre>&lt;div role="checkbox" aria-checked="true"&gt;Checked&lt;/div&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div role="checkbox" aria-checked="true">Checked</div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> aria-expanded for toggles.</div>
+                    <pre>&lt;button aria-expanded="false"&gt;Show More&lt;/button&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <button aria-expanded="false">Show More</button></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> aria-describedby for descriptions.</div>
+                    <pre>&lt;input aria-describedby="desc"&gt;&lt;span id="desc"&gt;Enter your name&lt;/span&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input aria-describedby="desc"><span id="desc">Enter your
+                            name</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> tabindex for keyboard navigation.</div>
+                    <pre>&lt;div tabindex="0"&gt;Focusable&lt;/div&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div tabindex="0">Focusable</div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> aria-required for required fields.</div>
+                    <pre>&lt;input aria-required="true"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input aria-required="true"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 16 of 20 -->
+        <!-- ADVANCED HTML5 FEATURES -->
+        <div class="topic-section" id="advanced-html5">
+            <h3>Advanced HTML5 Features</h3>
+            <div class="explanation">HTML5 introduced new elements and APIs for richer web applications.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Canvas for drawing graphics.</div>
+                    <pre>&lt;canvas id="myCanvas" width="100" height="50"&gt;&lt;/canvas&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <canvas id="myCanvas" width="100" height="50"
+                            style="border:1px solid #007bff;"></canvas></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> SVG for vector graphics.</div>
+                    <pre>&lt;svg width="60" height="40"&gt;&lt;circle cx="30" cy="20" r="15" fill="blue"/&gt;&lt;/svg&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <svg width="60" height="40">
+                            <circle cx="30" cy="20" r="15" fill="blue" />
+                        </svg></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Video with subtitles (track element).</div>
+                    <pre>&lt;video controls width="160"&gt;
+  &lt;source src="movie.mp4" type="video/mp4"&gt;
+  &lt;track src="subs_en.vtt" kind="subtitles" srclang="en" label="English"&gt;
+&lt;/video&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <video controls width="160">
+                            <source src="movie.mp4" type="video/mp4">
+                            <track src="subs_en.vtt" kind="subtitles" srclang="en" label="English">
+                        </video></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Audio with multiple sources.</div>
+                    <pre>&lt;audio controls&gt;
+  &lt;source src="sound.mp3" type="audio/mpeg"&gt;
+  &lt;source src="sound.ogg" type="audio/ogg"&gt;
+&lt;/audio&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <audio controls style="width:120px;">
+                            <source src="sound.mp3" type="audio/mpeg">
+                            <source src="sound.ogg" type="audio/ogg">
+                        </audio></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Output element for calculations.</div>
+                    <pre>&lt;form oninput="result.value=parseInt(a.value)+parseInt(b.value)"&gt;
+  &lt;input type="range" id="a" value="50"&gt;+
+  &lt;input type="number" id="b" value="50"&gt;=
+  &lt;output name="result" for="a b"&gt;100&lt;/output&gt;
+&lt;/form&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <form oninput="result.value=parseInt(a.value)+parseInt(b.value)">
+                            <input type="range" id="a" value="50">+
+                            <input type="number" id="b" value="50">=
+                            <output name="result" for="a b">100</output>
+                        </form>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Details and summary for collapsible content.</div>
+                    <pre>&lt;details&gt;&lt;summary&gt;More Info&lt;/summary&gt;Extra details here.&lt;/details&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <details>
+                            <summary>More Info</summary>Extra details here.
+                        </details>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Meter for scalar measurements.</div>
+                    <pre>&lt;meter value="0.7"&gt;70%&lt;/meter&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <meter value="0.7">70%</meter></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Progress bar for task completion.</div>
+                    <pre>&lt;progress value="30" max="100"&gt;30%&lt;/progress&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <progress value="30" max="100">30%</progress></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Mark element for highlights.</div>
+                    <pre>&lt;mark&gt;Important&lt;/mark&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <mark>Important</mark></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Time element for dates/times.</div>
+                    <pre>&lt;time datetime="2025-05-14"&gt;May 14, 2025&lt;/time&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <time datetime="2025-05-14">May 14, 2025</time></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 17 of 20 -->
+        <!-- EMBEDDING & INTEGRATION -->
+        <div class="topic-section" id="embedding-integration">
+            <h3>Embedding & Integration</h3>
+            <div class="explanation">HTML lets you embed and integrate external content and services.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Embedding a YouTube video with iframe.</div>
+                    <pre>&lt;iframe width="200" height="113" src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video"&gt;&lt;/iframe&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <iframe width="200" height="113"
+                            src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="YouTube video"></iframe></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Embedding a Google Map.</div>
+                    <pre>&lt;iframe src="https://www.google.com/maps?q=New+York&amp;output=embed" width="200" height="120"&gt;&lt;/iframe&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <iframe
+                            src="https://www.google.com/maps?q=New+York&output=embed" width="200" height="120"></iframe>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Embedding a PDF file.</div>
+                    <pre>&lt;embed src="file.pdf" width="100" height="60"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <embed src="file.pdf" width="100" height="60"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Embedding an external website with object.</div>
+                    <pre>&lt;object data="https://www.example.com" width="200" height="80"&gt;&lt;/object&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <object data="https://www.example.com" width="200"
+                            height="80"></object></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Social media share button (Twitter).</div>
+                    <pre>&lt;a href="https://twitter.com/share" target="_blank"&gt;Share on Twitter&lt;/a&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <a href="https://twitter.com/share" target="_blank">Share
+                            on Twitter</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Facebook Like button (iframe).</div>
+                    <pre>&lt;iframe src="https://www.facebook.com/plugins/like.php?href=https://example.com" width="120" height="30"&gt;&lt;/iframe&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <iframe
+                            src="https://www.facebook.com/plugins/like.php?href=https://example.com" width="120"
+                            height="30"></iframe></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Embedding a SoundCloud audio track.</div>
+                    <pre>&lt;iframe width="200" height="60" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293"&gt;&lt;/iframe&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <iframe width="200" height="60"
+                            src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/293"></iframe>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Embedding a CodePen demo.</div>
+                    <pre>&lt;iframe height="200" style="width:100%;" scrolling="no" title="CodePen" src="https://codepen.io/team/codepen/embed/preview/PNaGbb"&gt;&lt;/iframe&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <iframe height="200" style="width:100%;" scrolling="no"
+                            title="CodePen" src="https://codepen.io/team/codepen/embed/preview/PNaGbb"></iframe></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Embedding a Gist from GitHub.</div>
+                    <pre>&lt;script src="https://gist.github.com/username/gistid.js"&gt;&lt;/script&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Loads and displays the Gist code snippet.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Embedding a calendar (Google Calendar).</div>
+                    <pre>&lt;iframe src="https://calendar.google.com/calendar/embed?src=your_calendar_id" width="200" height="120"&gt;&lt;/iframe&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <iframe
+                            src="https://calendar.google.com/calendar/embed?src=your_calendar_id" width="200"
+                            height="120"></iframe></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 18 of 20 -->
+        <!-- META TAGS & SEO -->
+        <div class="topic-section" id="meta-seo">
+            <h3>Meta Tags & SEO</h3>
+            <div class="explanation">Meta tags provide metadata about the HTML document and help with SEO (Search Engine
+                Optimization).</div>
+            <button class="example-btn">Show Examples</button>    
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Meta description for search engines.</div>
+                    <pre>&lt;meta name="description" content="Learn HTML with examples"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but improves SEO.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Meta keywords (less important today).</div>
+                    <pre>&lt;meta name="keywords" content="HTML, tutorial, web"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Meta author tag.</div>
+                    <pre>&lt;meta name="author" content="Jane Doe"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Meta robots tag for indexing control.</div>
+                    <pre>&lt;meta name="robots" content="index, follow"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but tells search engines to index the
+                        page.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Open Graph title for social sharing.</div>
+                    <pre>&lt;meta property="og:title" content="HTML Tutorial"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but improves sharing on social media.
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Open Graph image for social sharing.</div>
+                    <pre>&lt;meta property="og:image" content="image.png"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Twitter Card meta tag.</div>
+                    <pre>&lt;meta name="twitter:card" content="summary_large_image"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but improves Twitter sharing.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Viewport meta tag for responsive design.</div>
+                    <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but enables mobile responsiveness.
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Charset meta tag for encoding.</div>
+                    <pre>&lt;meta charset="UTF-8"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but ensures correct character display.
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Canonical link to avoid duplicate content.</div>
+                    <pre>&lt;link rel="canonical" href="https://example.com/html-tutorial"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but helps SEO.</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 19 of 20 -->
+        <!-- RESPONSIVE DESIGN & MEDIA QUERIES -->
+        <div class="topic-section" id="responsive-media-queries">
+            <h3>Responsive Design & Media Queries</h3>
+            <div class="explanation">Responsive design ensures your website looks good on all devices. Media queries let
+                you apply CSS rules based on screen size or device features.</div>
+            <button class="example-btn">Show Examples</button>    
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Responsive image using CSS.</div>
+                    <pre>&lt;img src="photo.jpg" style="max-width:100%;height:auto;"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/120x60?text=Photo"
+                            style="max-width:100%;height:auto;"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Viewport meta tag for scaling.</div>
+                    <pre>&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but enables responsive scaling.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Media query for mobile screens.</div>
+                    <pre>&lt;style&gt;
+@media (max-width: 600px) {
+  body { background: #f0f8ff; }
+}
+&lt;/style&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Changes background color on small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Responsive navigation menu.</div>
+                    <pre>&lt;nav class="responsive-nav"&gt;...&lt;/nav&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <nav class="responsive-nav">...</nav>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Responsive grid layout with CSS Grid.</div>
+                    <pre>&lt;div class="grid"&gt;
+  &lt;div&gt;1&lt;/div&gt;&lt;div&gt;2&lt;/div&gt;&lt;div&gt;3&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); gap: 10px; }
+&lt;/style&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(100px,1fr));gap:10px;">
+                            <div style="background:#e0e0e0;padding:8px;">1</div>
+                            <div style="background:#e0e0e0;padding:8px;">2</div>
+                            <div style="background:#e0e0e0;padding:8px;">3</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Responsive flexbox layout.</div>
+                    <pre>&lt;div class="flex"&gt;
+  &lt;div&gt;A&lt;/div&gt;&lt;div&gt;B&lt;/div&gt;
+&lt;/div&gt;
+&lt;style&gt;
+.flex { display: flex; flex-wrap: wrap; gap: 10px; }
+.flex &gt; div { flex: 1 1 100px; background: #f8d7da; padding: 8px; }
+&lt;/style&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div style="display:flex;flex-wrap:wrap;gap:10px;">
+                            <div style="flex:1 1 100px;background:#f8d7da;padding:8px;">A</div>
+                            <div style="flex:1 1 100px;background:#f8d7da;padding:8px;">B</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Hide element on small screens.</div>
+                    <pre>&lt;style&gt;
+@media (max-width: 500px) {
+  .hide-mobile { display: none; }
+}
+&lt;/style&gt;
+&lt;div class="hide-mobile"&gt;Hidden on mobile&lt;/div&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div class="hide-mobile">Hidden on mobile</div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Responsive table with horizontal scroll.</div>
+                    <pre>&lt;div style="overflow-x:auto;"&gt;
+  &lt;table&gt;...&lt;/table&gt;
+&lt;/div&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div style="overflow-x:auto;max-width:200px;">
+                            <table border="1" style="min-width:300px;">
+                                <tr>
+                                    <td>Wide Table</td>
+                                    <td>More Data</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Responsive font size with vw unit.</div>
+                    <pre>&lt;style&gt;
+h2 { font-size: 5vw; }
+&lt;/style&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:5vw;">Responsive Heading</span>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Responsive image with srcset.</div>
+                    <pre>&lt;img srcset="small.jpg 480w, large.jpg 800w" sizes="(max-width:600px) 480px, 800px" src="large.jpg" alt="Responsive"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img
+                            src="https://via.placeholder.com/120x60?text=Responsive" alt="Responsive"></div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 20 of 20 -->
+        <!-- HTML BEST PRACTICES & RESOURCES -->
+        <div class="topic-section" id="best-practices-resources">
+            <h3>HTML Best Practices & Resources</h3>
+            <div class="explanation">Follow best practices and use trusted resources to write clean, accessible, and
+                maintainable HTML.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Use semantic elements for clarity.</div>
+                    <pre>&lt;main&gt;&lt;article&gt;Content&lt;/article&gt;&lt;/main&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <main>
+                            <article>Content</article>
+                        </main>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Always include alt text for images.</div>
+                    <pre>&lt;img src="logo.png" alt="Logo"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80x40?text=Logo"
+                            alt="Logo"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Indent nested elements for readability.</div>
+                    <pre>
+&lt;ul&gt;
+  &lt;li&gt;Item 1&lt;/li&gt;
+  &lt;li&gt;Item 2&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li>Item 1</li>
+                            <li>Item 2</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Validate your HTML.</div>
+                    <pre>https://validator.w3.org/</pre>
+                    <div class="console-output"><b>Output:</b> Use the W3C Validator to check your code.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Use comments to explain complex code.</div>
+                    <pre>&lt;!-- This section displays user info --&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but helps maintainability.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Avoid inline styles for maintainability.</div>
+                    <pre>&lt;div class="highlight"&gt;Styled by CSS&lt;/div&gt;</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <div class="highlight">Styled by CSS</div>
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Use lowercase for tags and attributes.</div>
+                    <pre>&lt;input type="text" name="email"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <input type="text" name="email"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Close all tags properly.</div>
+                    <pre>&lt;br&gt; &lt;hr&gt; &lt;img src="pic.jpg" alt="Pic"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <br>
+                        <hr style="border:1px solid #007bff; width:80px; display:inline-block;"> <img
+                            src="https://via.placeholder.com/40x20?text=Pic" alt="Pic">
+                    </div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Use external CSS and JS files.</div>
+                    <pre>&lt;link rel="stylesheet" href="style.css"&gt;
+&lt;script src="main.js"&gt;&lt;/script&gt;</pre>
+                    <div class="console-output"><b>Output:</b> No visible output, but improves performance and
+                        organization.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Useful HTML resources.</div>
+                    <pre>
+MDN Web Docs: https://developer.mozilla.org/
+W3Schools: https://www.w3schools.com/
+HTML Living Standard: https://html.spec.whatwg.org/
+</pre>
+                    <div class="console-output"><b>Output:</b>
+                        <ul>
+                            <li><a href="https://developer.mozilla.org/" target="_blank">MDN Web Docs</a></li>
+                            <li><a href="https://www.w3schools.com/" target="_blank">W3Schools</a></li>
+                            <li><a href="https://html.spec.whatwg.org/" target="_blank">HTML Living Standard</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
-    <script>
-        // Toggle the burger menu
-        function toggleMenu() {
-            const navLinks = document.querySelector('.nav-links');
-            navLinks.classList.toggle('active');
+
+
+   
+// ...existing code...
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+    // For each topic-section, add toggle logic for its button and examples-list
+    document.querySelectorAll('.topic-section').forEach(function(section) {
+        const btn = section.querySelector('.example-btn');
+        const examples = section.querySelector('.examples-list');
+        if (btn && examples) {
+            btn.addEventListener('click', function() {
+                // Hide all other examples-lists
+                document.querySelectorAll('.topic-section .examples-list').forEach(function(otherExamples) {
+                    if (otherExamples !== examples) {
+                        otherExamples.style.display = 'none';
+                        const otherBtn = otherExamples.parentElement.querySelector('.example-btn');
+                        if (otherBtn) otherBtn.textContent = 'Show Examples';
+                    }
+                });
+                // Toggle this section's examples-list
+                if (examples.style.display === 'none' || examples.style.display === '') {
+                    examples.style.display = 'block';
+                    btn.textContent = 'Hide Examples';
+                } else {
+                    examples.style.display = 'none';
+                    btn.textContent = 'Show Examples';
+                }
+            });
+            // Start with examples hidden
+            examples.style.display = 'none';
+            btn.textContent = 'Show Examples';
         }
-    </script>
+    });
+});
+</script>
+
 </body>
+
 </html>
+<!-- End of file -->
