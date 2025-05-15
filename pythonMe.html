@@ -3,11 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>codeMe -pythonMe</title>
+    <title>codeMe - pythonMe</title>
+    <link rel="stylesheet" href="static/css/htmlMestyle.css">
     <link rel="stylesheet" href="static/css/pythonMestyle.css">
-    <script src="static/script.js" defer></script>
     <style>
-        /* Responsive Navbar Styles */
         nav {
             display: flex;
             justify-content: space-between;
@@ -16,40 +15,17 @@
             color: white;
             padding: 1rem;
         }
-
-        nav h1 {
-            margin: 0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-
+        nav h1 { margin: 0; }
+        .nav-links { display: flex; gap: 1rem; }
         .nav-links a {
             color: white;
             text-decoration: none;
             padding: 0.5rem 1rem;
             border-radius: 5px;
         }
-
-        .nav-links a.active {
-            background-color: #007bff;
-        }
-
-        .burger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 3px 0;
-        }
-
+        .nav-links a.active { background-color: #007bff; }
+        .burger { display: none; flex-direction: column; cursor: pointer; }
+        .burger div { width: 25px; height: 3px; background-color: white; margin: 3px 0; }
         @media (max-width: 768px) {
             .nav-links {
                 display: none;
@@ -62,14 +38,8 @@
                 border-radius: 5px;
                 padding: 1rem;
             }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .burger {
-                display: flex;
-            }
+            .nav-links.active { display: flex; }
+            .burger { display: flex; }
         }
     </style>
 </head>
@@ -92,28 +62,3503 @@
             <a href="contact.html">CONTACT</a>
         </div>
     </nav>
-
     <div class="container">
-        <section>
-            <h2>
-                Python
-            </h2>
-            <p>Python is a versatile programming language.</p>
-            <pre>
-                # Python Example
-                def greet(name):
-                    return f"Hello, {name}!"
-
-                print(greet("World"))
-            </pre>
-        </section>
+        <h2>Python Tutorial</h2>
+        <p>Learn Python from beginner to advanced with interactive examples and explanations. Click "Show Examples" to view code and simulated console outputs.</p>
+        </div>
+        <!-- Segment 2 of 30: Introduction to Python -->
+        <div class="topic-section" id="intro-python">
+            <h3>Introduction to Python</h3>
+            <div class="explanation">
+                Python is a high-level, interpreted programming language known for its readability and versatility. It is widely used in web development, data science, automation, and more.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Print Hello World</div>
+                    <pre>print("Hello, World!")</pre>
+                    <div class="console-output"><b>Output:</b> Hello, World!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Python Version</div>
+                    <pre>import sys
+print(sys.version)</pre>
+                    <div class="console-output"><b>Output:</b> 3.11.2 (or your installed version)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Python History</div>
+                    <pre># Python was created by Guido van Rossum in 1991</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Advantages of Python</div>
+                    <pre># Easy to read, versatile, large community, many libraries</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Install Python (Windows)</div>
+                    <pre># Download from python.org and run the installer</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Install Python (macOS)</div>
+                    <pre># Use Homebrew: brew install python3</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Install Python (Linux)</div>
+                    <pre># Use apt: sudo apt install python3</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Using IDLE</div>
+                    <pre># Open IDLE from your Start Menu or terminal</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Using Jupyter Notebook</div>
+                    <pre># Install with pip: pip install notebook
+# Run: jupyter notebook</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Using Python in VS Code</div>
+                    <pre># Install Python extension in VS Code</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Running a Python Script</div>
+                    <pre># Save as hello.py, then run:
+python hello.py</pre>
+                    <div class="console-output"><b>Output:</b> Hello, World!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Interactive Python Shell</div>
+                    <pre># Type python in your terminal to start the shell</pre>
+                    <div class="console-output"><b>Output:</b> >>> (Python prompt appears)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Python as a Calculator</div>
+                    <pre>print(2 + 3 * 4)</pre>
+                    <div class="console-output"><b>Output:</b> 14</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Comments in Python</div>
+                    <pre># This is a comment</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Multi-line Comments</div>
+                    <pre>"""
+This is a
+multi-line comment
+"""</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a docstring)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Print Multiple Values</div>
+                    <pre>print("Python", 3, "Rocks!")</pre>
+                    <div class="console-output"><b>Output:</b> Python 3 Rocks!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Getting User Input</div>
+                    <pre># name = input("Enter your name: ")
+# print("Hello,", name)</pre>
+                    <div class="console-output"><b>Output:</b> (Prompts for input)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Python Documentation</div>
+                    <pre># Visit https://docs.python.org/3/ for docs</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Python Community</div>
+                    <pre># Join forums like Stack Overflow, Reddit, etc.</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Zen of Python</div>
+                    <pre>import this</pre>
+                    <div class="console-output"><b>Output:</b> The Zen of Python, by Tim Peters (aphorisms)</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 3 of 30: Basic Syntax & Data Types -->
+        <div class="topic-section" id="basic-syntax">
+            <h3>Basic Syntax & Data Types</h3>
+            <div class="explanation">
+                Python uses indentation to define code blocks. It supports several built-in data types, including integers, floats, booleans, and strings.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Indentation Matters</div>
+                    <pre>if True:
+    print("Indented block")</pre>
+                    <div class="console-output"><b>Output:</b> Indented block</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Integer Type</div>
+                    <pre>x = 5
+print(type(x))</pre>
+                    <div class="console-output"><b>Output:</b> &lt;class 'int'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Float Type</div>
+                    <pre>y = 3.14
+print(type(y))</pre>
+                    <div class="console-output"><b>Output:</b> &lt;class 'float'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Boolean Type</div>
+                    <pre>flag = True
+print(type(flag))</pre>
+                    <div class="console-output"><b>Output:</b> &lt;class 'bool'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> String Type</div>
+                    <pre>name = "Python"
+print(type(name))</pre>
+                    <div class="console-output"><b>Output:</b> &lt;class 'str'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Variable Assignment</div>
+                    <pre>a = 10
+b = 20
+print(a + b)</pre>
+                    <div class="console-output"><b>Output:</b> 30</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Multiple Assignment</div>
+                    <pre>x, y, z = 1, 2, 3
+print(x, y, z)</pre>
+                    <div class="console-output"><b>Output:</b> 1 2 3</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Type Conversion to String</div>
+                    <pre>num = 42
+s = str(num)
+print(s, type(s))</pre>
+                    <div class="console-output"><b>Output:</b> 42 &lt;class 'str'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Type Conversion to Integer</div>
+                    <pre>f = 3.99
+i = int(f)
+print(i, type(i))</pre>
+                    <div class="console-output"><b>Output:</b> 3 &lt;class 'int'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Type Conversion to Float</div>
+                    <pre>s = "5.5"
+f = float(s)
+print(f, type(f))</pre>
+                    <div class="console-output"><b>Output:</b> 5.5 &lt;class 'float'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Boolean from Integer</div>
+                    <pre>print(bool(0))
+print(bool(1))</pre>
+                    <div class="console-output"><b>Output:</b> False<br>True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> String Concatenation</div>
+                    <pre>greeting = "Hello, " + "world!"
+print(greeting)</pre>
+                    <div class="console-output"><b>Output:</b> Hello, world!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> String Multiplication</div>
+                    <pre>print("ha" * 3)</pre>
+                    <div class="console-output"><b>Output:</b> hahaha</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Escape Characters</div>
+                    <pre>print("Line1\\nLine2")</pre>
+                    <div class="console-output"><b>Output:</b> Line1\nLine2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Raw Strings</div>
+                    <pre>print(r"C:\\Users\\Name")</pre>
+                    <div class="console-output"><b>Output:</b> C:\Users\Name</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Getting Type with type()</div>
+                    <pre>print(type(123))
+print(type("abc"))</pre>
+                    <div class="console-output"><b>Output:</b> &lt;class 'int'&gt;<br>&lt;class 'str'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Checking if Variable Exists</div>
+                    <pre>try:
+    print(x)
+except NameError:
+    print("x is not defined")</pre>
+                    <div class="console-output"><b>Output:</b> x is not defined</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> None Type</div>
+                    <pre>n = None
+print(type(n))</pre>
+                    <div class="console-output"><b>Output:</b> &lt;class 'NoneType'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Dynamic Typing</div>
+                    <pre>var = 10
+print(var)
+var = "Now I'm a string"
+print(var)</pre>
+                    <div class="console-output"><b>Output:</b> 10<br>Now I'm a string</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Variable Naming Rules</div>
+                    <pre># Valid: my_var, _var, var1
+# Invalid: 1var, my-var, class</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 4 of 30: Operators & Expressions -->
+        <div class="topic-section" id="operators-expressions">
+            <h3>Operators & Expressions</h3>
+            <div class="explanation">
+                Python supports arithmetic, comparison, and logical operators for building expressions and making decisions.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Addition</div>
+                    <pre>print(2 + 3)</pre>
+                    <div class="console-output"><b>Output:</b> 5</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Subtraction</div>
+                    <pre>print(10 - 4)</pre>
+                    <div class="console-output"><b>Output:</b> 6</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Multiplication</div>
+                    <pre>print(6 * 7)</pre>
+                    <div class="console-output"><b>Output:</b> 42</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Division</div>
+                    <pre>print(8 / 2)</pre>
+                    <div class="console-output"><b>Output:</b> 4.0</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Modulus</div>
+                    <pre>print(10 % 3)</pre>
+                    <div class="console-output"><b>Output:</b> 1</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Floor Division</div>
+                    <pre>print(7 // 3)</pre>
+                    <div class="console-output"><b>Output:</b> 2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Exponentiation</div>
+                    <pre>print(2 ** 4)</pre>
+                    <div class="console-output"><b>Output:</b> 16</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Equal To</div>
+                    <pre>print(5 == 5)</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Not Equal To</div>
+                    <pre>print(3 != 4)</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Greater Than</div>
+                    <pre>print(7 > 2)</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Less Than</div>
+                    <pre>print(2 < 1)</pre>
+                    <div class="console-output"><b>Output:</b> False</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Greater Than or Equal To</div>
+                    <pre>print(5 >= 5)</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Less Than or Equal To</div>
+                    <pre>print(3 <= 4)</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Logical AND</div>
+                    <pre>print(True and False)</pre>
+                    <div class="console-output"><b>Output:</b> False</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Logical OR</div>
+                    <pre>print(True or False)</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Logical NOT</div>
+                    <pre>print(not True)</pre>
+                    <div class="console-output"><b>Output:</b> False</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Combined Expressions</div>
+                    <pre>print((3 > 2) and (2 < 5))</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Assignment Operator</div>
+                    <pre>x = 10
+x += 5
+print(x)</pre>
+                    <div class="console-output"><b>Output:</b> 15</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Chained Comparison</div>
+                    <pre>print(1 < 2 < 3)</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Expression in Print</div>
+                    <pre>print("Sum:", 2 + 2)</pre>
+                    <div class="console-output"><b>Output:</b> Sum: 4</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 5 of 30: Control Flow & Loops -->
+        <div class="topic-section" id="control-flow">
+            <h3>Control Flow & Loops</h3>
+            <div class="explanation">
+                Python uses <code>if</code>, <code>elif</code>, and <code>else</code> for conditional logic, and <code>for</code> and <code>while</code> loops for iteration. Control statements like <code>break</code>, <code>continue</code>, and <code>pass</code> alter loop behavior.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Simple If Statement</div>
+                    <pre>x = 5
+if x > 0:
+    print("Positive")</pre>
+                    <div class="console-output"><b>Output:</b> Positive</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> If-Else Statement</div>
+                    <pre>y = -3
+if y > 0:
+    print("Positive")
+else:
+    print("Non-positive")</pre>
+                    <div class="console-output"><b>Output:</b> Non-positive</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> If-Elif-Else</div>
+                    <pre>n = 0
+if n > 0:
+    print("Positive")
+elif n == 0:
+    print("Zero")
+else:
+    print("Negative")</pre>
+                    <div class="console-output"><b>Output:</b> Zero</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> For Loop Over List</div>
+                    <pre>for i in [1, 2, 3]:
+    print(i)</pre>
+                    <div class="console-output"><b>Output:</b> 1<br>2<br>3</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> For Loop with Range</div>
+                    <pre>for i in range(3):
+    print(i)</pre>
+                    <div class="console-output"><b>Output:</b> 0<br>1<br>2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> While Loop</div>
+                    <pre>count = 0
+while count < 3:
+    print(count)
+    count += 1</pre>
+                    <div class="console-output"><b>Output:</b> 0<br>1<br>2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Break Statement</div>
+                    <pre>for i in range(5):
+    if i == 3:
+        break
+    print(i)</pre>
+                    <div class="console-output"><b>Output:</b> 0<br>1<br>2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Continue Statement</div>
+                    <pre>for i in range(5):
+    if i % 2 == 0:
+        continue
+    print(i)</pre>
+                    <div class="console-output"><b>Output:</b> 1<br>3</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Pass Statement</div>
+                    <pre>for i in range(2):
+    pass  # Does nothing</pre>
+                    <div class="console-output"><b>Output:</b> (No output)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Nested Loops</div>
+                    <pre>for i in range(2):
+    for j in range(2):
+        print(i, j)</pre>
+                    <div class="console-output"><b>Output:</b> 0 0<br>0 1<br>1 0<br>1 1</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Else with For Loop</div>
+                    <pre>for i in range(2):
+    print(i)
+else:
+    print("Done")</pre>
+                    <div class="console-output"><b>Output:</b> 0<br>1<br>Done</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Else with While Loop</div>
+                    <pre>n = 0
+while n < 2:
+    print(n)
+    n += 1
+else:
+    print("Loop ended")</pre>
+                    <div class="console-output"><b>Output:</b> 0<br>1<br>Loop ended</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Infinite Loop (with break)</div>
+                    <pre>i = 0
+while True:
+    print(i)
+    if i == 1:
+        break
+    i += 1</pre>
+                    <div class="console-output"><b>Output:</b> 0<br>1</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Looping Over a String</div>
+                    <pre>for char in "hi":
+    print(char)</pre>
+                    <div class="console-output"><b>Output:</b> h<br>i</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Looping with enumerate()</div>
+                    <pre>for idx, val in enumerate(['a', 'b']):
+    print(idx, val)</pre>
+                    <div class="console-output"><b>Output:</b> 0 a<br>1 b</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Looping with zip()</div>
+                    <pre>for a, b in zip([1,2], ['x','y']):
+    print(a, b)</pre>
+                    <div class="console-output"><b>Output:</b> 1 x<br>2 y</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Range with Step</div>
+                    <pre>for i in range(0, 5, 2):
+    print(i)</pre>
+                    <div class="console-output"><b>Output:</b> 0<br>2<br>4</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Reversed Loop</div>
+                    <pre>for i in reversed(range(3)):
+    print(i)</pre>
+                    <div class="console-output"><b>Output:</b> 2<br>1<br>0</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Loop with else and break</div>
+                    <pre>for i in range(3):
+    if i == 1:
+        break
+else:
+    print("Completed")</pre>
+                    <div class="console-output"><b>Output:</b> (No output, else is skipped)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> List Comprehension in Loop</div>
+                    <pre>squares = [x*x for x in range(4)]
+print(squares)</pre>
+                    <div class="console-output"><b>Output:</b> [0, 1, 4, 9]</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 6 of 30: Functions & Modular Code -->
+        <div class="topic-section" id="functions-modular">
+            <h3>Functions & Modular Code</h3>
+            <div class="explanation">
+                Functions help organize code into reusable blocks. Python supports default, keyword, and variable-length arguments.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Defining a Function</div>
+                    <pre>def greet():
+    print("Hello!")</pre>
+                    <div class="console-output"><b>Output:</b> (No output until called)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Calling a Function</div>
+                    <pre>def greet():
+    print("Hello!")
+greet()</pre>
+                    <div class="console-output"><b>Output:</b> Hello!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Function with Parameters</div>
+                    <pre>def add(a, b):
+    return a + b
+print(add(2, 3))</pre>
+                    <div class="console-output"><b>Output:</b> 5</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Function with Default Argument</div>
+                    <pre>def greet(name="World"):
+    print("Hello,", name)
+greet()
+greet("Alice")</pre>
+                    <div class="console-output"><b>Output:</b> Hello, World<br>Hello, Alice</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Keyword Arguments</div>
+                    <pre>def subtract(a, b):
+    return a - b
+print(subtract(b=2, a=5))</pre>
+                    <div class="console-output"><b>Output:</b> 3</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Return Multiple Values</div>
+                    <pre>def min_max(nums):
+    return min(nums), max(nums)
+print(min_max([1, 5, 3]))</pre>
+                    <div class="console-output"><b>Output:</b> (1, 5)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Variable-Length Arguments</div>
+                    <pre>def total(*args):
+    return sum(args)
+print(total(1, 2, 3))</pre>
+                    <div class="console-output"><b>Output:</b> 6</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Variable-Length Keyword Arguments</div>
+                    <pre>def show(**kwargs):
+    for k, v in kwargs.items():
+        print(k, v)
+show(a=1, b=2)</pre>
+                    <div class="console-output"><b>Output:</b> a 1<br>b 2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Docstrings</div>
+                    <pre>def square(x):
+    """Returns the square of x."""
+    return x * x
+print(square.__doc__)</pre>
+                    <div class="console-output"><b>Output:</b> Returns the square of x.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Nested Functions</div>
+                    <pre>def outer():
+    def inner():
+        print("Inner!")
+    inner()
+outer()</pre>
+                    <div class="console-output"><b>Output:</b> Inner!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Function as Argument</div>
+                    <pre>def apply(f, x):
+    return f(x)
+print(apply(abs, -5))</pre>
+                    <div class="console-output"><b>Output:</b> 5</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Returning a Function</div>
+                    <pre>def make_adder(n):
+    def adder(x):
+        return x + n
+    return adder
+add5 = make_adder(5)
+print(add5(10))</pre>
+                    <div class="console-output"><b>Output:</b> 15</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Lambda Function</div>
+                    <pre>square = lambda x: x * x
+print(square(4))</pre>
+                    <div class="console-output"><b>Output:</b> 16</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Function Annotations</div>
+                    <pre>def greet(name: str) -> str:
+    return "Hello, " + name
+print(greet("Bob"))</pre>
+                    <div class="console-output"><b>Output:</b> Hello, Bob</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Recursive Function</div>
+                    <pre>def factorial(n):
+    if n == 0:
+        return 1
+    return n * factorial(n-1)
+print(factorial(4))</pre>
+                    <div class="console-output"><b>Output:</b> 24</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Global Variable</div>
+                    <pre>x = 10
+def show():
+    global x
+    x = 20
+show()
+print(x)</pre>
+                    <div class="console-output"><b>Output:</b> 20</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Nonlocal Variable</div>
+                    <pre>def outer():
+    x = 5
+    def inner():
+        nonlocal x
+        x = 10
+    inner()
+    return x
+print(outer())</pre>
+                    <div class="console-output"><b>Output:</b> 10</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Function with List Default</div>
+                    <pre>def append_one(lst=None):
+    if lst is None:
+        lst = []
+    lst.append(1)
+    return lst
+print(append_one())
+print(append_one())</pre>
+                    <div class="console-output"><b>Output:</b> [1]<br>[1]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Unpacking Arguments</div>
+                    <pre>def add(a, b, c):
+    return a + b + c
+nums = (1, 2, 3)
+print(add(*nums))</pre>
+                    <div class="console-output"><b>Output:</b> 6</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Unpacking Keyword Arguments</div>
+                    <pre>def show(a, b):
+    print(a, b)
+d = {'a': 1, 'b': 2}
+show(**d)</pre>
+                    <div class="console-output"><b>Output:</b> 1 2</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 7 of 30: Working with Strings -->
+        <div class="topic-section" id="strings">
+            <h3>Working with Strings</h3>
+            <div class="explanation">
+                Strings in Python are sequences of characters. You can manipulate, format, and process them using built-in methods and operators.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> String Length</div>
+                    <pre>s = "Python"
+print(len(s))</pre>
+                    <div class="console-output"><b>Output:</b> 6</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Strip Whitespace</div>
+                    <pre>text = "  hello  "
+print(text.strip())</pre>
+                    <div class="console-output"><b>Output:</b> hello</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Replace Substring</div>
+                    <pre>msg = "Hello, world!"
+print(msg.replace("world", "Python"))</pre>
+                    <div class="console-output"><b>Output:</b> Hello, Python!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Uppercase</div>
+                    <pre>print("abc".upper())</pre>
+                    <div class="console-output"><b>Output:</b> ABC</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Lowercase</div>
+                    <pre>print("PYTHON".lower())</pre>
+                    <div class="console-output"><b>Output:</b> python</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Startswith/Endswith</div>
+                    <pre>print("hello.py".endswith(".py"))</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Find Substring</div>
+                    <pre>print("banana".find("na"))</pre>
+                    <div class="console-output"><b>Output:</b> 2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Count Occurrences</div>
+                    <pre>print("banana".count("a"))</pre>
+                    <div class="console-output"><b>Output:</b> 3</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> String Slicing</div>
+                    <pre>s = "Python"
+print(s[1:4])</pre>
+                    <div class="console-output"><b>Output:</b> yth</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> String Formatting (f-string)</div>
+                    <pre>name = "Alice"
+print(f"Hello, {name}!")</pre>
+                    <div class="console-output"><b>Output:</b> Hello, Alice!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> String Formatting (.format())</div>
+                    <pre>print("Hello, {}!".format("Bob"))</pre>
+                    <div class="console-output"><b>Output:</b> Hello, Bob!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Escape Characters</div>
+                    <pre>print("Line1\nLine2")</pre>
+                    <div class="console-output"><b>Output:</b> Line1<br>Line2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Raw String</div>
+                    <pre>print(r"C:\new\folder")</pre>
+                    <div class="console-output"><b>Output:</b> C:\new\folder</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Split String</div>
+                    <pre>print("a,b,c".split(","))</pre>
+                    <div class="console-output"><b>Output:</b> ['a', 'b', 'c']</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Join List into String</div>
+                    <pre>print("-".join(["a", "b", "c"]))</pre>
+                    <div class="console-output"><b>Output:</b> a-b-c</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Check if String is Digit</div>
+                    <pre>print("123".isdigit())</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Center String</div>
+                    <pre>print("hi".center(6, "*"))</pre>
+                    <div class="console-output"><b>Output:</b> **hi**</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Replace All Spaces</div>
+                    <pre>print("a b c".replace(" ", ""))</pre>
+                    <div class="console-output"><b>Output:</b> abc</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> String Indexing</div>
+                    <pre>word = "Python"
+print(word[0])</pre>
+                    <div class="console-output"><b>Output:</b> P</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Multiline String</div>
+                    <pre>msg = """Hello
+World"""
+print(msg)</pre>
+                    <div class="console-output"><b>Output:</b> Hello<br>World</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 8 of 30: Lists, Tuples & Dictionaries -->
+        <div class="topic-section" id="lists-tuples-dicts">
+            <h3>Lists, Tuples & Dictionaries</h3>
+            <div class="explanation">
+                Python provides powerful built-in data structures: lists (mutable sequences), tuples (immutable sequences), and dictionaries (key-value pairs).
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Create a List</div>
+                    <pre>fruits = ["apple", "banana", "cherry"]
+print(fruits)</pre>
+                    <div class="console-output"><b>Output:</b> ['apple', 'banana', 'cherry']</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Append to List</div>
+                    <pre>numbers = [1, 2, 3]
+numbers.append(4)
+print(numbers)</pre>
+                    <div class="console-output"><b>Output:</b> [1, 2, 3, 4]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Remove from List</div>
+                    <pre>fruits = ["apple", "banana", "cherry"]
+fruits.remove("banana")
+print(fruits)</pre>
+                    <div class="console-output"><b>Output:</b> ['apple', 'cherry']</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Pop from List</div>
+                    <pre>nums = [10, 20, 30]
+x = nums.pop()
+print(x, nums)</pre>
+                    <div class="console-output"><b>Output:</b> 30 [10, 20]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> List Slicing</div>
+                    <pre>letters = ['a', 'b', 'c', 'd']
+print(letters[1:3])</pre>
+                    <div class="console-output"><b>Output:</b> ['b', 'c']</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> List Comprehension</div>
+                    <pre>squares = [x*x for x in range(5)]
+print(squares)</pre>
+                    <div class="console-output"><b>Output:</b> [0, 1, 4, 9, 16]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Tuple Creation</div>
+                    <pre>point = (2, 3)
+print(point)</pre>
+                    <div class="console-output"><b>Output:</b> (2, 3)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Tuple Unpacking</div>
+                    <pre>a, b = (5, 8)
+print(a, b)</pre>
+                    <div class="console-output"><b>Output:</b> 5 8</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Tuple is Immutable</div>
+                    <pre>t = (1, 2, 3)
+# t[0] = 10  # Error: tuples are immutable</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Create a Dictionary</div>
+                    <pre>person = {"name": "Alice", "age": 30}
+print(person)</pre>
+                    <div class="console-output"><b>Output:</b> {'name': 'Alice', 'age': 30}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Access Dictionary Value</div>
+                    <pre>person = {"name": "Bob"}
+print(person["name"])</pre>
+                    <div class="console-output"><b>Output:</b> Bob</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Add/Update Dictionary Entry</div>
+                    <pre>person = {"name": "Eve"}
+person["age"] = 25
+print(person)</pre>
+                    <div class="console-output"><b>Output:</b> {'name': 'Eve', 'age': 25}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Remove Dictionary Entry</div>
+                    <pre>person = {"name": "Dan", "age": 40}
+del person["age"]
+print(person)</pre>
+                    <div class="console-output"><b>Output:</b> {'name': 'Dan'}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Dictionary Keys</div>
+                    <pre>person = {"a": 1, "b": 2}
+print(list(person.keys()))</pre>
+                    <div class="console-output"><b>Output:</b> ['a', 'b']</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Dictionary Values</div>
+                    <pre>person = {"a": 1, "b": 2}
+print(list(person.values()))</pre>
+                    <div class="console-output"><b>Output:</b> [1, 2]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Dictionary Items</div>
+                    <pre>person = {"a": 1, "b": 2}
+print(list(person.items()))</pre>
+                    <div class="console-output"><b>Output:</b> [('a', 1), ('b', 2)]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Check Key in Dictionary</div>
+                    <pre>person = {"name": "Sam"}
+print("name" in person)</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Nested Dictionary</div>
+                    <pre>data = {"user": {"id": 1, "name": "Tom"}}
+print(data["user"]["name"])</pre>
+                    <div class="console-output"><b>Output:</b> Tom</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> List of Dictionaries</div>
+                    <pre>users = [{"id": 1}, {"id": 2}]
+print(users[1]["id"])</pre>
+                    <div class="console-output"><b>Output:</b> 2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Dictionary get() Method</div>
+                    <pre>person = {"name": "Ann"}
+print(person.get("age", "Unknown"))</pre>
+                    <div class="console-output"><b>Output:</b> Unknown</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 9 of 30: Basic File Handling -->
+        <div class="topic-section" id="file-handling">
+            <h3>Basic File Handling</h3>
+            <div class="explanation">
+                Python makes it easy to read from and write to files. Always close files or use <code>with</code> to manage resources automatically.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Write to a File</div>
+                    <pre>with open("example.txt", "w") as f:
+    f.write("Hello, file!")</pre>
+                    <div class="console-output"><b>Output:</b> (Writes "Hello, file!" to example.txt)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Read from a File</div>
+                    <pre>with open("example.txt", "r") as f:
+    content = f.read()
+    print(content)</pre>
+                    <div class="console-output"><b>Output:</b> Hello, file!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Append to a File</div>
+                    <pre>with open("example.txt", "a") as f:
+    f.write("\nAppended line")</pre>
+                    <div class="console-output"><b>Output:</b> (Appends "Appended line" to example.txt)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Read Lines from File</div>
+                    <pre>with open("example.txt", "r") as f:
+    lines = f.readlines()
+    print(lines)</pre>
+                    <div class="console-output"><b>Output:</b> ['Hello, file!', 'Appended line']</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Write Multiple Lines</div>
+                    <pre>lines = ["First\n", "Second\n"]
+with open("lines.txt", "w") as f:
+    f.writelines(lines)</pre>
+                    <div class="console-output"><b>Output:</b> (Writes two lines to lines.txt)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Iterate Over File Lines</div>
+                    <pre>with open("lines.txt") as f:
+    for line in f:
+        print(line.strip())</pre>
+                    <div class="console-output"><b>Output:</b> First<br>Second</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> File Not Found Exception</div>
+                    <pre>try:
+    open("nofile.txt")
+except FileNotFoundError:
+    print("File not found!")</pre>
+                    <div class="console-output"><b>Output:</b> File not found!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Check if File Exists</div>
+                    <pre>import os
+print(os.path.exists("example.txt"))</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Remove a File</div>
+                    <pre>import os
+os.remove("lines.txt")</pre>
+                    <div class="console-output"><b>Output:</b> (Removes lines.txt if it exists)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Rename a File</div>
+                    <pre>import os
+os.rename("example.txt", "renamed.txt")</pre>
+                    <div class="console-output"><b>Output:</b> (Renames example.txt to renamed.txt)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Open File in Binary Mode</div>
+                    <pre>with open("binary.dat", "wb") as f:
+    f.write(b"binary data")</pre>
+                    <div class="console-output"><b>Output:</b> (Writes binary data to binary.dat)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Read File in Binary Mode</div>
+                    <pre>with open("binary.dat", "rb") as f:
+    data = f.read()
+    print(data)</pre>
+                    <div class="console-output"><b>Output:</b> b'binary data'</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> File Pointer Position</div>
+                    <pre>with open("renamed.txt") as f:
+    print(f.tell())</pre>
+                    <div class="console-output"><b>Output:</b> 0</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Seek in File</div>
+                    <pre>with open("renamed.txt") as f:
+    f.seek(0)
+    print(f.read(5))</pre>
+                    <div class="console-output"><b>Output:</b> Hello</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Close a File Explicitly</div>
+                    <pre>f = open("renamed.txt")
+f.close()</pre>
+                    <div class="console-output"><b>Output:</b> (Closes the file)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Write and Read JSON</div>
+                    <pre>import json
+data = {"a": 1}
+with open("data.json", "w") as f:
+    json.dump(data, f)
+with open("data.json") as f:
+    print(json.load(f))</pre>
+                    <div class="console-output"><b>Output:</b> {'a': 1}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> File Handling Exception</div>
+                    <pre>try:
+    with open("nofile.txt") as f:
+        pass
+except Exception as e:
+    print("Error:", e)</pre>
+                    <div class="console-output"><b>Output:</b> Error: [Errno 2] No such file or directory: 'nofile.txt'</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Write UTF-8 File</div>
+                    <pre>with open("utf8.txt", "w", encoding="utf-8") as f:
+    f.write("café")</pre>
+                    <div class="console-output"><b>Output:</b> (Writes "café" to utf8.txt)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Read UTF-8 File</div>
+                    <pre>with open("utf8.txt", encoding="utf-8") as f:
+    print(f.read())</pre>
+                    <div class="console-output"><b>Output:</b> café</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Check File Closed</div>
+                    <pre>f = open("utf8.txt")
+print(f.closed)
+f.close()
+print(f.closed)</pre>
+                    <div class="console-output"><b>Output:</b> False<br>True</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 10 of 30: Advanced Data Structures -->
+        <div class="topic-section" id="advanced-data-structures">
+            <h3>Advanced Data Structures</h3>
+            <div class="explanation">
+                Python offers advanced data structures like list comprehensions, nested collections, sets, and frozensets for efficient data manipulation.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> List Comprehension</div>
+                    <pre>squares = [x**2 for x in range(5)]
+print(squares)</pre>
+                    <div class="console-output"><b>Output:</b> [0, 1, 4, 9, 16]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> List Comprehension with Condition</div>
+                    <pre>evens = [x for x in range(10) if x % 2 == 0]
+print(evens)</pre>
+                    <div class="console-output"><b>Output:</b> [0, 2, 4, 6, 8]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Nested List</div>
+                    <pre>matrix = [[1, 2], [3, 4]]
+print(matrix[1][0])</pre>
+                    <div class="console-output"><b>Output:</b> 3</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Nested Dictionary</div>
+                    <pre>users = {"alice": {"age": 25}, "bob": {"age": 30}}
+print(users["bob"]["age"])</pre>
+                    <div class="console-output"><b>Output:</b> 30</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Set Creation</div>
+                    <pre>unique = set([1, 2, 2, 3])
+print(unique)</pre>
+                    <div class="console-output"><b>Output:</b> {1, 2, 3}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Set Operations</div>
+                    <pre>a = {1, 2, 3}
+b = {2, 3, 4}
+print(a & b)</pre>
+                    <div class="console-output"><b>Output:</b> {2, 3}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Set Union</div>
+                    <pre>a = {1, 2}
+b = {2, 3}
+print(a | b)</pre>
+                    <div class="console-output"><b>Output:</b> {1, 2, 3}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Set Difference</div>
+                    <pre>a = {1, 2, 3}
+b = {2, 3, 4}
+print(a - b)</pre>
+                    <div class="console-output"><b>Output:</b> {1}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Set Symmetric Difference</div>
+                    <pre>a = {1, 2, 3}
+b = {2, 3, 4}
+print(a ^ b)</pre>
+                    <div class="console-output"><b>Output:</b> {1, 4}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Frozenset</div>
+                    <pre>fs = frozenset([1, 2, 3])
+print(fs)</pre>
+                    <div class="console-output"><b>Output:</b> frozenset({1, 2, 3})</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Set Comprehension</div>
+                    <pre>s = {x for x in range(5) if x % 2}
+print(s)</pre>
+                    <div class="console-output"><b>Output:</b> {1, 3}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Dictionary Comprehension</div>
+                    <pre>d = {x: x*x for x in range(3)}
+print(d)</pre>
+                    <div class="console-output"><b>Output:</b> {0: 0, 1: 1, 2: 4}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Flatten Nested List</div>
+                    <pre>nested = [[1, 2], [3, 4]]
+flat = [item for sublist in nested for item in sublist]
+print(flat)</pre>
+                    <div class="console-output"><b>Output:</b> [1, 2, 3, 4]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Remove Duplicates from List</div>
+                    <pre>nums = [1, 2, 2, 3]
+unique = list(set(nums))
+print(unique)</pre>
+                    <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Check Membership in Set</div>
+                    <pre>print(2 in {1, 2, 3})</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Nested Dictionary Comprehension</div>
+                    <pre>table = {x: {y: x*y for y in range(3)} for x in range(3)}
+print(table[2][2])</pre>
+                    <div class="console-output"><b>Output:</b> 4</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Set Length</div>
+                    <pre>s = {1, 2, 3}
+print(len(s))</pre>
+                    <div class="console-output"><b>Output:</b> 3</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Add to Set</div>
+                    <pre>s = {1, 2}
+s.add(3)
+print(s)</pre>
+                    <div class="console-output"><b>Output:</b> {1, 2, 3}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Remove from Set</div>
+                    <pre>s = {1, 2, 3}
+s.remove(2)
+print(s)</pre>
+                    <div class="console-output"><b>Output:</b> {1, 3}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Immutable Set (frozenset)</div>
+                    <pre>fs = frozenset([4, 5, 6])
+# fs.add(7)  # Error: frozenset is immutable</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 11 of 30: Functions & Scope -->
+        <div class="topic-section" id="functions-scope">
+            <h3>Functions & Scope</h3>
+            <div class="explanation">
+                Python supports lambda (anonymous) functions, higher-order functions, and different variable scopes: local, global, and nonlocal.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Lambda Function</div>
+                    <pre>double = lambda x: x * 2
+print(double(4))</pre>
+                    <div class="console-output"><b>Output:</b> 8</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> map() Function</div>
+                    <pre>nums = [1, 2, 3]
+doubled = list(map(lambda x: x * 2, nums))
+print(doubled)</pre>
+                    <div class="console-output"><b>Output:</b> [2, 4, 6]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> filter() Function</div>
+                    <pre>nums = [1, 2, 3, 4]
+evens = list(filter(lambda x: x % 2 == 0, nums))
+print(evens)</pre>
+                    <div class="console-output"><b>Output:</b> [2, 4]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> reduce() Function</div>
+                    <pre>from functools import reduce
+nums = [1, 2, 3, 4]
+product = reduce(lambda x, y: x * y, nums)
+print(product)</pre>
+                    <div class="console-output"><b>Output:</b> 24</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Local Scope</div>
+                    <pre>def foo():
+    x = 10
+    print(x)
+foo()</pre>
+                    <div class="console-output"><b>Output:</b> 10</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Global Scope</div>
+                    <pre>x = 5
+def bar():
+    print(x)
+bar()</pre>
+                    <div class="console-output"><b>Output:</b> 5</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Modifying Global Variable</div>
+                    <pre>x = 1
+def change():
+    global x
+    x = 99
+change()
+print(x)</pre>
+                    <div class="console-output"><b>Output:</b> 99</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Nonlocal Scope</div>
+                    <pre>def outer():
+    x = 10
+    def inner():
+        nonlocal x
+        x = 20
+    inner()
+    print(x)
+outer()</pre>
+                    <div class="console-output"><b>Output:</b> 20</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Function Returning Function</div>
+                    <pre>def make_multiplier(n):
+    return lambda x: x * n
+times3 = make_multiplier(3)
+print(times3(4))</pre>
+                    <div class="console-output"><b>Output:</b> 12</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Closures</div>
+                    <pre>def outer():
+    msg = "Hi"
+    def inner():
+        print(msg)
+    return inner
+f = outer()
+f()</pre>
+                    <div class="console-output"><b>Output:</b> Hi</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Default Argument Value</div>
+                    <pre>def greet(name="World"):
+    print("Hello,", name)
+greet()
+greet("Python")</pre>
+                    <div class="console-output"><b>Output:</b> Hello, World<br>Hello, Python</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Keyword Arguments</div>
+                    <pre>def show(a, b):
+    print(a, b)
+show(b=2, a=1)</pre>
+                    <div class="console-output"><b>Output:</b> 1 2</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Variable-Length Arguments</div>
+                    <pre>def total(*args):
+    print(sum(args))
+total(1, 2, 3)</pre>
+                    <div class="console-output"><b>Output:</b> 6</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Variable-Length Keyword Arguments</div>
+                    <pre>def show(**kwargs):
+    print(kwargs)
+show(a=1, b=2)</pre>
+                    <div class="console-output"><b>Output:</b> {'a': 1, 'b': 2}</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Function Annotation</div>
+                    <pre>def add(a: int, b: int) -> int:
+    return a + b
+print(add(2, 3))</pre>
+                    <div class="console-output"><b>Output:</b> 5</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Nested Functions</div>
+                    <pre>def outer():
+    def inner():
+        return "Inner"
+    return inner()
+print(outer())</pre>
+                    <div class="console-output"><b>Output:</b> Inner</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Function as Argument</div>
+                    <pre>def apply(func, value):
+    return func(value)
+print(apply(abs, -7))</pre>
+                    <div class="console-output"><b>Output:</b> 7</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Using map with Built-in Function</div>
+                    <pre>nums = ["1", "2", "3"]
+ints = list(map(int, nums))
+print(ints)</pre>
+                    <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Using filter with None</div>
+                    <pre>vals = ["", "a", "", "b"]
+filtered = list(filter(None, vals))
+print(filtered)</pre>
+                    <div class="console-output"><b>Output:</b> ['a', 'b']</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Using reduce for Sum</div>
+                    <pre>from functools import reduce
+nums = [1, 2, 3, 4]
+total = reduce(lambda x, y: x + y, nums)
+print(total)</pre>
+                    <div class="console-output"><b>Output:</b> 10</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 12 of 30: Exception Handling -->
+        <div class="topic-section" id="exception-handling">
+            <h3>Exception Handling</h3>
+            <div class="explanation">
+                Python uses <code>try</code>, <code>except</code>, <code>finally</code>, and <code>raise</code> to handle and raise exceptions for robust error management.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Basic try-except</div>
+                    <pre>try:
+    print(1 / 0)
+except ZeroDivisionError:
+    print("Cannot divide by zero!")</pre>
+                    <div class="console-output"><b>Output:</b> Cannot divide by zero!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Catching Multiple Exceptions</div>
+                    <pre>try:
+    int("abc")
+except (ValueError, TypeError):
+    print("Conversion failed!")</pre>
+                    <div class="console-output"><b>Output:</b> Conversion failed!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Using finally</div>
+                    <pre>try:
+    print("Try block")
+finally:
+    print("Finally block")</pre>
+                    <div class="console-output"><b>Output:</b> Try block<br>Finally block</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> else with try-except</div>
+                    <pre>try:
+    x = 5
+except:
+    print("Error")
+else:
+    print("No error")</pre>
+                    <div class="console-output"><b>Output:</b> No error</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Raising an Exception</div>
+                    <pre>raise ValueError("Custom error!")</pre>
+                    <div class="console-output"><b>Output:</b> ValueError: Custom error!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Custom Exception Class</div>
+                    <pre>class MyError(Exception):
+    pass
+try:
+    raise MyError("Oops!")
+except MyError as e:
+    print(e)</pre>
+                    <div class="console-output"><b>Output:</b> Oops!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Catch All Exceptions</div>
+                    <pre>try:
+    1 / 0
+except Exception as e:
+    print("Error:", e)</pre>
+                    <div class="console-output"><b>Output:</b> Error: division by zero</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Access Exception Object</div>
+                    <pre>try:
+    int("abc")
+except ValueError as err:
+    print("Error:", err)</pre>
+                    <div class="console-output"><b>Output:</b> Error: invalid literal for int() with base 10: 'abc'</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Nested try-except</div>
+                    <pre>try:
+    try:
+        1 / 0
+    except ZeroDivisionError:
+        print("Inner error")
+except:
+    print("Outer error")</pre>
+                    <div class="console-output"><b>Output:</b> Inner error</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> try-except-finally</div>
+                    <pre>try:
+    print("Try")
+except:
+    print("Except")
+finally:
+    print("Finally")</pre>
+                    <div class="console-output"><b>Output:</b> Try<br>Finally</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> try-except-else-finally</div>
+                    <pre>try:
+    print("Try")
+except:
+    print("Except")
+else:
+    print("Else")
+finally:
+    print("Finally")</pre>
+                    <div class="console-output"><b>Output:</b> Try<br>Else<br>Finally</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Catching KeyboardInterrupt</div>
+                    <pre>try:
+    while True:
+        pass
+except KeyboardInterrupt:
+    print("Stopped by user")</pre>
+                    <div class="console-output"><b>Output:</b> Stopped by user (if interrupted)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Re-raising Exceptions</div>
+                    <pre>try:
+    raise ValueError("Error!")
+except ValueError:
+    print("Caught")
+    raise</pre>
+                    <div class="console-output"><b>Output:</b> Caught<br>ValueError: Error!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Suppress Exception with pass</div>
+                    <pre>try:
+    1 / 0
+except ZeroDivisionError:
+    pass
+print("Continues")</pre>
+                    <div class="console-output"><b>Output:</b> Continues</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Exception in Function</div>
+                    <pre>def f():
+    raise RuntimeError("Oops!")
+try:
+    f()
+except RuntimeError as e:
+    print(e)</pre>
+                    <div class="console-output"><b>Output:</b> Oops!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Exception with Arguments</div>
+                    <pre>try:
+    raise Exception("Error", 404)
+except Exception as e:
+    print(e.args)</pre>
+                    <div class="console-output"><b>Output:</b> ('Error', 404)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Using assert</div>
+                    <pre>assert 2 + 2 == 4
+print("No error")</pre>
+                    <div class="console-output"><b>Output:</b> No error</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> AssertionError</div>
+                    <pre>assert 1 == 0, "Not equal"</pre>
+                    <div class="console-output"><b>Output:</b> AssertionError: Not equal</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Custom Exception with __str__</div>
+                    <pre>class MyError(Exception):
+    def __str__(self):
+        return "Custom error!"
+try:
+    raise MyError()
+except MyError as e:
+    print(e)</pre>
+                    <div class="console-output"><b>Output:</b> Custom error!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Exception Chaining</div>
+                    <pre>try:
+    try:
+        1 / 0
+    except ZeroDivisionError as e:
+        raise RuntimeError("Failed") from e
+except Exception as e:
+    print(e)</pre>
+                    <div class="console-output"><b>Output:</b> Failed</div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Segment 14 of 30: Object-Oriented Programming (OOP) -->
+        <div class="topic-section" id="oop">
+            <h3>Object-Oriented Programming (OOP)</h3>
+            <div class="explanation">
+                Python supports object-oriented programming with classes, objects, inheritance, and special methods for building reusable and modular code.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Define a Class</div>
+                    <pre>class Dog:
+    pass
+d = Dog()
+print(type(d))</pre>
+                    <div class="console-output"><b>Output:</b> &lt;class '__main__.Dog'&gt;</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Class with __init__</div>
+                    <pre>class Cat:
+    def __init__(self, name):
+        self.name = name
+c = Cat("Whiskers")
+print(c.name)</pre>
+                    <div class="console-output"><b>Output:</b> Whiskers</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Instance Method</div>
+                    <pre>class Person:
+    def greet(self):
+        print("Hello!")
+p = Person()
+p.greet()</pre>
+                    <div class="console-output"><b>Output:</b> Hello!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Class Attribute</div>
+                    <pre>class Car:
+    wheels = 4
+print(Car.wheels)</pre>
+                    <div class="console-output"><b>Output:</b> 4</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Object Attribute</div>
+                    <pre>class Bird:
+    def __init__(self, color):
+        self.color = color
+b = Bird("blue")
+print(b.color)</pre>
+                    <div class="console-output"><b>Output:</b> blue</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Inheritance</div>
+                    <pre>class Animal:
+    def speak(self):
+        print("Animal sound")
+class Dog(Animal):
+    pass
+d = Dog()
+d.speak()</pre>
+                    <div class="console-output"><b>Output:</b> Animal sound</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Method Overriding</div>
+                    <pre>class Animal:
+    def speak(self):
+        print("Animal sound")
+class Cat(Animal):
+    def speak(self):
+        print("Meow")
+c = Cat()
+c.speak()</pre>
+                    <div class="console-output"><b>Output:</b> Meow</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> super() Function</div>
+                    <pre>class Parent:
+    def show(self):
+        print("Parent")
+class Child(Parent):
+    def show(self):
+        super().show()
+        print("Child")
+c = Child()
+c.show()</pre>
+                    <div class="console-output"><b>Output:</b> Parent<br>Child</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> __str__ Method</div>
+                    <pre>class Book:
+    def __init__(self, title):
+        self.title = title
+    def __str__(self):
+        return f"Book: {self.title}"
+b = Book("Python 101")
+print(b)</pre>
+                    <div class="console-output"><b>Output:</b> Book: Python 101</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> __repr__ Method</div>
+                    <pre>class Point:
+    def __init__(self, x):
+        self.x = x
+    def __repr__(self):
+        return f"Point({self.x})"
+p = Point(5)
+print(repr(p))</pre>
+                    <div class="console-output"><b>Output:</b> Point(5)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> __len__ Method</div>
+                    <pre>class MyList:
+    def __init__(self, items):
+        self.items = items
+    def __len__(self):
+        return len(self.items)
+ml = MyList([1,2,3])
+print(len(ml))</pre>
+                    <div class="console-output"><b>Output:</b> 3</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Class Variable vs Instance Variable</div>
+                    <pre>class Demo:
+    x = 10
+    def __init__(self, y):
+        self.y = y
+d = Demo(5)
+print(d.x, d.y)</pre>
+                    <div class="console-output"><b>Output:</b> 10 5</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Static Method</div>
+                    <pre>class Math:
+    @staticmethod
+    def add(a, b):
+        return a + b
+print(Math.add(2, 3))</pre>
+                    <div class="console-output"><b>Output:</b> 5</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Class Method</div>
+                    <pre>class Example:
+    count = 0
+    @classmethod
+    def inc(cls):
+        cls.count += 1
+Example.inc()
+print(Example.count)</pre>
+                    <div class="console-output"><b>Output:</b> 1</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Private Attribute (Convention)</div>
+                    <pre>class Secret:
+    def __init__(self):
+        self._hidden = 42
+s = Secret()
+print(s._hidden)</pre>
+                    <div class="console-output"><b>Output:</b> 42</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Name Mangling</div>
+                    <pre>class Secret:
+    def __init__(self):
+        self.__hidden = 99
+s = Secret()
+print(s._Secret__hidden)</pre>
+                    <div class="console-output"><b>Output:</b> 99</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Multiple Inheritance</div>
+                    <pre>class A:
+    def foo(self): print("A")
+class B:
+    def bar(self): print("B")
+class C(A, B): pass
+c = C()
+c.foo()
+c.bar()</pre>
+                    <div class="console-output"><b>Output:</b> A<br>B</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> isinstance()</div>
+                    <pre>class X: pass
+x = X()
+print(isinstance(x, X))</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> issubclass()</div>
+                    <pre>class A: pass
+class B(A): pass
+print(issubclass(B, A))</pre>
+                    <div class="console-output"><b>Output:</b> True</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Dynamic Attribute Assignment</div>
+                    <pre>class D: pass
+d = D()
+d.x = 123
+print(d.x)</pre>
+                    <div class="console-output"><b>Output:</b> 123</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 15 of 30: Continue pythonMe.html (Intermediate Level: Modules & Packages) -->
+        <div class="topic-section" id="modules-packages">
+            <h3>Modules & Packages</h3>
+            <div class="explanation">
+                Python code can be organized into modules (single files) and packages (directories with <code>__init__.py</code>). Use <code>import</code> to reuse code and access standard libraries.
+            </div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Import a Module</div>
+                    <pre>import math
+print(math.sqrt(16))</pre>
+                    <div class="console-output"><b>Output:</b> 4.0</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Import Specific Function</div>
+                    <pre>from math import pi
+print(pi)</pre>
+                    <div class="console-output"><b>Output:</b> 3.141592653589793</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Import with Alias</div>
+                    <pre>import numpy as np
+a = np.array([1, 2, 3])
+print(a)</pre>
+                    <div class="console-output"><b>Output:</b> [1 2 3]</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> List All Module Names</div>
+                    <pre>import sys
+print(sys.builtin_module_names)</pre>
+                    <div class="console-output"><b>Output:</b> (Tuple of built-in module names)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Create Your Own Module</div>
+                    <pre># In mymodule.py:
+def hello():
+    print("Hello from mymodule!")
+# In another file:
+import mymodule
+mymodule.hello()</pre>
+                    <div class="console-output"><b>Output:</b> Hello from mymodule!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Import All from Module</div>
+                    <pre>from math import *
+print(sin(0))</pre>
+                    <div class="console-output"><b>Output:</b> 0.0</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Using __name__ Variable</div>
+                    <pre># In mymodule.py
+if __name__ == "__main__":
+    print("Run directly")
+else:
+    print("Imported")</pre>
+                    <div class="console-output"><b>Output:</b> Run directly (if run as script)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Standard Library Example</div>
+                    <pre>import random
+print(random.randint(1, 10))</pre>
+                    <div class="console-output"><b>Output:</b> (Random integer between 1 and 10)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Installing a Package</div>
+                    <pre># In terminal:
+pip install requests</pre>
+                    <div class="console-output"><b>Output:</b> (Installs the requests package)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Import from a Package</div>
+                    <pre>from os import path
+print(path.exists("pythonMe.html"))</pre>
+                    <div class="console-output"><b>Output:</b> True or False</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Relative Import (in package)</div>
+                    <pre># from . import mymodule
+# Only works inside a package</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> List Installed Packages</div>
+                    <pre>import pkg_resources
+print([p.project_name for p in pkg_resources.working_set])</pre>
+                    <div class="console-output"><b>Output:</b> (List of installed packages)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Using help()</div>
+                    <pre>import math
+help(math)</pre>
+                    <div class="console-output"><b>Output:</b> (Displays help for math module)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> dir() on Module</div>
+                    <pre>import math
+print(dir(math))</pre>
+                    <div class="console-output"><b>Output:</b> (List of math module attributes)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Import Error Handling</div>
+                    <pre>try:
+    import notamodule
+except ImportError:
+    print("Module not found!")</pre>
+                    <div class="console-output"><b>Output:</b> Module not found!</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Reloading a Module</div>
+                    <pre>import importlib
+import mymodule
+importlib.reload(mymodule)</pre>
+                    <div class="console-output"><b>Output:</b> (Reloads mymodule)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> __init__.py in Packages</div>
+                    <pre># An empty __init__.py file marks a directory as a package</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Importing from Subpackage</div>
+                    <pre># from package.subpackage import module</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> sys.path for Module Search</div>
+                    <pre>import sys
+print(sys.path)</pre>
+                    <div class="console-output"><b>Output:</b> (List of module search paths)</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Using __all__ in Modules</div>
+                    <pre># In mymodule.py
+__all__ = ["hello"]</pre>
+                    <div class="console-output"><b>Output:</b> (No output, just a comment)</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 16 of 30: Virtual Environments & pip -->
+<div class="topic-section" id="virtualenv-pip">
+    <h3>Virtual Environments & pip</h3>
+    <div class="explanation">
+        Virtual environments allow you to manage dependencies for different projects separately. <code>pip</code> is Python's package installer.
     </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Create a Virtual Environment (Windows)</div>
+            <pre>python -m venv venv</pre>
+            <div class="console-output"><b>Output:</b> (Creates a folder named venv)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Activate Virtual Environment (Windows)</div>
+            <pre>venv\Scripts\activate</pre>
+            <div class="console-output"><b>Output:</b> (Prompt changes to show venv is active)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Deactivate Virtual Environment</div>
+            <pre>deactivate</pre>
+            <div class="console-output"><b>Output:</b> (Returns to global Python environment)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Install a Package with pip</div>
+            <pre>pip install requests</pre>
+            <div class="console-output"><b>Output:</b> (Installs the requests package)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> List Installed Packages</div>
+            <pre>pip list</pre>
+            <div class="console-output"><b>Output:</b> (Shows installed packages in the environment)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Freeze Requirements</div>
+            <pre>pip freeze > requirements.txt</pre>
+            <div class="console-output"><b>Output:</b> (Writes installed packages to requirements.txt)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Install from requirements.txt</div>
+            <pre>pip install -r requirements.txt</pre>
+            <div class="console-output"><b>Output:</b> (Installs all packages listed in requirements.txt)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Uninstall a Package</div>
+            <pre>pip uninstall requests</pre>
+            <div class="console-output"><b>Output:</b> (Uninstalls the requests package)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Show Package Info</div>
+            <pre>pip show requests</pre>
+            <div class="console-output"><b>Output:</b> (Displays info about the requests package)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Upgrade pip</div>
+            <pre>python -m pip install --upgrade pip</pre>
+            <div class="console-output"><b>Output:</b> (Upgrades pip to the latest version)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 11:</b> Check pip Version</div>
+            <pre>pip --version</pre>
+            <div class="console-output"><b>Output:</b> (Shows pip version)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 12:</b> Search for a Package</div>
+            <pre>pip search flask</pre>
+            <div class="console-output"><b>Output:</b> (Lists packages matching "flask")</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 13:</b> Create requirements.txt Manually</div>
+            <pre># requirements.txt
+requests==2.31.0
+flask>=2.0.0
+</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a file example)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 14:</b> Install Editable Local Package</div>
+            <pre>pip install -e .</pre>
+            <div class="console-output"><b>Output:</b> (Installs current directory as a package in "editable" mode)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 15:</b> Check Python Executable in venv</div>
+            <pre>where python</pre>
+            <div class="console-output"><b>Output:</b> (Shows path to Python executable in venv)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 16:</b> Remove Virtual Environment</div>
+            <pre>rmdir /s /q venv</pre>
+            <div class="console-output"><b>Output:</b> (Deletes the venv folder on Windows)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 17:</b> Create venv (macOS/Linux)</div>
+            <pre>python3 -m venv venv</pre>
+            <div class="console-output"><b>Output:</b> (Creates a folder named venv)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 18:</b> Activate venv (macOS/Linux)</div>
+            <pre>source venv/bin/activate</pre>
+            <div class="console-output"><b>Output:</b> (Prompt changes to show venv is active)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 19:</b> Check if venv is Active (Python)</div>
+            <pre>import sys
+print(sys.prefix)</pre>
+            <div class="console-output"><b>Output:</b> (Shows venv path if active)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 20:</b> pip Help</div>
+            <pre>pip help</pre>
+            <div class="console-output"><b>Output:</b> (Shows pip command usage)</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 17 of 30: Python Standard Library Highlights -->
+<div class="topic-section" id="stdlib-highlights">
+    <h3>Python Standard Library Highlights</h3>
+    <div class="explanation">
+        The Python standard library provides a wide range of modules for file I/O, system calls, math, dates, data serialization, and more.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Using datetime</div>
+            <pre>import datetime
+now = datetime.datetime.now()
+print(now)</pre>
+            <div class="console-output"><b>Output:</b> 2025-05-15 12:34:56.789123 (current date and time)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Using os for Directory Listing</div>
+            <pre>import os
+print(os.listdir("."))</pre>
+            <div class="console-output"><b>Output:</b> (List of files in current directory)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Using sys.argv for Command Line Args</div>
+            <pre>import sys
+print(sys.argv)</pre>
+            <div class="console-output"><b>Output:</b> (List of command line arguments)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Using math for Square Root</div>
+            <pre>import math
+print(math.sqrt(25))</pre>
+            <div class="console-output"><b>Output:</b> 5.0</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Using random for Random Numbers</div>
+            <pre>import random
+print(random.randint(1, 100))</pre>
+            <div class="console-output"><b>Output:</b> (Random integer between 1 and 100)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Using json for Serialization</div>
+            <pre>import json
+data = {"a": 1}
+s = json.dumps(data)
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {"a": 1}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Using csv for Reading CSV</div>
+            <pre>import csv
+with open("data.csv") as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row)</pre>
+            <div class="console-output"><b>Output:</b> (Prints rows from data.csv)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Using urllib for HTTP Requests</div>
+            <pre>import urllib.request
+with urllib.request.urlopen("https://www.example.com") as response:
+    html = response.read()
+    print(html[:60])</pre>
+            <div class="console-output"><b>Output:</b> (First 60 bytes of HTML from example.com)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Using time for Sleep</div>
+            <pre>import time
+print("Wait...")
+time.sleep(2)
+print("Done!")</pre>
+            <div class="console-output"><b>Output:</b> Wait...<br>(2 second pause)<br>Done!</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Using shutil for File Copy</div>
+            <pre>import shutil
+shutil.copy("source.txt", "dest.txt")</pre>
+            <div class="console-output"><b>Output:</b> (Copies source.txt to dest.txt)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 11:</b> Using glob for File Patterns</div>
+            <pre>import glob
+print(glob.glob("*.py"))</pre>
+            <div class="console-output"><b>Output:</b> (List of .py files in current directory)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 12:</b> Using collections.Counter</div>
+            <pre>from collections import Counter
+print(Counter("banana"))</pre>
+            <div class="console-output"><b>Output:</b> Counter({'a': 3, 'b': 1, 'n': 2})</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 13:</b> Using itertools for Combinations</div>
+            <pre>import itertools
+print(list(itertools.combinations([1,2,3], 2)))</pre>
+            <div class="console-output"><b>Output:</b> [(1, 2), (1, 3), (2, 3)]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 14:</b> Using functools.lru_cache</div>
+            <pre>from functools import lru_cache
+@lru_cache(maxsize=32)
+def fib(n):
+    if n < 2: return n
+    return fib(n-1) + fib(n-2)
+print(fib(10))</pre>
+            <div class="console-output"><b>Output:</b> 55</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 15:</b> Using pathlib for Paths</div>
+            <pre>from pathlib import Path
+p = Path(".")
+print([f.name for f in p.iterdir()])</pre>
+            <div class="console-output"><b>Output:</b> (List of file and directory names in current directory)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 16:</b> Using re for Regular Expressions</div>
+            <pre>import re
+print(re.findall(r"\d+", "abc123def456"))</pre>
+            <div class="console-output"><b>Output:</b> ['123', '456']</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 17:</b> Using tempfile for Temporary Files</div>
+            <pre>import tempfile
+with tempfile.TemporaryFile() as f:
+    f.write(b"hello")
+    f.seek(0)
+    print(f.read())</pre>
+            <div class="console-output"><b>Output:</b> b'hello'</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 18:</b> Using subprocess to Run Commands</div>
+            <pre>import subprocess
+result = subprocess.run(["echo", "hi"], capture_output=True, text=True)
+print(result.stdout)</pre>
+            <div class="console-output"><b>Output:</b> hi</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 19:</b> Using logging for Logging</div>
+            <pre>import logging
+logging.basicConfig(level=logging.INFO)
+logging.info("Hello log!")</pre>
+            <div class="console-output"><b>Output:</b> INFO:root:Hello log!</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 20:</b> Using argparse for CLI Arguments</div>
+            <pre>import argparse
+parser = argparse.ArgumentParser()
+parser.add_argument("--name")
+args = parser.parse_args()
+print(args.name)</pre>
+            <div class="console-output"><b>Output:</b> (Prints value of --name argument if provided)</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 18 of 30: Pythonic Idioms & Best Practices -->
+<div class="topic-section" id="pythonic-idioms">
+    <h3>Pythonic Idioms & Best Practices</h3>
+    <div class="explanation">
+        Writing "Pythonic" code means using idioms and patterns that are clear, concise, and take advantage of Python's features.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> List Comprehension Instead of Loop</div>
+            <pre># Not Pythonic
+squares = []
+for x in range(5):
+    squares.append(x * x)
+# Pythonic
+squares = [x * x for x in range(5)]
+print(squares)</pre>
+            <div class="console-output"><b>Output:</b> [0, 1, 4, 9, 16]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Use enumerate() for Index and Value</div>
+            <pre>for idx, val in enumerate(['a', 'b', 'c']):
+    print(idx, val)</pre>
+            <div class="console-output"><b>Output:</b> 0 a<br>1 b<br>2 c</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Unpacking in Loops</div>
+            <pre>pairs = [(1, 'a'), (2, 'b')]
+for num, char in pairs:
+    print(num, char)</pre>
+            <div class="console-output"><b>Output:</b> 1 a<br>2 b</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Use of with for Resource Management</div>
+            <pre>with open("file.txt") as f:
+    data = f.read()</pre>
+            <div class="console-output"><b>Output:</b> (Reads file.txt safely)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Truthy and Falsy Values</div>
+            <pre>if []:
+    print("Not empty")
+else:
+    print("Empty list")</pre>
+            <div class="console-output"><b>Output:</b> Empty list</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Use of any() and all()</div>
+            <pre>nums = [0, 1, 2]
+print(any(nums))  # True if any element is true
+print(all(nums))  # True if all elements are true</pre>
+            <div class="console-output"><b>Output:</b> True<br>False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Swapping Variables</div>
+            <pre>a, b = 1, 2
+a, b = b, a
+print(a, b)</pre>
+            <div class="console-output"><b>Output:</b> 2 1</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Use of set() to Remove Duplicates</div>
+            <pre>nums = [1, 2, 2, 3]
+unique = list(set(nums))
+print(unique)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Ternary Conditional Expression</div>
+            <pre>x = 5
+result = "Even" if x % 2 == 0 else "Odd"
+print(result)</pre>
+            <div class="console-output"><b>Output:</b> Odd</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Use of join() for Strings</div>
+            <pre>words = ["Python", "is", "fun"]
+sentence = " ".join(words)
+print(sentence)</pre>
+            <div class="console-output"><b>Output:</b> Python is fun</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 11:</b> Use of zip() to Combine Lists</div>
+            <pre>names = ["Alice", "Bob"]
+scores = [90, 85]
+for name, score in zip(names, scores):
+    print(name, score)</pre>
+            <div class="console-output"><b>Output:</b> Alice 90<br>Bob 85</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 12:</b> Use of get() with Dictionaries</div>
+            <pre>person = {"name": "Tom"}
+print(person.get("age", "Unknown"))</pre>
+            <div class="console-output"><b>Output:</b> Unknown</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 13:</b> Chained Comparisons</div>
+            <pre>x = 5
+print(1 < x < 10)</pre>
+            <div class="console-output"><b>Output:</b> True</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 14:</b> Use of defaultdict</div>
+            <pre>from collections import defaultdict
+d = defaultdict(int)
+d["a"] += 1
+print(d["a"])</pre>
+            <div class="console-output"><b>Output:</b> 1</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 15:</b> Use of Counter</div>
+            <pre>from collections import Counter
+print(Counter("banana"))</pre>
+            <div class="console-output"><b>Output:</b> Counter({'a': 3, 'b': 1, 'n': 2})</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 16:</b> Use of Pathlib for Paths</div>
+            <pre>from pathlib import Path
+p = Path("myfile.txt")
+print(p.exists())</pre>
+            <div class="console-output"><b>Output:</b> True or False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 17:</b> Use of f-strings</div>
+            <pre>name = "Alice"
+print(f"Hello, {name}!")</pre>
+            <div class="console-output"><b>Output:</b> Hello, Alice!</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 18:</b> Use of is vs ==</div>
+            <pre>a = [1, 2]
+b = [1, 2]
+print(a == b)  # True (values equal)
+print(a is b)  # False (different objects)</pre>
+            <div class="console-output"><b>Output:</b> True<br>False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 19:</b> Use of contextlib for Custom Context Managers</div>
+            <pre>from contextlib import contextmanager
+@contextmanager
+def mycontext():
+    print("Enter")
+    yield
+    print("Exit")
+with mycontext():
+    print("Inside")</pre>
+            <div class="console-output"><b>Output:</b> Enter<br>Inside<br>Exit</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 20:</b> Use of type hints</div>
+            <pre>def greet(name: str) -> str:
+    return f"Hello, {name}!"
+print(greet("Bob"))</pre>
+            <div class="console-output"><b>Output:</b> Hello, Bob!</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 19 of 30: List, Dict, Set, and String Methods -->
+<div class="topic-section" id="common-methods">
+    <h3>Common List, Dict, Set, and String Methods</h3>
+    <div class="explanation">
+        Python's built-in types provide many useful methods for manipulating data efficiently.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> List append()</div>
+            <pre>lst = [1, 2]
+lst.append(3)
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> List extend()</div>
+            <pre>lst = [1, 2]
+lst.extend([3, 4])
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> List insert()</div>
+            <pre>lst = [1, 3]
+lst.insert(1, 2)
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> List remove()</div>
+            <pre>lst = [1, 2, 3]
+lst.remove(2)
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [1, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> List pop()</div>
+            <pre>lst = [1, 2, 3]
+x = lst.pop()
+print(x, lst)</pre>
+            <div class="console-output"><b>Output:</b> 3 [1, 2]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> List sort()</div>
+            <pre>lst = [3, 1, 2]
+lst.sort()
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> List reverse()</div>
+            <pre>lst = [1, 2, 3]
+lst.reverse()
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [3, 2, 1]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Dict keys(), values(), items()</div>
+            <pre>d = {"a": 1, "b": 2}
+print(list(d.keys()))
+print(list(d.values()))
+print(list(d.items()))</pre>
+            <div class="console-output"><b>Output:</b> ['a', 'b']<br>[1, 2]<br>[('a', 1), ('b', 2)]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Dict get() with default</div>
+            <pre>d = {"a": 1}
+print(d.get("b", 0))</pre>
+            <div class="console-output"><b>Output:</b> 0</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Dict update()</div>
+            <pre>d = {"a": 1}
+d.update({"b": 2})
+print(d)</pre>
+            <div class="console-output"><b>Output:</b> {'a': 1, 'b': 2}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 11:</b> Dict pop()</div>
+            <pre>d = {"a": 1, "b": 2}
+x = d.pop("a")
+print(x, d)</pre>
+            <div class="console-output"><b>Output:</b> 1 {'b': 2}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 12:</b> Set add()</div>
+            <pre>s = {1, 2}
+s.add(3)
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {1, 2, 3}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 13:</b> Set remove()</div>
+            <pre>s = {1, 2, 3}
+s.remove(2)
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {1, 3}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 14:</b> Set union() and intersection()</div>
+            <pre>a = {1, 2}
+b = {2, 3}
+print(a.union(b))
+print(a.intersection(b))</pre>
+            <div class="console-output"><b>Output:</b> {1, 2, 3}<br>{2}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 15:</b> String upper(), lower(), title()</div>
+            <pre>s = "python"
+print(s.upper())
+print(s.title())</pre>
+            <div class="console-output"><b>Output:</b> PYTHON<br>Python</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 16:</b> String split() and join()</div>
+            <pre>s = "a,b,c"
+lst = s.split(",")
+print(lst)
+print("-".join(lst))</pre>
+            <div class="console-output"><b>Output:</b> ['a', 'b', 'c']<br>a-b-c</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 17:</b> String replace()</div>
+            <pre>s = "hello world"
+print(s.replace("world", "Python"))</pre>
+            <div class="console-output"><b>Output:</b> hello Python</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 18:</b> String find()</div>
+            <pre>s = "banana"
+print(s.find("na"))</pre>
+            <div class="console-output"><b>Output:</b> 2</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 19:</b> String strip()</div>
+            <pre>s = "  hi  "
+print(s.strip())</pre>
+            <div class="console-output"><b>Output:</b> hi</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 20:</b> String startswith() and endswith()</div>
+            <pre>s = "pythonMe.html"
+print(s.startswith("python"))
+print(s.endswith(".html"))</pre>
+            <div class="console-output"><b>Output:</b> True<br>True</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 20 of 30: List Slicing, Copying, and Advanced Indexing -->
+<div class="topic-section" id="list-slicing">
+    <h3>List Slicing, Copying, and Advanced Indexing</h3>
+    <div class="explanation">
+        Python lists support powerful slicing and indexing features for extracting, copying, and modifying data efficiently.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Basic Slicing</div>
+            <pre>lst = [0, 1, 2, 3, 4]
+print(lst[1:4])</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Slice with Step</div>
+            <pre>lst = [0, 1, 2, 3, 4, 5]
+print(lst[::2])</pre>
+            <div class="console-output"><b>Output:</b> [0, 2, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Negative Indices</div>
+            <pre>lst = [10, 20, 30, 40]
+print(lst[-2:])</pre>
+            <div class="console-output"><b>Output:</b> [30, 40]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Reverse a List</div>
+            <pre>lst = [1, 2, 3]
+print(lst[::-1])</pre>
+            <div class="console-output"><b>Output:</b> [3, 2, 1]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Copy a List (Slicing)</div>
+            <pre>lst = [1, 2, 3]
+copy = lst[:]
+print(copy)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Copy a List (copy method)</div>
+            <pre>lst = [4, 5, 6]
+copy = lst.copy()
+print(copy)</pre>
+            <div class="console-output"><b>Output:</b> [4, 5, 6]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Shallow vs Deep Copy</div>
+            <pre>import copy
+lst = [[1], [2]]
+shallow = lst[:]
+deep = copy.deepcopy(lst)
+lst[0][0] = 99
+print(shallow)  # [[99], [2]]
+print(deep)     # [[1], [2]]</pre>
+            <div class="console-output"><b>Output:</b> [[99], [2]]<br>[[1], [2]]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Replace Slice</div>
+            <pre>lst = [1, 2, 3, 4]
+lst[1:3] = [20, 30]
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [1, 20, 30, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Delete Slice</div>
+            <pre>lst = [1, 2, 3, 4]
+del lst[1:3]
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [1, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Advanced Indexing with List Comprehension</div>
+            <pre>lst = [10, 20, 30, 40]
+indices = [0, 2]
+selected = [lst[i] for i in indices]
+print(selected)</pre>
+            <div class="console-output"><b>Output:</b> [10, 30]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 11:</b> Nested List Slicing</div>
+            <pre>matrix = [[1,2,3],[4,5,6],[7,8,9]]
+print([row[1] for row in matrix])</pre>
+            <div class="console-output"><b>Output:</b> [2, 5, 8]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 12:</b> Slice Assignment with Different Length</div>
+            <pre>lst = [1, 2, 3, 4]
+lst[1:3] = [9]
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [1, 9, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 13:</b> Remove All Elements</div>
+            <pre>lst = [1, 2, 3]
+lst[:] = []
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> []</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 14:</b> Step Slicing for Every Nth Element</div>
+            <pre>lst = [0, 1, 2, 3, 4, 5]
+print(lst[1::2])</pre>
+            <div class="console-output"><b>Output:</b> [1, 3, 5]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 15:</b> Out-of-Bounds Slicing</div>
+            <pre>lst = [1, 2, 3]
+print(lst[1:10])</pre>
+            <div class="console-output"><b>Output:</b> [2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 16:</b> Negative Step Slicing</div>
+            <pre>lst = [1, 2, 3, 4, 5]
+print(lst[4:1:-1])</pre>
+            <div class="console-output"><b>Output:</b> [5, 4, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 17:</b> Copying with list()</div>
+            <pre>lst = [7, 8, 9]
+copy = list(lst)
+print(copy)</pre>
+            <div class="console-output"><b>Output:</b> [7, 8, 9]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 18:</b> List Index Method</div>
+            <pre>lst = [10, 20, 30]
+print(lst.index(20))</pre>
+            <div class="console-output"><b>Output:</b> 1</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 19:</b> List Count Method</div>
+            <pre>lst = [1, 2, 2, 3]
+print(lst.count(2))</pre>
+            <div class="console-output"><b>Output:</b> 2</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 20:</b> List Multiplication</div>
+            <pre>lst = [0]
+print(lst * 5)</pre>
+            <div class="console-output"><b>Output:</b> [0, 0, 0, 0, 0]</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 21 of 30: List, Dict, Set, and String Comprehensions -->
+<div class="topic-section" id="comprehensions">
+    <h3>List, Dict, Set, and String Comprehensions</h3>
+    <div class="explanation">
+        Comprehensions provide a concise way to create lists, dictionaries, sets, and even strings by iterating and optionally filtering elements.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> List Comprehension</div>
+            <pre>squares = [x * x for x in range(5)]
+print(squares)</pre>
+            <div class="console-output"><b>Output:</b> [0, 1, 4, 9, 16]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> List Comprehension with Condition</div>
+            <pre>evens = [x for x in range(10) if x % 2 == 0]
+print(evens)</pre>
+            <div class="console-output"><b>Output:</b> [0, 2, 4, 6, 8]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Nested List Comprehension</div>
+            <pre>matrix = [[1, 2], [3, 4]]
+flat = [item for row in matrix for item in row]
+print(flat)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Dictionary Comprehension</div>
+            <pre>d = {x: x * x for x in range(3)}
+print(d)</pre>
+            <div class="console-output"><b>Output:</b> {0: 0, 1: 1, 2: 4}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Set Comprehension</div>
+            <pre>s = {x for x in [1, 2, 2, 3]}
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {1, 2, 3}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> String Join in Comprehension</div>
+            <pre>chars = [c.upper() for c in "abc"]
+result = "".join(chars)
+print(result)</pre>
+            <div class="console-output"><b>Output:</b> ABC</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Filtering with Comprehension</div>
+            <pre>nums = [1, 2, 3, 4]
+filtered = [x for x in nums if x > 2]
+print(filtered)</pre>
+            <div class="console-output"><b>Output:</b> [3, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Nested Dictionary Comprehension</div>
+            <pre>table = {x: {y: x * y for y in range(3)} for x in range(3)}
+print(table[2][2])</pre>
+            <div class="console-output"><b>Output:</b> 4</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Set Comprehension with Condition</div>
+            <pre>s = {x for x in range(10) if x % 3 == 0}
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {0, 3, 6, 9}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> List Comprehension with Function</div>
+            <pre>def square(x): return x * x
+lst = [square(x) for x in range(4)]
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [0, 1, 4, 9]</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 22 of 30: Lambda, map, filter, and reduce -->
+<div class="topic-section" id="lambda-map-filter-reduce">
+    <h3>Lambda, map, filter, and reduce</h3>
+    <div class="explanation">
+        Python provides anonymous (lambda) functions and functional tools like <code>map()</code>, <code>filter()</code>, and <code>reduce()</code> for concise data processing.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Lambda Function</div>
+            <pre>add = lambda x, y: x + y
+print(add(2, 3))</pre>
+            <div class="console-output"><b>Output:</b> 5</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> map() with Lambda</div>
+            <pre>nums = [1, 2, 3]
+squared = list(map(lambda x: x * x, nums))
+print(squared)</pre>
+            <div class="console-output"><b>Output:</b> [1, 4, 9]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> filter() with Lambda</div>
+            <pre>nums = [1, 2, 3, 4]
+evens = list(filter(lambda x: x % 2 == 0, nums))
+print(evens)</pre>
+            <div class="console-output"><b>Output:</b> [2, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> reduce() with Lambda</div>
+            <pre>from functools import reduce
+nums = [1, 2, 3, 4]
+product = reduce(lambda x, y: x * y, nums)
+print(product)</pre>
+            <div class="console-output"><b>Output:</b> 24</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Lambda in sort()</div>
+            <pre>pairs = [(1, 'b'), (2, 'a'), (3, 'c')]
+pairs.sort(key=lambda x: x[1])
+print(pairs)</pre>
+            <div class="console-output"><b>Output:</b> [(2, 'a'), (1, 'b'), (3, 'c')]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Lambda for Custom Filtering</div>
+            <pre>words = ["apple", "banana", "pear"]
+long_words = list(filter(lambda w: len(w) > 4, words))
+print(long_words)</pre>
+            <div class="console-output"><b>Output:</b> ['apple', 'banana']</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> map() with Multiple Lists</div>
+            <pre>a = [1, 2, 3]
+b = [4, 5, 6]
+summed = list(map(lambda x, y: x + y, a, b))
+print(summed)</pre>
+            <div class="console-output"><b>Output:</b> [5, 7, 9]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> filter() with None</div>
+            <pre>vals = ["", "a", "", "b"]
+filtered = list(filter(None, vals))
+print(filtered)</pre>
+            <div class="console-output"><b>Output:</b> ['a', 'b']</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> reduce() for Sum</div>
+            <pre>from functools import reduce
+nums = [1, 2, 3, 4]
+total = reduce(lambda x, y: x + y, nums)
+print(total)</pre>
+            <div class="console-output"><b>Output:</b> 10</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Lambda with sorted()</div>
+            <pre>words = ["pear", "apple", "banana"]
+sorted_words = sorted(words, key=lambda w: len(w))
+print(sorted_words)</pre>
+            <div class="console-output"><b>Output:</b> ['pear', 'apple', 'banana']</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 23 of 30: List, Dict, and Set Iteration Patterns -->
+<div class="topic-section" id="iteration-patterns">
+    <h3>List, Dict, and Set Iteration Patterns</h3>
+    <div class="explanation">
+        Python provides flexible ways to iterate over lists, dictionaries, and sets, including unpacking, enumeration, and simultaneous iteration.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Iterate Over List</div>
+            <pre>nums = [1, 2, 3]
+for n in nums:
+    print(n)</pre>
+            <div class="console-output"><b>Output:</b> 1<br>2<br>3</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Iterate with Index (enumerate)</div>
+            <pre>fruits = ["apple", "banana"]
+for idx, fruit in enumerate(fruits):
+    print(idx, fruit)</pre>
+            <div class="console-output"><b>Output:</b> 0 apple<br>1 banana</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Iterate Over Dictionary Keys</div>
+            <pre>d = {"a": 1, "b": 2}
+for key in d:
+    print(key)</pre>
+            <div class="console-output"><b>Output:</b> a<br>b</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Iterate Over Dictionary Items</div>
+            <pre>d = {"a": 1, "b": 2}
+for k, v in d.items():
+    print(k, v)</pre>
+            <div class="console-output"><b>Output:</b> a 1<br>b 2</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Iterate Over Set</div>
+            <pre>s = {1, 2, 3}
+for x in s:
+    print(x)</pre>
+            <div class="console-output"><b>Output:</b> 1<br>2<br>3 (order may vary)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Iterate Two Lists Together (zip)</div>
+            <pre>names = ["Tom", "Sue"]
+scores = [90, 95]
+for name, score in zip(names, scores):
+    print(name, score)</pre>
+            <div class="console-output"><b>Output:</b> Tom 90<br>Sue 95</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Iterate with Sorted</div>
+            <pre>nums = [3, 1, 2]
+for n in sorted(nums):
+    print(n)</pre>
+            <div class="console-output"><b>Output:</b> 1<br>2<br>3</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Reverse Iteration</div>
+            <pre>for n in reversed([1, 2, 3]):
+    print(n)</pre>
+            <div class="console-output"><b>Output:</b> 3<br>2<br>1</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Iterate with Range and Length</div>
+            <pre>lst = ["a", "b", "c"]
+for i in range(len(lst)):
+    print(i, lst[i])</pre>
+            <div class="console-output"><b>Output:</b> 0 a<br>1 b<br>2 c</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Dictionary Comprehension Iteration</div>
+            <pre>d = {"x": 1, "y": 2}
+for k in d:
+    d[k] += 10
+print(d)</pre>
+            <div class="console-output"><b>Output:</b> {'x': 11, 'y': 12}</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 24 of 30: List, Dict, and Set Built-in Functions -->
+<div class="topic-section" id="builtins">
+    <h3>List, Dict, and Set Built-in Functions</h3>
+    <div class="explanation">
+        Python provides many built-in functions for working with lists, dictionaries, and sets, making data manipulation easier and more efficient.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> len() on List, Dict, Set</div>
+            <pre>lst = [1, 2, 3]
+d = {"a": 1, "b": 2}
+s = {1, 2, 3}
+print(len(lst), len(d), len(s))</pre>
+            <div class="console-output"><b>Output:</b> 3 2 3</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> sum() on List and Set</div>
+            <pre>lst = [1, 2, 3]
+s = {4, 5}
+print(sum(lst), sum(s))</pre>
+            <div class="console-output"><b>Output:</b> 6 9</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> min() and max()</div>
+            <pre>nums = [7, 2, 5]
+print(min(nums), max(nums))</pre>
+            <div class="console-output"><b>Output:</b> 2 7</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> sorted()</div>
+            <pre>lst = [3, 1, 2]
+print(sorted(lst))</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> reversed()</div>
+            <pre>lst = [1, 2, 3]
+print(list(reversed(lst)))</pre>
+            <div class="console-output"><b>Output:</b> [3, 2, 1]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> any() and all()</div>
+            <pre>lst = [0, 1, 2]
+print(any(lst), all(lst))</pre>
+            <div class="console-output"><b>Output:</b> True False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> zip() to Combine Lists</div>
+            <pre>a = [1, 2]
+b = ["x", "y"]
+print(list(zip(a, b)))</pre>
+            <div class="console-output"><b>Output:</b> [(1, 'x'), (2, 'y')]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> enumerate() for Index and Value</div>
+            <pre>lst = ["a", "b"]
+print(list(enumerate(lst)))</pre>
+            <div class="console-output"><b>Output:</b> [(0, 'a'), (1, 'b')]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> map() with Built-in Function</div>
+            <pre>nums = ["1", "2", "3"]
+ints = list(map(int, nums))
+print(ints)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> filter() with Built-in Function</div>
+            <pre>lst = ["", "a", "", "b"]
+filtered = list(filter(None, lst))
+print(filtered)</pre>
+            <div class="console-output"><b>Output:</b> ['a', 'b']</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 25 of 30: List, Dict, and Set Copying & Equality -->
+<div class="topic-section" id="copying-equality">
+    <h3>List, Dict, and Set Copying & Equality</h3>
+    <div class="explanation">
+        Copying and comparing collections in Python can be done with built-in methods and operators. Be aware of shallow vs deep copies and value vs identity equality.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Shallow Copy of List</div>
+            <pre>lst1 = [1, 2, 3]
+lst2 = lst1[:]
+print(lst1 == lst2, lst1 is lst2)</pre>
+            <div class="console-output"><b>Output:</b> True False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Deep Copy of List</div>
+            <pre>import copy
+lst1 = [[1], [2]]
+lst2 = copy.deepcopy(lst1)
+lst1[0][0] = 99
+print(lst1, lst2)</pre>
+            <div class="console-output"><b>Output:</b> [[99], [2]] [[1], [2]]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Copying a Dict</div>
+            <pre>d1 = {"a": 1}
+d2 = d1.copy()
+print(d1 == d2, d1 is d2)</pre>
+            <div class="console-output"><b>Output:</b> True False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Copying a Set</div>
+            <pre>s1 = {1, 2}
+s2 = set(s1)
+print(s1 == s2, s1 is s2)</pre>
+            <div class="console-output"><b>Output:</b> True False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> == vs is for Lists</div>
+            <pre>a = [1, 2]
+b = [1, 2]
+print(a == b)  # True (values equal)
+print(a is b)  # False (different objects)</pre>
+            <div class="console-output"><b>Output:</b> True<br>False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> == vs is for Dicts</div>
+            <pre>d1 = {"x": 1}
+d2 = {"x": 1}
+print(d1 == d2)  # True
+print(d1 is d2)  # False</pre>
+            <div class="console-output"><b>Output:</b> True<br>False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> == vs is for Sets</div>
+            <pre>s1 = {1, 2}
+s2 = {2, 1}
+print(s1 == s2)  # True
+print(s1 is s2)  # False</pre>
+            <div class="console-output"><b>Output:</b> True<br>False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Copying Nested Structures</div>
+            <pre>import copy
+nested = [[1], [2]]
+shallow = nested[:]
+deep = copy.deepcopy(nested)
+nested[0][0] = 42
+print(shallow)  # [[42], [2]]
+print(deep)     # [[1], [2]]</pre>
+            <div class="console-output"><b>Output:</b> [[42], [2]]<br>[[1], [2]]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Copying with list(), dict(), set()</div>
+            <pre>lst = [1, 2]
+lst2 = list(lst)
+d = {"a": 1}
+d2 = dict(d)
+s = {1, 2}
+s2 = set(s)
+print(lst2, d2, s2)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2] {'a': 1} {1, 2}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Identity of Immutable Types</div>
+            <pre>a = (1, 2)
+b = (1, 2)
+print(a == b, a is b)</pre>
+            <div class="console-output"><b>Output:</b> True False (may be True for small tuples)</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 26 of 30: List, Dict, and Set Mutability & Identity -->
+<div class="topic-section" id="mutability-identity">
+    <h3>List, Dict, and Set Mutability & Identity</h3>
+    <div class="explanation">
+        Lists, dictionaries, and sets are mutable objects in Python. Their identity (checked with <code>is</code> and <code>id()</code>) remains the same unless a new object is created.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> List Mutability</div>
+            <pre>lst = [1, 2, 3]
+print(id(lst))
+lst.append(4)
+print(lst, id(lst))</pre>
+            <div class="console-output"><b>Output:</b> (Same id before and after append, list changed)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Dict Mutability</div>
+            <pre>d = {"a": 1}
+print(id(d))
+d["b"] = 2
+print(d, id(d))</pre>
+            <div class="console-output"><b>Output:</b> (Same id before and after update, dict changed)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Set Mutability</div>
+            <pre>s = {1, 2}
+print(id(s))
+s.add(3)
+print(s, id(s))</pre>
+            <div class="console-output"><b>Output:</b> (Same id before and after add, set changed)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Immutable Tuple</div>
+            <pre>t = (1, 2)
+try:
+    t[0] = 99
+except TypeError as e:
+    print(e)</pre>
+            <div class="console-output"><b>Output:</b> 'tuple' object does not support item assignment</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> id() Function</div>
+            <pre>a = [1, 2]
+b = a
+print(id(a) == id(b))</pre>
+            <div class="console-output"><b>Output:</b> True</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Copy Changes Identity</div>
+            <pre>a = [1, 2]
+b = a[:]
+print(id(a) == id(b))</pre>
+            <div class="console-output"><b>Output:</b> False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Mutating Shared Reference</div>
+            <pre>a = [1, 2]
+b = a
+b.append(3)
+print(a)</pre>
+            <div class="console-output"><b>Output:</b> [1, 2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Immutable Types: Strings</div>
+            <pre>s = "hi"
+print(id(s))
+s += "!"
+print(s, id(s))</pre>
+            <div class="console-output"><b>Output:</b> (id changes after concatenation, string is immutable)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> is vs == with Mutables</div>
+            <pre>a = [1]
+b = [1]
+print(a == b, a is b)</pre>
+            <div class="console-output"><b>Output:</b> True False</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> is vs == with Immutables</div>
+            <pre>a = 1000
+b = 1000
+print(a == b, a is b)</pre>
+            <div class="console-output"><b>Output:</b> True False (for large integers)</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 27 of 30: List, Dict, and Set Performance Tips -->
+<div class="topic-section" id="performance-tips">
+    <h3>List, Dict, and Set Performance Tips</h3>
+    <div class="explanation">
+        Lists, dictionaries, and sets have different performance characteristics. Use them appropriately for fast lookups, insertions, and deletions.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> List Lookup (O(n))</div>
+            <pre>lst = list(range(1000))
+print(999 in lst)</pre>
+            <div class="console-output"><b>Output:</b> True</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Set Lookup (O(1))</div>
+            <pre>s = set(range(1000))
+print(999 in s)</pre>
+            <div class="console-output"><b>Output:</b> True</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Dict Lookup (O(1))</div>
+            <pre>d = {x: x for x in range(1000)}
+print(999 in d)</pre>
+            <div class="console-output"><b>Output:</b> True</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> List Append vs Insert</div>
+            <pre>lst = [1, 2, 3]
+lst.append(4)  # Fast (O(1))
+lst.insert(0, 0)  # Slow (O(n))
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [0, 1, 2, 3, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Set Uniqueness</div>
+            <pre>nums = [1, 2, 2, 3]
+unique = set(nums)
+print(unique)</pre>
+            <div class="console-output"><b>Output:</b> {1, 2, 3}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Dict Key Overwrite</div>
+            <pre>d = {"a": 1}
+d["a"] = 2
+print(d)</pre>
+            <div class="console-output"><b>Output:</b> {'a': 2}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Use List for Ordered Data</div>
+            <pre>lst = ["first", "second", "third"]
+print(lst[0])</pre>
+            <div class="console-output"><b>Output:</b> first</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Use Set for Fast Membership Test</div>
+            <pre>words = ["a", "b", "c"]
+word_set = set(words)
+print("b" in word_set)</pre>
+            <div class="console-output"><b>Output:</b> True</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Use Dict for Key-Value Mapping</div>
+            <pre>ages = {"Tom": 30, "Sue": 25}
+print(ages["Sue"])</pre>
+            <div class="console-output"><b>Output:</b> 25</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Avoid Linear Search in Large Lists</div>
+            <pre>lst = list(range(1000000))
+print(999999 in lst)  # Slow for very large lists</pre>
+            <div class="console-output"><b>Output:</b> True</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 28 of 30: List, Dict, and Set Pitfalls -->
+<div class="topic-section" id="pitfalls">
+    <h3>List, Dict, and Set Pitfalls</h3>
+    <div class="explanation">
+        Be aware of common pitfalls when using lists, dictionaries, and sets, such as mutable default arguments and key uniqueness.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Mutable Default Argument</div>
+            <pre>def append_one(lst=[]):
+    lst.append(1)
+    return lst
+print(append_one())
+print(append_one())</pre>
+            <div class="console-output"><b>Output:</b> [1]<br>[1, 1] (unexpected behavior)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Correct Way for Default List</div>
+            <pre>def append_one(lst=None):
+    if lst is None:
+        lst = []
+    lst.append(1)
+    return lst
+print(append_one())
+print(append_one())</pre>
+            <div class="console-output"><b>Output:</b> [1]<br>[1]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Dict Key Uniqueness</div>
+            <pre>d = {"a": 1, "a": 2}
+print(d)</pre>
+            <div class="console-output"><b>Output:</b> {'a': 2}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Set Uniqueness</div>
+            <pre>s = {1, 2, 2, 3}
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {1, 2, 3}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Changing List While Iterating</div>
+            <pre>lst = [1, 2, 3]
+for x in lst:
+    lst.remove(x)
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> [2]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Copy Before Modifying</div>
+            <pre>lst = [1, 2, 3]
+for x in lst[:]:
+    lst.remove(x)
+print(lst)</pre>
+            <div class="console-output"><b>Output:</b> []</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Using Unhashable Types as Dict Keys</div>
+            <pre># d = {[1, 2]: "value"}  # Error: list is unhashable
+d = {(1, 2): "value"}
+print(d)</pre>
+            <div class="console-output"><b>Output:</b> {(1, 2): 'value'}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Set Operations with Non-Hashable Types</div>
+            <pre># s = {[1, 2], [3, 4]}  # Error: list is unhashable
+s = {(1, 2), (3, 4)}
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {(1, 2), (3, 4)}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Dict get() Default Value</div>
+            <pre>d = {"a": 1}
+print(d.get("b", 0))</pre>
+            <div class="console-output"><b>Output:</b> 0</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Set add() vs update()</div>
+            <pre>s = {1}
+s.add(2)
+s.update([3, 4])
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {1, 2, 3, 4}</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 29 of 30: List, Dict, and Set Advanced Patterns -->
+<div class="topic-section" id="advanced-patterns">
+    <h3>List, Dict, and Set Advanced Patterns</h3>
+    <div class="explanation">
+        Advanced patterns include dictionary and set comprehensions, generator expressions, and using collections like defaultdict and Counter.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Dictionary Comprehension</div>
+            <pre>d = {x: x * 2 for x in range(3)}
+print(d)</pre>
+            <div class="console-output"><b>Output:</b> {0: 0, 1: 2, 2: 4}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Set Comprehension</div>
+            <pre>s = {x for x in range(5) if x % 2}
+print(s)</pre>
+            <div class="console-output"><b>Output:</b> {1, 3}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Generator Expression</div>
+            <pre>gen = (x * x for x in range(3))
+print(list(gen))</pre>
+            <div class="console-output"><b>Output:</b> [0, 1, 4]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Using collections.defaultdict</div>
+            <pre>from collections import defaultdict
+d = defaultdict(int)
+d["a"] += 1
+print(d["a"])</pre>
+            <div class="console-output"><b>Output:</b> 1</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Using collections.Counter</div>
+            <pre>from collections import Counter
+c = Counter("banana")
+print(c)</pre>
+            <div class="console-output"><b>Output:</b> Counter({'a': 3, 'b': 1, 'n': 2})</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Unpacking with *</div>
+            <pre>lst = [1, 2, 3]
+a, *b = lst
+print(a, b)</pre>
+            <div class="console-output"><b>Output:</b> 1 [2, 3]</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Merging Dictionaries (Python 3.9+)</div>
+            <pre>d1 = {"a": 1}
+d2 = {"b": 2}
+merged = d1 | d2
+print(merged)</pre>
+            <div class="console-output"><b>Output:</b> {'a': 1, 'b': 2}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Set Intersection & Union</div>
+            <pre>a = {1, 2}
+b = {2, 3}
+print(a & b)
+print(a | b)</pre>
+            <div class="console-output"><b>Output:</b> {2}<br>{1, 2, 3}</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Dict get with Default Factory</div>
+            <pre>from collections import defaultdict
+d = defaultdict(lambda: "N/A")
+print(d["missing"])</pre>
+            <div class="console-output"><b>Output:</b> N/A</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Chained Generators</div>
+            <pre>def gen1():
+    yield from range(2)
+def gen2():
+    yield from gen1()
+    yield 2
+print(list(gen2()))</pre>
+            <div class="console-output"><b>Output:</b> [0, 1, 2]</div>
+        </div>
+    </div>
+</div>
+<!-- Segment 30 of 30: Python Resources & Next Steps -->
+<div class="topic-section" id="resources-next">
+    <h3>Python Resources & Next Steps</h3>
+    <div class="explanation">
+        Continue your Python journey with these resources and ideas for further learning.
+    </div>
+    <button class="example-btn">Show Examples</button>
+    <div class="examples-list">
+        <div class="example-animate">
+            <div class="explanation"><b>Example 1:</b> Official Python Documentation</div>
+            <pre># https://docs.python.org/3/</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a link)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 2:</b> Python Package Index (PyPI)</div>
+            <pre># https://pypi.org/</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a link)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 3:</b> Real Python Tutorials</div>
+            <pre># https://realpython.com/</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a link)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 4:</b> Python Tutor (Visualize Code)</div>
+            <pre># https://pythontutor.com/</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a link)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 5:</b> Practice Problems (LeetCode, HackerRank)</div>
+            <pre># https://leetcode.com/ and https://www.hackerrank.com/domains/tutorials/10-days-of-python</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a link)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 6:</b> Python Community Forums</div>
+            <pre># https://discuss.python.org/</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a link)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 7:</b> Python Discord</div>
+            <pre># https://pythondiscord.com/</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a link)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 8:</b> Python Subreddit</div>
+            <pre># https://www.reddit.com/r/Python/</pre>
+            <div class="console-output"><b>Output:</b> (No output, just a link)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 9:</b> Python Books</div>
+            <pre># "Automate the Boring Stuff with Python" by Al Sweigart
+# "Fluent Python" by Luciano Ramalho</pre>
+            <div class="console-output"><b>Output:</b> (No output, just book titles)</div>
+        </div>
+        <div class="example-animate">
+            <div class="explanation"><b>Example 10:</b> Next Steps</div>
+            <pre># Build projects, contribute to open source, explore frameworks like Django or Flask</pre>
+            <div class="console-output"><b>Output:</b> (No output, just advice)</div>
+        </div>
+    </div>
+</div>
+
+
+
     <script>
+    document.addEventListener('DOMContentLoaded', function () {
+    // For each topic-section, add toggle logic for its button and examples-list
+    document.querySelectorAll('.topic-section').forEach(function(section) {
+        const btn = section.querySelector('.example-btn');
+        const examples = section.querySelector('.examples-list');
+        if (btn && examples) {
+            btn.addEventListener('click', function() {
+                // Hide all other examples-lists
+                document.querySelectorAll('.topic-section .examples-list').forEach(function(otherExamples) {
+                    if (otherExamples !== examples) {
+                        otherExamples.style.display = 'none';
+                        const otherBtn = otherExamples.parentElement.querySelector('.example-btn');
+                        if (otherBtn) otherBtn.textContent = 'Show Examples';
+                    }
+                });
+                // Toggle this section's examples-list
+                if (examples.style.display === 'none' || examples.style.display === '') {
+                    examples.style.display = 'block';
+                    btn.textContent = 'Hide Examples';
+                } else {
+                    examples.style.display = 'none';
+                    btn.textContent = 'Show Examples';
+                }
+            });
+            // Start with examples hidden
+            examples.style.display = 'none';
+            btn.textContent = 'Show Examples';
+        }
+
         // Toggle the burger menu
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
+
+           // Make toggleMenu and toggleTheme globally accessible
+    window.toggleMenu = function() {
+        const navLinks = document.querySelector('.nav-links');
+        navLinks.classList.toggle('active');
+    };
+
+    window.toggleTheme = function() {
+        document.body.classList.toggle('dark-mode');
+    };
     </script>
 </body>
 </html>
