@@ -1,15 +1,91 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
-
-.container {
-    padding: 2rem;
+body {
+    min-height: 100vh;
+    width: 100vw;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: #fff;
+    color: #333;
+    font-family: Arial, sans-serif;
 }
-
+#root, .container {
+    min-height: calc(100vh - 64px);
+    box-sizing: border-box;
+    height: auto;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    color: white;
+    padding: 1rem;
+}
+nav h1 {
+    margin: 0;
+}
+.nav-links {
+    display: flex;
+    gap: 1rem;
+}
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+}
+.nav-links a.active {
+    background-color: #007bff;
+}
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 3px 0;
+}
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 10px;
+        width: 150px;
+        border-radius: 5px;
+        padding: 1rem;
+    }
+    .nav-links.active {
+        display: flex;
+    }
+    .burger {
+        display: flex;
+    }
+}
+button, .example-btn {
+    cursor: pointer;
+    padding: 0.5rem 1rem;
+    border: none;
+    background-color: #007bff;
+    color: white;
+    border-radius: 5px;
+    transition: background 0.2s;
+    font-size: 1rem;
+}
+button:hover, .example-btn:hover {
+    background-color: #0056b3;
+}
 pre {
     background-color: #f8f9fa;
     color: #333;
@@ -18,4 +94,13 @@ pre {
     border-radius: 5px;
     overflow-x: auto;
     white-space: pre-wrap;
+}
+.dark-mode {
+    background-color: #222 !important;
+    color: white !important;
+}
+.dark-mode pre {
+    background-color: #333;
+    color: #f8f9fa;
+    border: 1px solid #555;
 }

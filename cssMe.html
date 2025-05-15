@@ -8,8 +8,28 @@
     <title>codeMe - cssMe</title>
     <link rel="stylesheet" href="static/css/htmlMestyle.css">
     <link rel="stylesheet" href="static/css/cssMestyle.css">
+   
     <style>
         /* Responsive Navbar Styles */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            min-height: 100vh;
+            width: 100vw;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            /* Optional: for consistent background */
+            background: #fff;
+        }
+        #root, .container {
+            min-height: calc(100vh - 64px); /* adjust if nav height changes */
+            box-sizing: border-box;
+        }
         nav {
             display: flex;
             justify-content: space-between;
@@ -18,83 +38,30 @@
             color: white;
             padding: 1rem;
         }
-
-        nav h1 {
-            margin: 0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
-        .nav-links a.active {
-            background-color: #007bff;
-        }
-
-        .burger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 3px 0;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #333;
-                position: absolute;
-                top: 60px;
-                right: 10px;
-                width: 150px;
-                border-radius: 5px;
-                padding: 1rem;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .burger {
-                display: flex;
-            }
-        }
+        
     </style>
+<!-- ...existing code... -->
 </head>
 
 <body>
     <nav>
-        <h1>cssMe</h1>
-        <button onclick="toggleTheme()">Toggle Dark Mode</button>
-        <div class="burger" onclick="toggleMenu()">
-            <div></div>
-            <div></div>
-            <div></div>
-        </div>
-        <div class="nav-links">
-            <a href="index.html">HOME</a>
-            <a href="htmlMe.html">HTML</a>
-            <a href="cssMe.html" class="active">CSS</a>
-            <a href="javascriptMe.html">JAVASCRIPT</a>
-            <a href="pythonMe.html">PYTHON</a>
-            <a href="blog.html">BLOG</a>
-            <a href="contact.html">CONTACT</a>
-        </div>
-    </nav>
+    <h1>CodeMe -cssMe</h1>
+    <button onclick="toggleTheme()">Toggle Dark Mode</button>
+    <div class="burger" onclick="toggleMenu()">
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class="nav-links">
+        <a href="index.html">HOME</a>
+        <a href="htmlMe.html">HTML</a>
+        <a href="cssMe.html" class="active">CSS</a>
+        <a href="javascriptMe.html">JAVASCRIPT</a>
+        <a href="pythonMe.html">PYTHON</a>
+        <a href="blog.html">BLOG</a>
+        <a href="contact.html">CONTACT</a>
+    </div>
+</nav>
 
     <div class="container">
         <h2>CSS Tutorial</h2>
@@ -2681,8 +2648,19 @@ input:focus { border-color: #f44336; }</pre>
                 </div>
             </div>
         </div>
-    </div>
+        </div>
     <script>
+        // Toggle the burger menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
+        }
+
+        // Toggle dark mode
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
         document.addEventListener('DOMContentLoaded', function () {
             // For each topic-section, add toggle logic for its button and examples-list
             document.querySelectorAll('.topic-section').forEach(function (section) {
@@ -2710,17 +2688,6 @@ input:focus { border-color: #f44336; }</pre>
                     // Start with examples hidden
                     examples.style.display = 'none';
                     btn.textContent = 'Show Examples';
-                }
-
-                // Toggle the burger menu (move outside the DOMContentLoaded for global access)
-                function toggleMenu() {
-                    const navLinks = document.querySelector('.nav-links');
-                    navLinks.classList.toggle('active');
-                }
-
-                // Toggle dark mode
-                function toggleTheme() {
-                    document.body.classList.toggle('dark-mode');
                 }
 
                 // Optional: Add dark mode styles
@@ -2762,7 +2729,8 @@ input:focus { border-color: #f44336; }</pre>
     `;
                     document.head.appendChild(style);
                 })();
+            });
+        });
     </script>
 </body>
-
 </html>

@@ -1,4 +1,3 @@
- <!-- Segment 1 of 20 -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -9,86 +8,31 @@
     <link rel="stylesheet" href="static/css/htmlMestyle.css">
     <script src="static/script.js" defer></script>
     <style>
-        nav {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            background-color: #333;
-            color: white;
-            padding: 1rem;
+        /* Add horizontal padding to the main container for all screen sizes */
+        .container {
+            padding-left: 1.5rem;
+            padding-right: 1.5rem;
         }
-
-        nav h1 {
-            margin: 0;
-        }
-
-        .nav-links {
-            display: flex;
-            gap: 1rem;
-        }
-
-        .nav-links a {
-            color: white;
-            text-decoration: none;
-            padding: 0.5rem 1rem;
-            border-radius: 5px;
-        }
-
-        .nav-links a.active {
-            background-color: #007bff;
-        }
-
-        .burger {
-            display: none;
-            flex-direction: column;
-            cursor: pointer;
-        }
-
-        .burger div {
-            width: 25px;
-            height: 3px;
-            background-color: white;
-            margin: 3px 0;
-        }
-
-        @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-                flex-direction: column;
-                background-color: #333;
-                position: absolute;
-                top: 60px;
-                right: 10px;
-                width: 150px;
-                border-radius: 5px;
-                padding: 1rem;
-            }
-
-            .nav-links.active {
-                display: flex;
-            }
-
-            .burger {
-                display: flex;
+        @media (max-width: 600px) {
+            .container {
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
             }
         }
-
+        
         .example-animate {
             animation: fadeIn 1s;
         }
-
         @keyframes fadeIn {
             from {
                 opacity: 0;
                 transform: translateY(20px);
             }
-
             to {
                 opacity: 1;
                 transform: translateY(0);
             }
         }
-
         .console-output {
             background: #222;
             color: #b8ffb8;
@@ -97,16 +41,13 @@
             margin-top: 0.5rem;
             font-family: 'Fira Mono', 'Consolas', monospace;
         }
-
         .explanation {
             margin-bottom: 0.5rem;
             color: #007bff;
         }
-
         .topic-section {
             margin-bottom: 2.5rem;
         }
-
         .example-btn {
             margin-bottom: 1rem;
         }
@@ -2416,50 +2357,89 @@ HTML Living Standard: https://html.spec.whatwg.org/
             </div>
         </div>
     </div>
-
-
-   
-
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    // For each topic-section, add toggle logic for its button and examples-list
-    document.querySelectorAll('.topic-section').forEach(function(section) {
-        const btn = section.querySelector('.example-btn');
-        const examples = section.querySelector('.examples-list');
-        if (btn && examples) {
-            btn.addEventListener('click', function() {
-                // Hide all other examples-lists
-                document.querySelectorAll('.topic-section .examples-list').forEach(function(otherExamples) {
-                    if (otherExamples !== examples) {
-                        otherExamples.style.display = 'none';
-                        const otherBtn = otherExamples.parentElement.querySelector('.example-btn');
-                        if (otherBtn) otherBtn.textContent = 'Show Examples';
-                    }
-                });
-                // Toggle this section's examples-list
-                if (examples.style.display === 'none' || examples.style.display === '') {
-                    examples.style.display = 'block';
-                    btn.textContent = 'Hide Examples';
-                } else {
-                    examples.style.display = 'none';
-                    btn.textContent = 'Show Examples';
-                }
-            });
-            // Start with examples hidden
-            examples.style.display = 'none';
-            btn.textContent = 'Show Examples';
-        }
-
+        </div>
+    <script>
         // Toggle the burger menu
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
-    });
-});
-</script>
 
+        // Toggle dark mode
+        function toggleTheme() {
+            document.body.classList.toggle('dark-mode');
+        }
+
+        document.addEventListener('DOMContentLoaded', function () {
+            // For each topic-section, add toggle logic for its button and examples-list
+            document.querySelectorAll('.topic-section').forEach(function (section) {
+                const btn = section.querySelector('.example-btn');
+                const examples = section.querySelector('.examples-list');
+                if (btn && examples) {
+                    btn.addEventListener('click', function () {
+                        // Hide all other examples-lists
+                        document.querySelectorAll('.topic-section .examples-list').forEach(function (otherExamples) {
+                            if (otherExamples !== examples) {
+                                otherExamples.style.display = 'none';
+                                const otherBtn = otherExamples.parentElement.querySelector('.example-btn');
+                                if (otherBtn) otherBtn.textContent = 'Show Examples';
+                            }
+                        });
+                        // Toggle this section's examples-list
+                        if (examples.style.display === 'none' || examples.style.display === '') {
+                            examples.style.display = 'block';
+                            btn.textContent = 'Hide Examples';
+                        } else {
+                            examples.style.display = 'none';
+                            btn.textContent = 'Show Examples';
+                        }
+                    });
+                    // Start with examples hidden
+                    examples.style.display = 'none';
+                    btn.textContent = 'Show Examples';
+                }
+
+                // Optional: Add dark mode styles
+                (function () {
+                    const style = document.createElement('style');
+                    style.innerHTML = `
+    body.dark-mode {
+        background: #181a1b !important;
+        color: #e0e0e0 !important;
+    }
+    body.dark-mode .container {
+        background: #23272b !important;
+        color: #e0e0e0 !important;
+    }
+    body.dark-mode .topic-section {
+        background: #23272b !important;
+        border-left-color: #ffd43b !important;
+    }
+    body.dark-mode .example-animate {
+        background: #222 !important;
+        border-left-color: #ffd43b !important;
+    }
+    body.dark-mode .example-animate pre,
+    body.dark-mode .console-output {
+        background: #181a1b !important;
+        color: #ffd43b !important;
+    }
+    body.dark-mode .console-output {
+        color: #b5e853 !important;
+    }
+    body.dark-mode nav {
+        background: #222 !important;
+        color: #ffd43b !important;
+    }
+    body.dark-mode .nav-links a.active {
+        background: #ffd43b !important;
+        color: #222 !important;
+    }
+    `;
+                    document.head.appendChild(style);
+                })();
+            });
+        });
+    </script>
 </body>
-
 </html>
-<!-- End of file -->
