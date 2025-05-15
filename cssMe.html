@@ -1,12 +1,14 @@
+<!-- Segment 1 of 20 -->
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CodeMe - cssMe</title>
+    <title>codeMe - cssMe</title>
+    <link rel="stylesheet" href="static/css/htmlMestyle.css">
     <link rel="stylesheet" href="static/css/cssMestyle.css">
-    <script src="static/script.js" defer></script>
-    <style>
+     <style>
         /* Responsive Navbar Styles */
         nav {
             display: flex;
@@ -73,6 +75,7 @@
         }
     </style>
 </head>
+
 <body>
     <nav>
         <h1>cssMe</h1>
@@ -94,28 +97,2312 @@
     </nav>
 
     <div class="container">
-        <section>
-            <h2>CSS Styling</h2>
-            <p>CSS is used to style HTML elements.</p>
-            <pre>
-                body {
-                    font-family: Arial, sans-serif;
-                    background-color: #f4f4f4;
-                    color: #333;
-                }
+        <h2>CSS Tutorial</h2>
+        <p>Explore CSS from beginner to advanced with interactive examples and explanations. Click "Show Examples" to view code and simulated console outputs.</p>
 
-                h1 {
-                    color: #007bff;
-                }
-            </pre>
-        </section>
+        <!-- BEGINNER LEVEL -->
+        <div class="topic-section" id="intro-css">
+            <h3>Introduction to CSS</h3>
+            <div class="explanation">CSS (Cascading Style Sheets) describes how HTML elements are displayed. You can use inline, internal, or external CSS. Syntax: <code>selector { property: value; }</code></div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Inline CSS</div>
+                    <pre>&lt;p style="color: red;"&gt;Hello!&lt;/p&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:red;">Hello!</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Internal CSS</div>
+                    <pre>&lt;style&gt;p { color: blue; }&lt;/style&gt;</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:blue;">Hello!</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> External CSS</div>
+                    <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Loads and applies <code>style.css</code>.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Basic CSS Syntax</div>
+                    <pre>h1 { color: green; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:green;">Heading</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Multiple Selectors</div>
+                    <pre>h1, h2 { font-family: Arial; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-family:Arial;">H1/H2 text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Class Selector</div>
+                    <pre>.highlight { background: yellow; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="background:yellow;">Highlighted</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> ID Selector</div>
+                    <pre>#main { font-size: 2em; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:2em;">Main</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Universal Selector</div>
+                    <pre>* { margin: 0; }</pre>
+                    <div class="console-output"><b>Output:</b> All elements have no margin.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Comments in CSS</div>
+                    <pre>/* This is a comment */</pre>
+                    <div class="console-output"><b>Output:</b> No visible output.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Case Insensitivity</div>
+                    <pre>BODY { background: #eee; }</pre>
+                    <div class="console-output"><b>Output:</b> Body background is light gray.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Property Value Pair</div>
+                    <pre>p { color: purple; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:purple;">Purple text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Multiple Declarations</div>
+                    <pre>h2 { color: orange; font-weight: bold; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:orange;font-weight:bold;">Orange Bold</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> CSS File Extension</div>
+                    <pre>style.css</pre>
+                    <div class="console-output"><b>Output:</b> External CSS files use the .css extension.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Importing CSS</div>
+                    <pre>@import url('style.css');</pre>
+                    <div class="console-output"><b>Output:</b> Imports another CSS file.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> CSS Specificity</div>
+                    <pre>#id .class p { color: teal; }</pre>
+                    <div class="console-output"><b>Output:</b> Most specific selector wins.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Inheritance</div>
+                    <pre>body { color: navy; }</pre>
+                    <div class="console-output"><b>Output:</b> All text inherits navy color unless overridden.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> !important Rule</div>
+                    <pre>p { color: red !important; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:red;">Red text (forced)</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Linking Multiple Stylesheets</div>
+                    <pre>&lt;link rel="stylesheet" href="base.css"&gt;
+&lt;link rel="stylesheet" href="theme.css"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Both CSS files are loaded.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Overriding Styles</div>
+                    <pre>p { color: blue; } p { color: green; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:green;">Green text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> CSS for Print</div>
+                    <pre>@media print { body { color: black; } }</pre>
+                    <div class="console-output"><b>Output:</b> Text is black when printing.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 2 of 20 -->
+        <div class="topic-section" id="selectors-basic">
+            <h3>Selectors & Basic Styling</h3>
+            <div class="explanation">Selectors target HTML elements. Basic styling includes color, font, and text properties.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Universal Selector</div>
+                    <pre>* { box-sizing: border-box; }</pre>
+                    <div class="console-output"><b>Output:</b> All elements use border-box sizing.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Element Selector</div>
+                    <pre>p { color: #333; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:#333;">Paragraph</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Class Selector</div>
+                    <pre>.blue { color: blue; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:blue;">Blue text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> ID Selector</div>
+                    <pre>#special { font-weight: bold; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-weight:bold;">Bold text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Grouped Selectors</div>
+                    <pre>h1, h2 { color: orange; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:orange;">H1/H2</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Descendant Selector</div>
+                    <pre>div p { color: teal; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:teal;">Teal paragraph</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Combining Selectors</div>
+                    <pre>ul li { list-style-type: square; }</pre>
+                    <div class="console-output"><b>Output:</b> <ul><li style="list-style-type:square;">Item</li></ul></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Color Property</div>
+                    <pre>span { color: #e91e63; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:#e91e63;">Pink text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Background Color</div>
+                    <pre>div { background-color: #f0f0f0; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:#f0f0f0;">Background</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Font Family</div>
+                    <pre>body { font-family: 'Arial', sans-serif; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-family:Arial,sans-serif;">Arial text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Font Size</div>
+                    <pre>p { font-size: 20px; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:20px;">Large text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Text Align</div>
+                    <pre>h2 { text-align: center; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="display:block;text-align:center;">Centered</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Text Decoration</div>
+                    <pre>a { text-decoration: underline; }</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#" style="text-decoration:underline;">Link</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Line Height</div>
+                    <pre>p { line-height: 2; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="line-height:2;">Double spaced</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Font Weight</div>
+                    <pre>strong { font-weight: 700; }</pre>
+                    <div class="console-output"><b>Output:</b> <strong style="font-weight:700;">Bold</strong></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Font Style</div>
+                    <pre>em { font-style: italic; }</pre>
+                    <div class="console-output"><b>Output:</b> <em style="font-style:italic;">Italic</em></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Text Transform</div>
+                    <pre>h3 { text-transform: uppercase; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="text-transform:uppercase;">Uppercase</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Letter Spacing</div>
+                    <pre>span { letter-spacing: 2px; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="letter-spacing:2px;">Spaced</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Word Spacing</div>
+                    <pre>p { word-spacing: 10px; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="word-spacing:10px;">Word spacing</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Text Shadow</div>
+                    <pre>h1 { text-shadow: 2px 2px 4px #888; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="text-shadow:2px 2px 4px #888;">Shadow</span></div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 3 of 20 -->
+        <div class="topic-section" id="box-model-layout">
+            <h3>Box Model & Layout Basics</h3>
+            <div class="explanation">The CSS box model describes the design and layout of elements using margin, border, padding, and content. Display, visibility, and opacity control how elements appear and interact.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Margin</div>
+                    <pre>div { margin: 20px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="margin:20px;display:inline-block;background:#eee;">20px margin</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Padding</div>
+                    <pre>div { padding: 15px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="padding:15px;display:inline-block;background:#eee;">15px padding</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Border</div>
+                    <pre>div { border: 2px solid #007bff; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:2px solid #007bff;display:inline-block;">Bordered</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Width & Height</div>
+                    <pre>div { width: 120px; height: 60px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:120px;height:60px;background:#eee;display:inline-block;">120x60</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Box Sizing</div>
+                    <pre>div { box-sizing: border-box; }</pre>
+                    <div class="console-output"><b>Output:</b> Padding and border included in width/height.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Display Block</div>
+                    <pre>div { display: block; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="display:block;background:#eee;">Block element</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Display Inline</div>
+                    <pre>span { display: inline; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="display:inline;background:#eee;">Inline</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Display Inline-block</div>
+                    <pre>div { display: inline-block; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="display:inline-block;background:#eee;">Inline-block</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Display None</div>
+                    <pre>div { display: none; }</pre>
+                    <div class="console-output"><b>Output:</b> Element is hidden and removed from layout.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Visibility Hidden</div>
+                    <pre>div { visibility: hidden; }</pre>
+                    <div class="console-output"><b>Output:</b> Element is invisible but takes up space.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Opacity</div>
+                    <pre>div { opacity: 0.5; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="opacity:0.5;background:#eee;display:inline-block;">50% opacity</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Margin Auto (Centering)</div>
+                    <pre>div { width: 200px; margin: 0 auto; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:200px;margin:0 auto;background:#eee;">Centered block</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Border Radius</div>
+                    <pre>div { border-radius: 10px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-radius:10px;background:#eee;width:60px;height:30px;display:inline-block;">Rounded</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Border Color</div>
+                    <pre>div { border: 2px solid red; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:2px solid red;display:inline-block;">Red border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Border Style</div>
+                    <pre>div { border-style: dashed; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:2px dashed #333;display:inline-block;">Dashed border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Border Width</div>
+                    <pre>div { border-width: 5px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:5px solid #333;display:inline-block;">5px border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Outline</div>
+                    <pre>div { outline: 2px dotted blue; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="outline:2px dotted blue;display:inline-block;">Outline</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Overflow Hidden</div>
+                    <pre>div { width: 80px; overflow: hidden; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:80px;overflow:hidden;white-space:nowrap;background:#eee;">This text is clipped</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Overflow Scroll</div>
+                    <pre>div { width: 80px; overflow: scroll; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:80px;overflow:scroll;white-space:nowrap;background:#eee;">Scroll me horizontally</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Box Shadow</div>
+                    <pre>div { box-shadow: 2px 2px 8px #aaa; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="box-shadow:2px 2px 8px #aaa;background:#eee;display:inline-block;">Shadow</div></div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 4 of 20 -->
+        <div class="topic-section" id="positioning-layout">
+            <h3>Positioning & Layout Techniques</h3>
+            <div class="explanation">CSS positioning allows you to control where elements appear on the page. Use static, relative, absolute, fixed, float, clear, and basic flexbox for layout.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Static Positioning (default)</div>
+                    <pre>div { position: static; }</pre>
+                    <div class="console-output"><b>Output:</b> Element follows normal flow.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Relative Positioning</div>
+                    <pre>div { position: relative; left: 20px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="position:relative;left:20px;display:inline-block;background:#eee;">Moved right 20px</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Absolute Positioning</div>
+                    <pre>div { position: absolute; top: 10px; left: 10px; }</pre>
+                    <div class="console-output"><b>Output:</b> Absolutely positioned (relative to nearest positioned ancestor).</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Fixed Positioning</div>
+                    <pre>div { position: fixed; bottom: 0; right: 0; }</pre>
+                    <div class="console-output"><b>Output:</b> Fixed to bottom-right of viewport.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Z-Index</div>
+                    <pre>div { position: absolute; z-index: 10; }</pre>
+                    <div class="console-output"><b>Output:</b> Controls stacking order.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Float Left</div>
+                    <pre>img { float: left; }</pre>
+                    <div class="console-output"><b>Output:</b> Image floats to the left of text.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Float Right</div>
+                    <pre>img { float: right; }</pre>
+                    <div class="console-output"><b>Output:</b> Image floats to the right of text.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Clear Both</div>
+                    <pre>div { clear: both; }</pre>
+                    <div class="console-output"><b>Output:</b> Element moves below floated elements.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Flex Container</div>
+                    <pre>div { display: flex; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="display:flex;"><div style="background:#eee;margin:2px;padding:2px;">A</div><div style="background:#eee;margin:2px;padding:2px;">B</div></div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Flex Direction Row</div>
+                    <pre>div { display: flex; flex-direction: row; }</pre>
+                    <div class="console-output"><b>Output:</b> Items in a row (default).</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Flex Direction Column</div>
+                    <pre>div { display: flex; flex-direction: column; }</pre>
+                    <div class="console-output"><b>Output:</b> Items stack vertically.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Justify Content Center</div>
+                    <pre>div { display: flex; justify-content: center; }</pre>
+                    <div class="console-output"><b>Output:</b> Items centered horizontally.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Align Items Center</div>
+                    <pre>div { display: flex; align-items: center; }</pre>
+                    <div class="console-output"><b>Output:</b> Items centered vertically.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Flex Wrap</div>
+                    <pre>div { display: flex; flex-wrap: wrap; }</pre>
+                    <div class="console-output"><b>Output:</b> Items wrap to next line if needed.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Align Self</div>
+                    <pre>div.child { align-self: flex-end; }</pre>
+                    <div class="console-output"><b>Output:</b> Child aligns to flex-end.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Order Property</div>
+                    <pre>div.child { order: 2; }</pre>
+                    <div class="console-output"><b>Output:</b> Changes order of flex items.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Flex Grow</div>
+                    <pre>div.child { flex-grow: 1; }</pre>
+                    <div class="console-output"><b>Output:</b> Child grows to fill space.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Flex Shrink</div>
+                    <pre>div.child { flex-shrink: 0; }</pre>
+                    <div class="console-output"><b>Output:</b> Child will not shrink.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Flex Basis</div>
+                    <pre>div.child { flex-basis: 100px; }</pre>
+                    <div class="console-output"><b>Output:</b> Initial size of flex item is 100px.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Centering with Flexbox</div>
+                    <pre>div { display: flex; justify-content: center; align-items: center; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="display:flex;justify-content:center;align-items:center;height:40px;background:#eee;"><span>Centered</span></div></div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 5 of 20 -->
+        <div class="topic-section" id="background-borders">
+            <h3>Background & Borders</h3>
+            <div class="explanation">CSS backgrounds and borders let you style elements with colors, images, gradients, and various border effects.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Background Color</div>
+                    <pre>div { background-color: #ffeb3b; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background-color:#ffeb3b;display:inline-block;padding:4px;">Yellow background</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Background Image</div>
+                    <pre>div { background-image: url('https://via.placeholder.com/40'); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background-image:url('https://via.placeholder.com/40');width:40px;height:40px;display:inline-block;"></div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Background Repeat</div>
+                    <pre>div { background-repeat: no-repeat; }</pre>
+                    <div class="console-output"><b>Output:</b> No repeating background image.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Background Position</div>
+                    <pre>div { background-position: center; }</pre>
+                    <div class="console-output"><b>Output:</b> Background image centered.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Background Size Cover</div>
+                    <pre>div { background-size: cover; }</pre>
+                    <div class="console-output"><b>Output:</b> Background image covers the element.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Background Gradient</div>
+                    <pre>div { background: linear-gradient(to right, #ff9800, #2196f3); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:linear-gradient(to right, #ff9800, #2196f3);width:100px;height:30px;display:inline-block;"></div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Multiple Backgrounds</div>
+                    <pre>div { background: url('a.png'), url('b.png'); }</pre>
+                    <div class="console-output"><b>Output:</b> Multiple background images layered.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Border Style</div>
+                    <pre>div { border-style: dotted; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:2px dotted #333;display:inline-block;">Dotted border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Border Width</div>
+                    <pre>div { border-width: 4px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:4px solid #333;display:inline-block;">4px border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Border Color</div>
+                    <pre>div { border-color: #e91e63; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:2px solid #e91e63;display:inline-block;">Pink border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Border Radius</div>
+                    <pre>div { border-radius: 12px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-radius:12px;background:#eee;width:60px;height:30px;display:inline-block;">Rounded</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Border Top</div>
+                    <pre>div { border-top: 3px solid #2196f3; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-top:3px solid #2196f3;display:inline-block;">Top border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Border Bottom</div>
+                    <pre>div { border-bottom: 3px dashed #ff9800; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-bottom:3px dashed #ff9800;display:inline-block;">Bottom border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Border Left</div>
+                    <pre>div { border-left: 5px double #4caf50; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-left:5px double #4caf50;display:inline-block;">Left border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Border Right</div>
+                    <pre>div { border-right: 5px groove #f44336; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-right:5px groove #f44336;display:inline-block;">Right border</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Outline</div>
+                    <pre>div { outline: 2px solid #009688; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="outline:2px solid #009688;display:inline-block;">Outline</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Outline Offset</div>
+                    <pre>div { outline-offset: 4px; }</pre>
+                    <div class="console-output"><b>Output:</b> Outline is offset from border.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Background Attachment Fixed</div>
+                    <pre>body { background-attachment: fixed; }</pre>
+                    <div class="console-output"><b>Output:</b> Background image stays fixed during scroll.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Background Clip</div>
+                    <pre>div { background-clip: padding-box; }</pre>
+                    <div class="console-output"><b>Output:</b> Background extends to padding edge only.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Background Origin</div>
+                    <pre>div { background-origin: border-box; }</pre>
+                    <div class="console-output"><b>Output:</b> Background positioned relative to border box.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 6 of 20 -->
+        <div class="topic-section" id="media-queries-responsive">
+            <h3>Media Queries & Responsive Design Basics</h3>
+            <div class="explanation">Media queries allow you to apply CSS rules based on device characteristics, enabling responsive layouts for different screen sizes.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Basic Media Query</div>
+                    <pre>@media (max-width: 600px) { body { background: #f0f; } }</pre>
+                    <div class="console-output"><b>Output:</b> Background turns purple on small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Responsive Font Size</div>
+                    <pre>@media (max-width: 500px) { h1 { font-size: 1.2em; } }</pre>
+                    <div class="console-output"><b>Output:</b> Heading font size shrinks on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Hide Element on Mobile</div>
+                    <pre>@media (max-width: 600px) { .sidebar { display: none; } }</pre>
+                    <div class="console-output"><b>Output:</b> Sidebar hidden on small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Change Layout on Tablet</div>
+                    <pre>@media (min-width: 601px) and (max-width: 900px) { .container { flex-direction: column; } }</pre>
+                    <div class="console-output"><b>Output:</b> Container stacks vertically on tablets.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Responsive Image</div>
+                    <pre>img { max-width: 100%; height: auto; }</pre>
+                    <div class="console-output"><b>Output:</b> Image scales to fit container.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Responsive Navigation</div>
+                    <pre>@media (max-width: 700px) { nav { flex-direction: column; } }</pre>
+                    <div class="console-output"><b>Output:</b> Navigation stacks vertically on small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Responsive Padding</div>
+                    <pre>@media (max-width: 400px) { .box { padding: 5px; } }</pre>
+                    <div class="console-output"><b>Output:</b> Less padding on very small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Responsive Columns</div>
+                    <pre>@media (max-width: 800px) { .col { width: 100%; } }</pre>
+                    <div class="console-output"><b>Output:</b> Columns become full width on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Responsive Button Size</div>
+                    <pre>@media (max-width: 500px) { button { font-size: 1.1em; } }</pre>
+                    <div class="console-output"><b>Output:</b> Buttons are easier to tap on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Responsive Grid Gap</div>
+                    <pre>@media (max-width: 600px) { .grid { gap: 8px; } }</pre>
+                    <div class="console-output"><b>Output:</b> Grid gap shrinks on small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Responsive Flex Direction</div>
+                    <pre>@media (max-width: 600px) { .flex { flex-direction: column; } }</pre>
+                    <div class="console-output"><b>Output:</b> Flex items stack vertically on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Responsive Table</div>
+                    <pre>@media (max-width: 700px) { table { font-size: 0.9em; } }</pre>
+                    <div class="console-output"><b>Output:</b> Table text shrinks on small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Responsive Card Layout</div>
+                    <pre>@media (max-width: 600px) { .card { margin: 8px 0; } }</pre>
+                    <div class="console-output"><b>Output:</b> Cards have more vertical margin on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Responsive Hide Text</div>
+                    <pre>@media (max-width: 400px) { .long-text { display: none; } }</pre>
+                    <div class="console-output"><b>Output:</b> Long text hidden on very small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Responsive Border Radius</div>
+                    <pre>@media (max-width: 500px) { .box { border-radius: 0; } }</pre>
+                    <div class="console-output"><b>Output:</b> No border radius on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Responsive Font Weight</div>
+                    <pre>@media (max-width: 600px) { h2 { font-weight: 400; } }</pre>
+                    <div class="console-output"><b>Output:</b> Headings are lighter on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Responsive List Style</div>
+                    <pre>@media (max-width: 600px) { ul { list-style-type: none; } }</pre>
+                    <div class="console-output"><b>Output:</b> List bullets removed on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Responsive Image Border</div>
+                    <pre>@media (max-width: 500px) { img { border-radius: 50%; } }</pre>
+                    <div class="console-output"><b>Output:</b> Images become circular on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Responsive Footer</div>
+                    <pre>@media (max-width: 600px) { footer { font-size: 0.8em; } }</pre>
+                    <div class="console-output"><b>Output:</b> Footer text shrinks on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Responsive Navbar</div>
+                    <pre>@media (max-width: 700px) { .nav-links { flex-direction: column; } }</pre>
+                    <div class="console-output"><b>Output:</b> Navbar links stack vertically on small screens.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 7 of 20 -->
+        <div class="topic-section" id="advanced-selectors">
+            <h3>Advanced Selectors & Combinators</h3>
+            <div class="explanation">Advanced selectors and combinators allow you to target elements more precisely using attributes, relationships, pseudo-classes, and pseudo-elements.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Attribute Selector (exact match)</div>
+                    <pre>input[type="text"] { border: 2px solid #007bff; }</pre>
+                    <div class="console-output"><b>Output:</b> Text inputs have a blue border.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Attribute Selector (starts with)</div>
+                    <pre>a[href^="https"] { color: green; }</pre>
+                    <div class="console-output"><b>Output:</b> Links starting with https are green.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Attribute Selector (ends with)</div>
+                    <pre>img[src$=".png"] { border: 1px solid #f44336; }</pre>
+                    <div class="console-output"><b>Output:</b> PNG images have a red border.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Attribute Selector (contains)</div>
+                    <pre>input[placeholder*="name"] { background: #e3f2fd; }</pre>
+                    <div class="console-output"><b>Output:</b> Inputs with "name" in placeholder have blue background.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Child Selector</div>
+                    <pre>ul > li { color: #ff9800; }</pre>
+                    <div class="console-output"><b>Output:</b> Direct li children of ul are orange.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Descendant Selector</div>
+                    <pre>div span { color: #4caf50; }</pre>
+                    <div class="console-output"><b>Output:</b> Spans inside divs are green.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Adjacent Sibling Selector</div>
+                    <pre>h2 + p { font-style: italic; }</pre>
+                    <div class="console-output"><b>Output:</b> Paragraphs immediately after h2 are italic.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> General Sibling Selector</div>
+                    <pre>h2 ~ p { color: #e91e63; }</pre>
+                    <div class="console-output"><b>Output:</b> All paragraphs after h2 are pink.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> :hover Pseudo-class</div>
+                    <pre>button:hover { background: #2196f3; color: #fff; }</pre>
+                    <div class="console-output"><b>Output:</b> Button turns blue on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> :focus Pseudo-class</div>
+                    <pre>input:focus { border-color: #ff9800; }</pre>
+                    <div class="console-output"><b>Output:</b> Input border turns orange on focus.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> :nth-child</div>
+                    <pre>li:nth-child(2) { color: #f44336; }</pre>
+                    <div class="console-output"><b>Output:</b> Second list item is red.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> :not()</div>
+                    <pre>button:not(.primary) { background: #eee; }</pre>
+                    <div class="console-output"><b>Output:</b> Buttons without .primary class have gray background.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> :first-child</div>
+                    <pre>p:first-child { font-weight: bold; }</pre>
+                    <div class="console-output"><b>Output:</b> First paragraph is bold.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> :last-child</div>
+                    <pre>li:last-child { text-decoration: underline; }</pre>
+                    <div class="console-output"><b>Output:</b> Last list item is underlined.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> ::before Pseudo-element</div>
+                    <pre>h3::before { content: "★ "; color: gold; }</pre>
+                    <div class="console-output"><b>Output:</b> Gold star before every h3.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> ::after Pseudo-element</div>
+                    <pre>h3::after { content: " ✔"; color: green; }</pre>
+                    <div class="console-output"><b>Output:</b> Green check after every h3.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> ::first-letter</div>
+                    <pre>p::first-letter { font-size: 2em; color: #2196f3; }</pre>
+                    <div class="console-output"><b>Output:</b> First letter of paragraph is large and blue.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> ::selection</div>
+                    <pre>p::selection { background: #ffeb3b; }</pre>
+                    <div class="console-output"><b>Output:</b> Selected text in paragraph is yellow.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> :checked</div>
+                    <pre>input[type="checkbox"]:checked { accent-color: #4caf50; }</pre>
+                    <div class="console-output"><b>Output:</b> Checked checkboxes are green (modern browsers).</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> :disabled</div>
+                    <pre>button:disabled { opacity: 0.5; }</pre>
+                    <div class="console-output"><b>Output:</b> Disabled buttons are semi-transparent.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 8 of 20 -->
+        <div class="topic-section" id="flexbox-grid">
+            <h3>Flexbox & CSS Grid Layout</h3>
+            <div class="explanation">Flexbox and Grid are powerful CSS modules for creating flexible, responsive layouts with rows, columns, and complex arrangements.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Flex Container</div>
+                    <pre>.container { display: flex; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="display:flex;"><div style="background:#eee;margin:2px;padding:2px;">A</div><div style="background:#eee;margin:2px;padding:2px;">B</div></div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Flex Direction Column</div>
+                    <pre>.container { flex-direction: column; }</pre>
+                    <div class="console-output"><b>Output:</b> Items stack vertically.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Justify Content Space-Between</div>
+                    <pre>.container { justify-content: space-between; }</pre>
+                    <div class="console-output"><b>Output:</b> Items spread out with space between.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Align Items Flex-End</div>
+                    <pre>.container { align-items: flex-end; }</pre>
+                    <div class="console-output"><b>Output:</b> Items align to the bottom of the container.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Flex Wrap</div>
+                    <pre>.container { flex-wrap: wrap; }</pre>
+                    <div class="console-output"><b>Output:</b> Items wrap to the next line if needed.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Flex Grow</div>
+                    <pre>.item { flex-grow: 1; }</pre>
+                    <div class="console-output"><b>Output:</b> Items grow to fill available space.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Flex Shrink</div>
+                    <pre>.item { flex-shrink: 0; }</pre>
+                    <div class="console-output"><b>Output:</b> Items will not shrink.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Flex Basis</div>
+                    <pre>.item { flex-basis: 120px; }</pre>
+                    <div class="console-output"><b>Output:</b> Initial size of item is 120px.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Order</div>
+                    <pre>.item { order: 2; }</pre>
+                    <div class="console-output"><b>Output:</b> Changes the order of flex items.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Align Self</div>
+                    <pre>.item { align-self: center; }</pre>
+                    <div class="console-output"><b>Output:</b> Item aligns itself to the center.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Grid Container</div>
+                    <pre>.grid { display: grid; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="display:grid;grid-template-columns:1fr 1fr;width:100px;"><div style="background:#eee;">A</div><div style="background:#eee;">B</div></div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Grid Template Columns</div>
+                    <pre>.grid { grid-template-columns: 100px 1fr; }</pre>
+                    <div class="console-output"><b>Output:</b> First column 100px, second fills remaining space.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Grid Template Rows</div>
+                    <pre>.grid { grid-template-rows: 50px 50px; }</pre>
+                    <div class="console-output"><b>Output:</b> Two rows, each 50px tall.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Grid Gap</div>
+                    <pre>.grid { gap: 10px; }</pre>
+                    <div class="console-output"><b>Output:</b> 10px gap between grid items.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Grid Column Span</div>
+                    <pre>.item { grid-column: span 2; }</pre>
+                    <div class="console-output"><b>Output:</b> Item spans two columns.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Grid Row Span</div>
+                    <pre>.item { grid-row: span 2; }</pre>
+                    <div class="console-output"><b>Output:</b> Item spans two rows.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Grid Area</div>
+                    <pre>.item { grid-area: header; }</pre>
+                    <div class="console-output"><b>Output:</b> Item placed in the "header" grid area.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Grid Auto Flow</div>
+                    <pre>.grid { grid-auto-flow: column; }</pre>
+                    <div class="console-output"><b>Output:</b> Grid items flow by column.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Grid Justify Items</div>
+                    <pre>.grid { justify-items: end; }</pre>
+                    <div class="console-output"><b>Output:</b> Grid items align to the end horizontally.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Grid Align Items</div>
+                    <pre>.grid { align-items: start; }</pre>
+                    <div class="console-output"><b>Output:</b> Grid items align to the top vertically.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 9 of 20 -->
+        <div class="topic-section" id="transitions-animations">
+            <h3>Transitions & Animations</h3>
+            <div class="explanation">CSS transitions and animations allow you to smoothly animate changes to properties and create engaging effects using keyframes and transforms.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Simple Transition</div>
+                    <pre>button { transition: background 0.3s; }
+button:hover { background: #2196f3; }</pre>
+                    <div class="console-output"><b>Output:</b> Button background animates on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Multiple Properties</div>
+                    <pre>div { transition: color 0.2s, font-size 0.4s; }</pre>
+                    <div class="console-output"><b>Output:</b> Color and font size animate smoothly.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Transition Timing Function</div>
+                    <pre>div { transition-timing-function: ease-in-out; }</pre>
+                    <div class="console-output"><b>Output:</b> Animation accelerates and decelerates smoothly.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Transition Delay</div>
+                    <pre>div { transition-delay: 0.5s; }</pre>
+                    <div class="console-output"><b>Output:</b> Animation starts after 0.5s delay.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Keyframes Animation</div>
+                    <pre>@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+div { animation: fadeIn 1s; }</pre>
+                    <div class="console-output"><b>Output:</b> Element fades in.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Infinite Animation</div>
+                    <pre>div { animation: spin 2s linear infinite; }
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Element spins forever.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Animation Fill Mode</div>
+                    <pre>div { animation-fill-mode: forwards; }</pre>
+                    <div class="console-output"><b>Output:</b> Animation stays at end state.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Animation Delay</div>
+                    <pre>div { animation-delay: 1s; }</pre>
+                    <div class="console-output"><b>Output:</b> Animation starts after 1 second.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Animation Direction</div>
+                    <pre>div { animation-direction: alternate; }</pre>
+                    <div class="console-output"><b>Output:</b> Animation reverses every cycle.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Animation Iteration Count</div>
+                    <pre>div { animation-iteration-count: 3; }</pre>
+                    <div class="console-output"><b>Output:</b> Animation runs 3 times.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Transform Scale</div>
+                    <pre>div:hover { transform: scale(1.2); }</pre>
+                    <div class="console-output"><b>Output:</b> Element grows on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Transform Rotate</div>
+                    <pre>div:hover { transform: rotate(15deg); }</pre>
+                    <div class="console-output"><b>Output:</b> Element rotates on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Transform Translate</div>
+                    <pre>div:hover { transform: translateX(20px); }</pre>
+                    <div class="console-output"><b>Output:</b> Element moves right on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Transform Skew</div>
+                    <pre>div:hover { transform: skewY(10deg); }</pre>
+                    <div class="console-output"><b>Output:</b> Element skews on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Chained Transforms</div>
+                    <pre>div:hover { transform: scale(1.1) rotate(5deg); }</pre>
+                    <div class="console-output"><b>Output:</b> Element grows and rotates on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Transition on Opacity</div>
+                    <pre>div { transition: opacity 0.5s; }
+div.hide { opacity: 0; }</pre>
+                    <div class="console-output"><b>Output:</b> Element fades out smoothly.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Animation with Steps</div>
+                    <pre>div { animation: jump 1s steps(5) infinite; }
+@keyframes jump {
+  to { left: 100px; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Element jumps in 5 steps.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Animation Play State</div>
+                    <pre>div { animation-play-state: paused; }</pre>
+                    <div class="console-output"><b>Output:</b> Animation is paused.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Animation Name</div>
+                    <pre>div { animation-name: fadeIn; }</pre>
+                    <div class="console-output"><b>Output:</b> Uses the fadeIn keyframes.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> CSS Loader Animation</div>
+                    <pre>.loader {
+  width: 24px; height: 24px;
+  border: 4px solid #eee;
+  border-top: 4px solid #2196f3;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}</pre>
+                    <div class="console-output"><b>Output:</b> <span style="display:inline-block;width:24px;height:24px;border:4px solid #eee;border-top:4px solid #2196f3;border-radius:50%;animation:spin 1s linear infinite;"></span> Spinning loader.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 10 of 20 -->
+        <div class="topic-section" id="typography-fonts">
+            <h3>Typography & Fonts</h3>
+            <div class="explanation">Typography in CSS lets you control font families, sizes, weights, and advanced features like custom fonts and fallbacks.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Font Family</div>
+                    <pre>body { font-family: 'Segoe UI', Arial, sans-serif; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-family:'Segoe UI',Arial,sans-serif;">Segoe UI text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Font Size</div>
+                    <pre>h1 { font-size: 2.5em; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:2.5em;">Large heading</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Font Weight</div>
+                    <pre>strong { font-weight: 900; }</pre>
+                    <div class="console-output"><b>Output:</b> <strong style="font-weight:900;">Heavy bold</strong></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Font Style Italic</div>
+                    <pre>em { font-style: italic; }</pre>
+                    <div class="console-output"><b>Output:</b> <em style="font-style:italic;">Italic</em></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Text Transform Uppercase</div>
+                    <pre>h2 { text-transform: uppercase; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="text-transform:uppercase;">Uppercase</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Letter Spacing</div>
+                    <pre>p { letter-spacing: 3px; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="letter-spacing:3px;">Spaced out</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Word Spacing</div>
+                    <pre>p { word-spacing: 12px; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="word-spacing:12px;">Word spacing</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Line Height</div>
+                    <pre>p { line-height: 2; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="line-height:2;">Double spaced</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Text Align Center</div>
+                    <pre>h3 { text-align: center; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="display:block;text-align:center;">Centered text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Text Decoration Underline</div>
+                    <pre>a { text-decoration: underline; }</pre>
+                    <div class="console-output"><b>Output:</b> <a href="#" style="text-decoration:underline;">Underlined link</a></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Text Shadow</div>
+                    <pre>h1 { text-shadow: 2px 2px 8px #888; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="text-shadow:2px 2px 8px #888;">Shadowed text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Custom Font with @font-face</div>
+                    <pre>@font-face {
+  font-family: 'MyFont';
+  src: url('myfont.woff2') format('woff2');
+}
+body { font-family: 'MyFont', sans-serif; }</pre>
+                    <div class="console-output"><b>Output:</b> Uses custom font if available.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Google Fonts Integration</div>
+                    <pre>&lt;link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet"&gt;
+body { font-family: 'Roboto', sans-serif; }</pre>
+                    <div class="console-output"><b>Output:</b> Uses Roboto font from Google Fonts.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Font Fallbacks</div>
+                    <pre>body { font-family: 'Open Sans', Arial, sans-serif; }</pre>
+                    <div class="console-output"><b>Output:</b> Uses Open Sans, then Arial, then sans-serif.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Font Variant Small Caps</div>
+                    <pre>p { font-variant: small-caps; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-variant:small-caps;">Small caps text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Text Overflow Ellipsis</div>
+                    <pre>div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; width: 100px; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="white-space:nowrap;overflow:hidden;text-overflow:ellipsis;width:100px;">This is a long text that will be truncated...</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Direction RTL</div>
+                    <pre>p { direction: rtl; unicode-bidi: bidi-override; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="direction:rtl;unicode-bidi:bidi-override;">Right to left</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Letter Case Lowercase</div>
+                    <pre>span { text-transform: lowercase; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="text-transform:lowercase;">LOWERCASE</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Letter Case Capitalize</div>
+                    <pre>span { text-transform: capitalize; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="text-transform:capitalize;">capitalize each word</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Font Stretch</div>
+                    <pre>h2 { font-stretch: expanded; }</pre>
+                    <div class="console-output"><b>Output:</b> Heading text is stretched (if supported).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 11 of 20 -->
+        <div class="topic-section" id="css-variables-custom">
+            <h3>CSS Variables & Custom Properties</h3>
+            <div class="explanation">CSS variables (custom properties) allow you to store values for reuse and enable dynamic theming and easier maintenance.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Defining a Variable</div>
+                    <pre>:root { --main-color: #007bff; }</pre>
+                    <div class="console-output"><b>Output:</b> Variable <code>--main-color</code> is set globally.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Using a Variable</div>
+                    <pre>h1 { color: var(--main-color); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:#007bff;">Heading in main color</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Variable in Background</div>
+                    <pre>div { background: var(--main-color); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:#007bff;color:#fff;display:inline-block;padding:4px;">Main color background</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Variable Fallback</div>
+                    <pre>p { color: var(--secondary, #333); }</pre>
+                    <div class="console-output"><b>Output:</b> Uses #333 if <code>--secondary</code> is not set.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Scoped Variables</div>
+                    <pre>.theme-dark { --main-color: #222; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:#222;">Dark theme color</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Changing Variables with JS</div>
+                    <pre>document.documentElement.style.setProperty('--main-color', 'red');</pre>
+                    <div class="console-output"><b>Output:</b> Updates <code>--main-color</code> dynamically.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Variables in Media Queries</div>
+                    <pre>@media (max-width: 600px) {
+  :root { --main-color: #f44336; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:#f44336;">Main color changes on mobile</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Variables in Gradients</div>
+                    <pre>div { background: linear-gradient(var(--main-color), #fff); }</pre>
+                    <div class="console-output"><b>Output:</b> Gradient uses main color.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Variables in Border</div>
+                    <pre>div { border: 2px solid var(--main-color); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:2px solid #007bff;display:inline-block;">Border in main color</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Variables in Box Shadow</div>
+                    <pre>div { box-shadow: 0 2px 8px var(--main-color); }</pre>
+                    <div class="console-output"><b>Output:</b> Box shadow uses main color.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Variables in Font Size</div>
+                    <pre>:root { --big: 2em; }
+h1 { font-size: var(--big); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:2em;">Big heading</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Variables in Padding</div>
+                    <pre>:root { --pad: 16px; }
+div { padding: var(--pad); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="padding:16px;background:#eee;display:inline-block;">16px padding</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Variables in Border Radius</div>
+                    <pre>:root { --radius: 8px; }
+div { border-radius: var(--radius); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-radius:8px;background:#eee;width:60px;height:30px;display:inline-block;">Rounded</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Variables in Multiple Selectors</div>
+                    <pre>h1, h2 { color: var(--main-color); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="color:#007bff;">Headings in main color</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Variables in Animations</div>
+                    <pre>@keyframes pulse {
+  to { background: var(--main-color); }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Animation uses main color.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Variables in Pseudo-elements</div>
+                    <pre>h2::after { content: var(--main-content, "★"); }</pre>
+                    <div class="console-output"><b>Output:</b> Adds star after h2 by default.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Variables in Forms</div>
+                    <pre>input { border-color: var(--main-color); }</pre>
+                    <div class="console-output"><b>Output:</b> Inputs have main color border.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Variables in Button Hover</div>
+                    <pre>button:hover { background: var(--main-color); }</pre>
+                    <div class="console-output"><b>Output:</b> Button background uses main color on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Variables in Responsive Design</div>
+                    <pre>@media (max-width: 500px) {
+  :root { --main-color: #f44336; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Main color changes on small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Dynamic Theming</div>
+                    <pre>.theme-dark { --main-color: #222; }
+.theme-light { --main-color: #fff; }</pre>
+                    <div class="console-output"><b>Output:</b> Switch themes by changing class.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 12 of 20 -->
+        <div class="topic-section" id="advanced-responsive">
+            <h3>Advanced Responsive Design</h3>
+            <div class="explanation">Advanced responsive design uses Flexbox, Grid, adaptive images, and mobile-first principles for robust layouts across devices.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Flexbox Responsive Layout</div>
+                    <pre>.container { display: flex; flex-wrap: wrap; }
+@media (max-width: 600px) {
+  .container { flex-direction: column; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Flex items stack on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Grid Responsive Columns</div>
+                    <pre>.grid { display: grid; grid-template-columns: repeat(4, 1fr); }
+@media (max-width: 800px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Grid columns reduce on smaller screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Adaptive Images with srcset</div>
+                    <pre>&lt;img src="small.jpg" srcset="large.jpg 1024w, small.jpg 480w" alt="Responsive"&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Loads best image for device width.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Picture Element for Art Direction</div>
+                    <pre>&lt;picture&gt;
+  &lt;source media="(min-width: 800px)" srcset="large.jpg"&gt;
+  &lt;img src="small.jpg" alt="Responsive"&gt;
+&lt;/picture&gt;</pre>
+                    <div class="console-output"><b>Output:</b> Loads different images for different screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Mobile-First Design</div>
+                    <pre>/* Mobile styles first */
+.container { padding: 8px; }
+@media (min-width: 600px) {
+  .container { padding: 24px; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Padding increases on larger screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Responsive Navigation Toggle</div>
+                    <pre>@media (max-width: 700px) {
+  .nav-links { display: none; }
+  .burger { display: flex; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Burger menu appears on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Responsive Card Grid</div>
+                    <pre>.cards { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 16px; }
+@media (max-width: 900px) {
+  .cards { grid-template-columns: 1fr; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Cards stack vertically on small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Responsive Table Scroll</div>
+                    <pre>@media (max-width: 600px) {
+  table { display: block; overflow-x: auto; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Table scrolls horizontally on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Responsive Hide Columns</div>
+                    <pre>@media (max-width: 600px) {
+  .hide-mobile { display: none; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Columns hidden on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Responsive Font Scaling</div>
+                    <pre>html { font-size: 16px; }
+@media (max-width: 500px) {
+  html { font-size: 14px; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Base font size shrinks on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Responsive Button Block</div>
+                    <pre>@media (max-width: 600px) {
+  button { display: block; width: 100%; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Buttons fill width on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Responsive Image Height</div>
+                    <pre>img { height: auto; max-height: 300px; }
+@media (max-width: 600px) {
+  img { max-height: 150px; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Images are shorter on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Responsive Flex Item Order</div>
+                    <pre>@media (max-width: 600px) {
+  .sidebar { order: 2; }
+  .main { order: 1; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Sidebar moves below main content on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Responsive Hide Logo</div>
+                    <pre>@media (max-width: 400px) {
+  .logo { display: none; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Logo hidden on very small screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Responsive Margin Collapse</div>
+                    <pre>@media (max-width: 600px) {
+  .section { margin: 0; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Margins removed on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Responsive Borderless Table</div>
+                    <pre>@media (max-width: 600px) {
+  table, th, td { border: none; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Table borders removed on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Responsive Icon Size</div>
+                    <pre>@media (max-width: 500px) {
+  .icon { font-size: 1.5em; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Icons are larger on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Responsive Hide Sidebar</div>
+                    <pre>@media (max-width: 700px) {
+  .sidebar { display: none; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Sidebar hidden on tablets and mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Responsive Grid Gap</div>
+                    <pre>@media (max-width: 600px) {
+  .grid { gap: 4px; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Grid gap shrinks on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Responsive Section Padding</div>
+                    <pre>@media (max-width: 600px) {
+  section { padding: 8px; }
+}</pre>
+                    <div class="console-output"><b>Output:</b> Section padding reduced on mobile.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 13 of 20 -->
+        <div class="topic-section" id="forms-inputs">
+            <h3>Styling Forms & Inputs</h3>
+            <div class="explanation">CSS can style form elements for better usability and appearance, including inputs, buttons, checkboxes, and focus states.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Input Border Color</div>
+                    <pre>input { border: 2px solid #2196f3; }</pre>
+                    <div class="console-output"><b>Output:</b> <input style="border:2px solid #2196f3;" placeholder="Input"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Input Focus State</div>
+                    <pre>input:focus { outline: 2px solid #ff9800; }</pre>
+                    <div class="console-output"><b>Output:</b> Input gets orange outline on focus.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Button Styling</div>
+                    <pre>button { background: #4caf50; color: #fff; border: none; padding: 8px 16px; }</pre>
+                    <div class="console-output"><b>Output:</b> <button style="background:#4caf50;color:#fff;border:none;padding:8px 16px;">Button</button></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Button Hover</div>
+                    <pre>button:hover { background: #388e3c; }</pre>
+                    <div class="console-output"><b>Output:</b> Button darkens on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Disabled Input</div>
+                    <pre>input:disabled { background: #eee; }</pre>
+                    <div class="console-output"><b>Output:</b> <input disabled style="background:#eee;" placeholder="Disabled"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Checkbox Custom Color</div>
+                    <pre>input[type="checkbox"]:checked { accent-color: #f44336; }</pre>
+                    <div class="console-output"><b>Output:</b> Checked checkboxes are red (modern browsers).</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Radio Custom Color</div>
+                    <pre>input[type="radio"]:checked { accent-color: #2196f3; }</pre>
+                    <div class="console-output"><b>Output:</b> Checked radios are blue (modern browsers).</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Placeholder Styling</div>
+                    <pre>input::placeholder { color: #888; }</pre>
+                    <div class="console-output"><b>Output:</b> Placeholder text is gray.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Rounded Inputs</div>
+                    <pre>input { border-radius: 8px; }</pre>
+                    <div class="console-output"><b>Output:</b> <input style="border-radius:8px;" placeholder="Rounded"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Input Padding</div>
+                    <pre>input { padding: 10px; }</pre>
+                    <div class="console-output"><b>Output:</b> <input style="padding:10px;" placeholder="Padded"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Full Width Input</div>
+                    <pre>input { width: 100%; }</pre>
+                    <div class="console-output"><b>Output:</b> Input stretches to container width.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Custom Select</div>
+                    <pre>select { background: #fffbe7; border: 1px solid #ff9800; }</pre>
+                    <div class="console-output"><b>Output:</b> <select style="background:#fffbe7;border:1px solid #ff9800;"><option>Option</option></select></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Textarea Resize</div>
+                    <pre>textarea { resize: vertical; }</pre>
+                    <div class="console-output"><b>Output:</b> <textarea style="resize:vertical;">Resizable</textarea></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Input Shadow</div>
+                    <pre>input { box-shadow: 0 2px 6px #ccc; }</pre>
+                    <div class="console-output"><b>Output:</b> <input style="box-shadow:0 2px 6px #ccc;" placeholder="Shadow"></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Input Group</div>
+                    <pre>.input-group input { border-radius: 0; }
+.input-group button { border-radius: 0; }</pre>
+                    <div class="console-output"><b>Output:</b> Inputs and buttons have square edges in group.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> File Input Custom</div>
+                    <pre>input[type="file"] { color: #2196f3; }</pre>
+                    <div class="console-output"><b>Output:</b> File input text is blue.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Range Slider Styling</div>
+                    <pre>input[type="range"] { accent-color: #ff9800; }</pre>
+                    <div class="console-output"><b>Output:</b> Range slider is orange (modern browsers).</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Input Disabled Opacity</div>
+                    <pre>input:disabled { opacity: 0.6; }</pre>
+                    <div class="console-output"><b>Output:</b> Disabled inputs are faded.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Input Transition</div>
+                    <pre>input { transition: border-color 0.3s; }
+input:focus { border-color: #f44336; }</pre>
+                    <div class="console-output"><b>Output:</b> Border animates to red on focus.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Custom Checkbox Size</div>
+                    <pre>input[type="checkbox"] {
+  width: 20px; height: 20px;
+}</pre>
+                    <div class="console-output"><b>Output:</b> Checkbox is larger (modern browsers).</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 14 of 20 -->
+        <div class="topic-section" id="lists-tables">
+            <h3>Styling Lists & Tables</h3>
+            <div class="explanation">CSS can enhance the appearance of lists and tables, making data easier to read and visually appealing.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Remove List Bullets</div>
+                    <pre>ul { list-style-type: none; }</pre>
+                    <div class="console-output"><b>Output:</b> <ul style="list-style-type:none;"><li>Item 1</li><li>Item 2</li></ul></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Custom List Marker</div>
+                    <pre>ul { list-style-type: square; }</pre>
+                    <div class="console-output"><b>Output:</b> <ul style="list-style-type:square;"><li>Item</li></ul></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> List Item Spacing</div>
+                    <pre>li { margin-bottom: 8px; }</pre>
+                    <div class="console-output"><b>Output:</b> List items spaced apart.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Custom Ordered List</div>
+                    <pre>ol { list-style-type: upper-roman; }</pre>
+                    <div class="console-output"><b>Output:</b> <ol style="list-style-type:upper-roman;"><li>Item</li></ol></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Table Border Collapse</div>
+                    <pre>table { border-collapse: collapse; }</pre>
+                    <div class="console-output"><b>Output:</b> Table borders are merged.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Table Row Striping</div>
+                    <pre>tr:nth-child(even) { background: #f9f9f9; }</pre>
+                    <div class="console-output"><b>Output:</b> Even rows have a light background.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Table Hover Row</div>
+                    <pre>tr:hover { background: #e3f2fd; }</pre>
+                    <div class="console-output"><b>Output:</b> Row highlights on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Table Cell Padding</div>
+                    <pre>td, th { padding: 12px; }</pre>
+                    <div class="console-output"><b>Output:</b> Table cells have more space.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Table Header Styling</div>
+                    <pre>th { background: #2196f3; color: #fff; }</pre>
+                    <div class="console-output"><b>Output:</b> <table><tr><th style="background:#2196f3;color:#fff;">Header</th></tr></table></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Table Border</div>
+                    <pre>table, th, td { border: 1px solid #ccc; }</pre>
+                    <div class="console-output"><b>Output:</b> Table and cells have borders.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Table Width</div>
+                    <pre>table { width: 100%; }</pre>
+                    <div class="console-output"><b>Output:</b> Table stretches to container width.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Table Text Align</div>
+                    <pre>td { text-align: center; }</pre>
+                    <div class="console-output"><b>Output:</b> Table cell text is centered.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Table Caption Styling</div>
+                    <pre>caption { font-weight: bold; color: #4caf50; }</pre>
+                    <div class="console-output"><b>Output:</b> Table caption is bold and green.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Table Responsive Scroll</div>
+                    <pre>@media (max-width: 600px) { table { display: block; overflow-x: auto; } }</pre>
+                    <div class="console-output"><b>Output:</b> Table scrolls horizontally on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Table No Border on Mobile</div>
+                    <pre>@media (max-width: 600px) { table, th, td { border: none; } }</pre>
+                    <div class="console-output"><b>Output:</b> Table borders removed on mobile.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Table Cell Ellipsis</div>
+                    <pre>td { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; max-width: 120px; }</pre>
+                    <div class="console-output"><b>Output:</b> Long cell text is truncated with ellipsis.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Table Header Uppercase</div>
+                    <pre>th { text-transform: uppercase; }</pre>
+                    <div class="console-output"><b>Output:</b> Table headers are uppercase.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Table Zebra Striping</div>
+                    <pre>tbody tr:nth-child(odd) { background: #f0f0f0; }</pre>
+                    <div class="console-output"><b>Output:</b> Odd rows have a light gray background.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Table Highlight Column</div>
+                    <pre>td.highlight { background: #fffde7; }</pre>
+                    <div class="console-output"><b>Output:</b> Highlighted column is yellow.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Table Responsive Font Size</div>
+                    <pre>@media (max-width: 600px) { table { font-size: 0.9em; } }</pre>
+                    <div class="console-output"><b>Output:</b> Table font size shrinks on mobile.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 15 of 20 -->
+        <div class="topic-section" id="shadows-effects">
+            <h3>Shadows & Visual Effects</h3>
+            <div class="explanation">CSS provides shadow and filter effects to enhance UI elements, add depth, and create engaging visuals.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Box Shadow</div>
+                    <pre>div { box-shadow: 2px 4px 12px #888; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="box-shadow:2px 4px 12px #888;width:60px;height:30px;background:#eee;display:inline-block;">Shadow</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Multiple Box Shadows</div>
+                    <pre>div { box-shadow: 2px 2px 4px #888, 0 0 8px #2196f3; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="box-shadow:2px 2px 4px #888,0 0 8px #2196f3;width:60px;height:30px;background:#eee;display:inline-block;">Multi-shadow</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Text Shadow</div>
+                    <pre>h2 { text-shadow: 1px 1px 6px #f44336; }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="text-shadow:1px 1px 6px #f44336;">Shadowed text</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Drop Shadow Filter</div>
+                    <pre>img { filter: drop-shadow(4px 4px 8px #888); }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40" style="filter:drop-shadow(4px 4px 8px #888);vertical-align:middle;"> Image with drop shadow</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Blur Filter</div>
+                    <pre>div { filter: blur(2px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="filter:blur(2px);background:#eee;display:inline-block;">Blurred</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Grayscale Filter</div>
+                    <pre>img { filter: grayscale(100%); }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40" style="filter:grayscale(100%);vertical-align:middle;"> Grayscale image</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Brightness Filter</div>
+                    <pre>div { filter: brightness(1.5); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="filter:brightness(1.5);background:#eee;display:inline-block;">Brighter</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Contrast Filter</div>
+                    <pre>div { filter: contrast(200%); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="filter:contrast(200%);background:#eee;display:inline-block;">High contrast</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Opacity Effect</div>
+                    <pre>div { opacity: 0.3; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="opacity:0.3;background:#eee;display:inline-block;">Faded</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Invert Filter</div>
+                    <pre>img { filter: invert(100%); }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40" style="filter:invert(100%);vertical-align:middle;"> Inverted image</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Sepia Filter</div>
+                    <pre>img { filter: sepia(100%); }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40" style="filter:sepia(100%);vertical-align:middle;"> Sepia image</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Hue Rotate Filter</div>
+                    <pre>img { filter: hue-rotate(90deg); }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40" style="filter:hue-rotate(90deg);vertical-align:middle;"> Hue rotated</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Saturate Filter</div>
+                    <pre>img { filter: saturate(300%); }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40" style="filter:saturate(300%);vertical-align:middle;"> Highly saturated</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Backdrop Blur</div>
+                    <pre>.backdrop { backdrop-filter: blur(6px); }</pre>
+                    <div class="console-output"><b>Output:</b> Background behind element is blurred.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Shadow on Hover</div>
+                    <pre>div:hover { box-shadow: 0 8px 24px #2196f3; }</pre>
+                    <div class="console-output"><b>Output:</b> Shadow appears on hover.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Shadow for Buttons</div>
+                    <pre>button { box-shadow: 0 2px 6px #888; }</pre>
+                    <div class="console-output"><b>Output:</b> <button style="box-shadow:0 2px 6px #888;">Button</button></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Shadow for Cards</div>
+                    <pre>.card { box-shadow: 0 4px 16px #bbb; }</pre>
+                    <div class="console-output"><b>Output:</b> Card has a soft shadow.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Shadow for Navbar</div>
+                    <pre>nav { box-shadow: 0 2px 8px #333; }</pre>
+                    <div class="console-output"><b>Output:</b> Navbar has a shadow below.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Shadow for Images</div>
+                    <pre>img { box-shadow: 0 4px 12px #444; }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/40" style="box-shadow:0 4px 12px #444;vertical-align:middle;"> Image shadow</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Shadow for Modals</div>
+                    <pre>.modal { box-shadow: 0 8px 32px #0008; }</pre>
+                    <div class="console-output"><b>Output:</b> Modal has a deep shadow.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 16 of 20 -->
+        <div class="topic-section" id="zindex-overflow">
+            <h3>Z-Index, Overflow & Stacking Context</h3>
+            <div class="explanation">Control element stacking, overflow behavior, and how elements layer on top of each other using z-index and overflow properties.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> Z-Index</div>
+                    <pre>.box { position: absolute; z-index: 10; }</pre>
+                    <div class="console-output"><b>Output:</b> Box appears above lower z-index elements.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> Stacking Context</div>
+                    <pre>.parent { position: relative; z-index: 1; }
+.child { position: absolute; z-index: 2; }</pre>
+                    <div class="console-output"><b>Output:</b> Child stacks above parent content.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> Overflow Visible</div>
+                    <pre>div { overflow: visible; }</pre>
+                    <div class="console-output"><b>Output:</b> Content spills outside the box.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> Overflow Hidden</div>
+                    <pre>div { overflow: hidden; }</pre>
+                    <div class="console-output"><b>Output:</b> Content is clipped to the box.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> Overflow Scroll</div>
+                    <pre>div { overflow: scroll; }</pre>
+                    <div class="console-output"><b>Output:</b> Scrollbars always visible if content overflows.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> Overflow Auto</div>
+                    <pre>div { overflow: auto; }</pre>
+                    <div class="console-output"><b>Output:</b> Scrollbars appear only when needed.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> Overflow-X and Overflow-Y</div>
+                    <pre>div { overflow-x: scroll; overflow-y: hidden; }</pre>
+                    <div class="console-output"><b>Output:</b> Horizontal scroll only.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> Creating a Modal Overlay</div>
+                    <pre>.overlay {
+  position: fixed; top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0,0,0,0.5);
+  z-index: 1000;
+}</pre>
+                    <div class="console-output"><b>Output:</b> Overlay covers the page above all content.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> Tooltip Above Content</div>
+                    <pre>.tooltip {
+  position: absolute; z-index: 999;
+  background: #333; color: #fff;
+}</pre>
+                    <div class="console-output"><b>Output:</b> Tooltip appears above other elements.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> Sticky Header</div>
+                    <pre>header { position: sticky; top: 0; z-index: 100; }</pre>
+                    <div class="console-output"><b>Output:</b> Header stays at the top while scrolling.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> Nested Z-Index</div>
+                    <pre>.outer { position: relative; z-index: 1; }
+.inner { position: absolute; z-index: 2; }</pre>
+                    <div class="console-output"><b>Output:</b> Inner element stacks above outer.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> Negative Z-Index</div>
+                    <pre>div { position: relative; z-index: -1; }</pre>
+                    <div class="console-output"><b>Output:</b> Element appears below normal stacking context.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> Overflow Wrap</div>
+                    <pre>p { overflow-wrap: break-word; }</pre>
+                    <div class="console-output"><b>Output:</b> Long words break to fit container.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> Text Overflow Ellipsis</div>
+                    <pre>div { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }</pre>
+                    <div class="console-output"><b>Output:</b> Text is truncated with ellipsis.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> Scroll Snap</div>
+                    <pre>.scroll-container {
+  scroll-snap-type: x mandatory;
+}
+.child {
+  scroll-snap-align: start;
+}</pre>
+                    <div class="console-output"><b>Output:</b> Content snaps to position when scrolling.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> Overflow Anchor</div>
+                    <pre>div { overflow-anchor: none; }</pre>
+                    <div class="console-output"><b>Output:</b> Prevents scroll anchoring in container.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> Isolated Stacking Context</div>
+                    <pre>div { isolation: isolate; }</pre>
+                    <div class="console-output"><b>Output:</b> Creates a new stacking context.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> Overflow Hidden for Images</div>
+                    <pre>.img-container { overflow: hidden; width: 100px; height: 100px; }
+.img-container img { width: 150px; }</pre>
+                    <div class="console-output"><b>Output:</b> Image is clipped to container size.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> Scrollable Div</div>
+                    <pre>div.scrollable { max-height: 80px; overflow-y: auto; }</pre>
+                    <div class="console-output"><b>Output:</b> Div scrolls vertically if content overflows.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Overflow Auto for Code Blocks</div>
+                    <pre>pre { overflow: auto; max-width: 100%; }</pre>
+                    <div class="console-output"><b>Output:</b> Code blocks scroll horizontally if needed.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 17 of 20 -->
+        <div class="topic-section" id="css-functions-calc">
+            <h3>CSS Functions: calc(), min(), max(), clamp()</h3>
+            <div class="explanation">CSS functions like <code>calc()</code>, <code>min()</code>, <code>max()</code>, and <code>clamp()</code> allow for dynamic, flexible values in your styles.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> calc() for Width</div>
+                    <pre>div { width: calc(100% - 40px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:calc(100% - 40px);background:#eee;display:inline-block;">Width minus 40px</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> calc() for Font Size</div>
+                    <pre>h1 { font-size: calc(1em + 2vw); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:calc(1em + 2vw);">Responsive heading</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> min() for Responsive Width</div>
+                    <pre>div { width: min(400px, 90vw); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:min(400px,90vw);background:#eee;display:inline-block;">Max 400px or 90vw</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> max() for Minimum Height</div>
+                    <pre>div { min-height: max(200px, 40vh); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="min-height:max(200px,40vh);background:#eee;display:inline-block;">At least 200px or 40vh</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> clamp() for Font Size</div>
+                    <pre>p { font-size: clamp(1em, 2vw, 2em); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:clamp(1em,2vw,2em);">Clamped font size</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> calc() for Margin</div>
+                    <pre>div { margin-left: calc(50% - 100px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="margin-left:calc(50% - 100px);background:#eee;display:inline-block;">Centered with calc()</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> min() for Image Width</div>
+                    <pre>img { width: min(100%, 300px); }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80" style="width:min(100%,300px);"> Responsive image</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> max() for Padding</div>
+                    <pre>div { padding: max(10px, 2vw); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="padding:max(10px,2vw);background:#eee;display:inline-block;">Responsive padding</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> clamp() for Width</div>
+                    <pre>div { width: clamp(200px, 50vw, 600px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:clamp(200px,50vw,600px);background:#eee;display:inline-block;">Width between 200px and 600px</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> calc() for Grid Layout</div>
+                    <pre>.grid { grid-template-columns: 1fr calc(2fr + 20px); }</pre>
+                    <div class="console-output"><b>Output:</b> Grid column uses calc() for sizing.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> min() for Button Width</div>
+                    <pre>button { width: min(180px, 100%); }</pre>
+                    <div class="console-output"><b>Output:</b> <button style="width:min(180px,100%);">Button</button></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> max() for Container Height</div>
+                    <pre>.container { height: max(300px, 60vh); }</pre>
+                    <div class="console-output"><b>Output:</b> Container is at least 300px or 60vh tall.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> clamp() for Border Radius</div>
+                    <pre>div { border-radius: clamp(4px, 2vw, 24px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-radius:clamp(4px,2vw,24px);background:#eee;width:60px;height:30px;display:inline-block;">Clamped radius</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> calc() for Responsive Columns</div>
+                    <pre>.col { width: calc(33.333% - 16px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:calc(33.333% - 16px);background:#eee;display:inline-block;">Responsive column</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> min() for Card Height</div>
+                    <pre>.card { height: min(350px, 80vh); }</pre>
+                    <div class="console-output"><b>Output:</b> Card height is at most 350px or 80vh.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> max() for Font Size</div>
+                    <pre>h2 { font-size: max(1.5em, 3vw); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:max(1.5em,3vw);">Large heading</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> clamp() for Margin</div>
+                    <pre>div { margin: clamp(8px, 2vw, 32px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="margin:clamp(8px,2vw,32px);background:#eee;display:inline-block;">Clamped margin</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> calc() for Responsive Height</div>
+                    <pre>div { height: calc(100vh - 120px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="height:calc(100vh - 120px);background:#eee;display:inline-block;">Height minus 120px</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> min() for Responsive Gap</div>
+                    <pre>.grid { gap: min(24px, 4vw); }</pre>
+                    <div class="console-output"><b>Output:</b> Grid gap is responsive.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> clamp() for Padding</div>
+                    <pre>section { padding: clamp(8px, 5vw, 40px); }</pre>
+                    <div class="console-output"><b>Output:</b> Section padding is responsive and clamped.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 17 of 20 -->
+        <div class="topic-section" id="css-functions-calc">
+            <h3>CSS Functions: calc(), min(), max(), clamp()</h3>
+            <div class="explanation">CSS functions like <code>calc()</code>, <code>min()</code>, <code>max()</code>, and <code>clamp()</code> allow for dynamic, flexible values in your styles.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> calc() for Width</div>
+                    <pre>div { width: calc(100% - 40px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:calc(100% - 40px);background:#eee;display:inline-block;">Width minus 40px</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> calc() for Font Size</div>
+                    <pre>h1 { font-size: calc(1em + 2vw); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:calc(1em + 2vw);">Responsive heading</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> min() for Responsive Width</div>
+                    <pre>div { width: min(400px, 90vw); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:min(400px,90vw);background:#eee;display:inline-block;">Max 400px or 90vw</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> max() for Minimum Height</div>
+                    <pre>div { min-height: max(200px, 40vh); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="min-height:max(200px,40vh);background:#eee;display:inline-block;">At least 200px or 40vh</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> clamp() for Font Size</div>
+                    <pre>p { font-size: clamp(1em, 2vw, 2em); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:clamp(1em,2vw,2em);">Clamped font size</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> calc() for Margin</div>
+                    <pre>div { margin-left: calc(50% - 100px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="margin-left:calc(50% - 100px);background:#eee;display:inline-block;">Centered with calc()</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> min() for Image Width</div>
+                    <pre>img { width: min(100%, 300px); }</pre>
+                    <div class="console-output"><b>Output:</b> <img src="https://via.placeholder.com/80" style="width:min(100%,300px);"> Responsive image</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> max() for Padding</div>
+                    <pre>div { padding: max(10px, 2vw); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="padding:max(10px,2vw);background:#eee;display:inline-block;">Responsive padding</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> clamp() for Width</div>
+                    <pre>div { width: clamp(200px, 50vw, 600px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:clamp(200px,50vw,600px);background:#eee;display:inline-block;">Width between 200px and 600px</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> calc() for Grid Layout</div>
+                    <pre>.grid { grid-template-columns: 1fr calc(2fr + 20px); }</pre>
+                    <div class="console-output"><b>Output:</b> Grid column uses calc() for sizing.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> min() for Button Width</div>
+                    <pre>button { width: min(180px, 100%); }</pre>
+                    <div class="console-output"><b>Output:</b> <button style="width:min(180px,100%);">Button</button></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> max() for Container Height</div>
+                    <pre>.container { height: max(300px, 60vh); }</pre>
+                    <div class="console-output"><b>Output:</b> Container is at least 300px or 60vh tall.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> clamp() for Border Radius</div>
+                    <pre>div { border-radius: clamp(4px, 2vw, 24px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border-radius:clamp(4px,2vw,24px);background:#eee;width:60px;height:30px;display:inline-block;">Clamped radius</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> calc() for Responsive Columns</div>
+                    <pre>.col { width: calc(33.333% - 16px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="width:calc(33.333% - 16px);background:#eee;display:inline-block;">Responsive column</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> min() for Card Height</div>
+                    <pre>.card { height: min(350px, 80vh); }</pre>
+                    <div class="console-output"><b>Output:</b> Card height is at most 350px or 80vh.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> max() for Font Size</div>
+                    <pre>h2 { font-size: max(1.5em, 3vw); }</pre>
+                    <div class="console-output"><b>Output:</b> <span style="font-size:max(1.5em,3vw);">Large heading</span></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> clamp() for Margin</div>
+                    <pre>div { margin: clamp(8px, 2vw, 32px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="margin:clamp(8px,2vw,32px);background:#eee;display:inline-block;">Clamped margin</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> calc() for Responsive Height</div>
+                    <pre>div { height: calc(100vh - 120px); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="height:calc(100vh - 120px);background:#eee;display:inline-block;">Height minus 120px</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> min() for Responsive Gap</div>
+                    <pre>.grid { gap: min(24px, 4vw); }</pre>
+                    <div class="console-output"><b>Output:</b> Grid gap is responsive.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> clamp() for Padding</div>
+                    <pre>section { padding: clamp(8px, 5vw, 40px); }</pre>
+                    <div class="console-output"><b>Output:</b> Section padding is responsive and clamped.</div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 19 of 20 -->
+        <div class="topic-section" id="css-functions-color">
+            <h3>CSS Color Functions & Modern Color</h3>
+            <div class="explanation">Modern CSS supports advanced color functions for flexible, accessible, and dynamic color management.</div>
+            <button class="example-btn">Show Examples</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 1:</b> rgb()</div>
+                    <pre>div { background: rgb(33, 150, 243); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:rgb(33,150,243);color:#fff;display:inline-block;padding:4px;">RGB color</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 2:</b> rgba() with Alpha</div>
+                    <pre>div { background: rgba(244, 67, 54, 0.5); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:rgba(244,67,54,0.5);display:inline-block;padding:4px;">Semi-transparent red</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 3:</b> hsl()</div>
+                    <pre>div { background: hsl(120, 60%, 50%); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:hsl(120,60%,50%);display:inline-block;padding:4px;">HSL green</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 4:</b> hsla()</div>
+                    <pre>div { background: hsla(39, 100%, 50%, 0.7); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:hsla(39,100%,50%,0.7);display:inline-block;padding:4px;">HSLA orange</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 5:</b> hex with alpha</div>
+                    <pre>div { background: #2196f380; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:#2196f380;display:inline-block;padding:4px;">Hex with alpha</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 6:</b> color-mix()</div>
+                    <pre>div { background: color-mix(in srgb, red 60%, blue 40%); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:color-mix(in srgb, red 60%, blue 40%);display:inline-block;padding:4px;">Mixed color</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 7:</b> color-contrast()</div>
+                    <pre>color-contrast(#fff vs #333, #2196f3, #f44336);</pre>
+                    <div class="console-output"><b>Output:</b> Chooses most readable color for text.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 8:</b> lab() color</div>
+                    <pre>div { background: lab(60% 40 30); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:lab(60% 40 30);display:inline-block;padding:4px;">Lab color</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 9:</b> lch() color</div>
+                    <pre>div { background: lch(70% 50 200); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:lch(70% 50 200);display:inline-block;padding:4px;">LCH color</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 10:</b> currentColor keyword</div>
+                    <pre>div { border: 2px solid currentColor; color: #e91e63; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="border:2px solid #e91e63;color:#e91e63;display:inline-block;">Border matches text color</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 11:</b> transparent keyword</div>
+                    <pre>div { background: transparent; }</pre>
+                    <div class="console-output"><b>Output:</b> Transparent background.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 12:</b> system colors</div>
+                    <pre>div { color: CanvasText; background: Canvas; }</pre>
+                    <div class="console-output"><b>Output:</b> Uses system theme colors.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 13:</b> color-scheme property</div>
+                    <pre>:root { color-scheme: light dark; }</pre>
+                    <div class="console-output"><b>Output:</b> Enables automatic dark/light mode support.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 14:</b> forced-color-adjust</div>
+                    <pre>div { forced-color-adjust: none; }</pre>
+                    <div class="console-output"><b>Output:</b> Prevents system color overrides.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 15:</b> color() function</div>
+                    <pre>div { background: color(display-p3 1 0.5 0); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:color(display-p3 1 0.5 0);display:inline-block;padding:4px;">Wide-gamut color</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 16:</b> named colors</div>
+                    <pre>div { background: rebeccapurple; }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:rebeccapurple;color:#fff;display:inline-block;padding:4px;">Named color</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 17:</b> opacity with color functions</div>
+                    <pre>div { background: hsl(200 100% 50% / 0.3); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:hsl(200 100% 50% / 0.3);display:inline-block;padding:4px;">HSL with alpha</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 18:</b> color-mix() with variables</div>
+                    <pre>div { background: color-mix(in srgb, var(--main-color), white 40%); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:color-mix(in srgb, #007bff, white 40%);display:inline-block;padding:4px;">Mixed with variable</div></div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 19:</b> color-contrast() for accessibility</div>
+                    <pre>color-contrast(#fff vs #333, #2196f3, #f44336);</pre>
+                    <div class="console-output"><b>Output:</b> Picks best color for readable text.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Example 20:</b> Using color() for P3 colors</div>
+                    <pre>div { background: color(display-p3 0.8 0.2 0.7); }</pre>
+                    <div class="console-output"><b>Output:</b> <div style="background:color(display-p3 0.8 0.2 0.7);display:inline-block;padding:4px;">P3 color</div></div>
+                </div>
+            </div>
+        </div>
+        <!-- Segment 19 of 20 -->
+        <div class="topic-section" id="css-best-practices">
+        </div>
+        <!-- Segment 20 of 20 -->
+        <div class="topic-section" id="css-best-practices">
+            <h3>CSS Best Practices & Tips</h3>
+            <div class="explanation">Follow these best practices to write clean, maintainable, and efficient CSS for your projects.</div>
+            <button class="example-btn">Show Tips</button>
+            <div class="examples-list">
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 1:</b> Use Semantic Class Names</div>
+                    <pre>.btn-primary, .card-header, .nav-link</pre>
+                    <div class="console-output"><b>Why:</b> Improves readability and maintainability.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 2:</b> Keep Selectors Short & Specific</div>
+                    <pre>.sidebar .menu-item { ... }</pre>
+                    <div class="console-output"><b>Why:</b> Avoids overly complex selectors.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 3:</b> Use CSS Variables for Repeated Values</div>
+                    <pre>:root { --main-color: #2196f3; }</pre>
+                    <div class="console-output"><b>Why:</b> Makes theme changes easier.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 4:</b> Group Related Rules</div>
+                    <pre>h1, h2, h3 { margin-bottom: 1em; }</pre>
+                    <div class="console-output"><b>Why:</b> Reduces repetition.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 5:</b> Use Shorthand Properties</div>
+                    <pre>margin: 10px 20px;</pre>
+                    <div class="console-output"><b>Why:</b> Keeps code concise.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 6:</b> Avoid !important When Possible</div>
+                    <pre>/* Only use !important as a last resort */</pre>
+                    <div class="console-output"><b>Why:</b> Makes debugging easier.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 7:</b> Use External Stylesheets</div>
+                    <pre>&lt;link rel="stylesheet" href="style.css"&gt;</pre>
+                    <div class="console-output"><b>Why:</b> Separates content and presentation.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 8:</b> Minimize Repaints & Reflows</div>
+                    <pre>/* Batch DOM changes and use classes for state */</pre>
+                    <div class="console-output"><b>Why:</b> Improves performance.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 9:</b> Use Rems/Ems for Sizing</div>
+                    <pre>font-size: 1.2rem;</pre>
+                    <div class="console-output"><b>Why:</b> Supports accessibility and scaling.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 10:</b> Comment Your Code</div>
+                    <pre>/* Section: Navigation Styles */</pre>
+                    <div class="console-output"><b>Why:</b> Helps future you and teammates.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 11:</b> Use a CSS Reset or Normalize</div>
+                    <pre>@import url('normalize.css');</pre>
+                    <div class="console-output"><b>Why:</b> Ensures consistency across browsers.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 12:</b> Prefer Flexbox/Grid for Layout</div>
+                    <pre>display: flex; /* or */ display: grid;</pre>
+                    <div class="console-output"><b>Why:</b> Modern, responsive layouts.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 13:</b> Test on Multiple Devices</div>
+                    <pre>/* Use browser dev tools for emulation */</pre>
+                    <div class="console-output"><b>Why:</b> Ensures your site looks good everywhere.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 14:</b> Use BEM or Similar Naming Conventions</div>
+                    <pre>.block__element--modifier</pre>
+                    <div class="console-output"><b>Why:</b> Makes large projects manageable.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 15:</b> Avoid Deep Nesting</div>
+                    <pre>/* Limit selector depth for performance */</pre>
+                    <div class="console-output"><b>Why:</b> Keeps CSS fast and easy to override.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 16:</b> Use Logical Properties</div>
+                    <pre>margin-inline: 1em;</pre>
+                    <div class="console-output"><b>Why:</b> Supports better internationalization.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 17:</b> Prefer Mobile-First CSS</div>
+                    <pre>@media (min-width: 600px) { ... }</pre>
+                    <div class="console-output"><b>Why:</b> Easier to scale up for larger screens.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 18:</b> Use Layered CSS for Components</div>
+                    <pre>@layer base, components, utilities;</pre>
+                    <div class="console-output"><b>Why:</b> Organizes styles by purpose.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 19:</b> Optimize for Accessibility</div>
+                    <pre>/* Use sufficient color contrast and focus styles */</pre>
+                    <div class="console-output"><b>Why:</b> Makes your site usable for everyone.</div>
+                </div>
+                <div class="example-animate">
+                    <div class="explanation"><b>Tip 20:</b> Keep Learning!</div>
+                    <pre>/* CSS evolves—stay updated with new features */</pre>
+                    <div class="console-output"><b>Why:</b> Modern CSS is powerful and always improving.</div>
+                </div>
+            </div>
+        </div>
     </div>
     <script>
+document.addEventListener('DOMContentLoaded', function () {
+    // For each topic-section, add toggle logic for its button and examples-list
+    document.querySelectorAll('.topic-section').forEach(function(section) {
+        const btn = section.querySelector('.example-btn');
+        const examples = section.querySelector('.examples-list');
+        if (btn && examples) {
+            btn.addEventListener('click', function() {
+                // Hide all other examples-lists
+                document.querySelectorAll('.topic-section .examples-list').forEach(function(otherExamples) {
+                    if (otherExamples !== examples) {
+                        otherExamples.style.display = 'none';
+                        const otherBtn = otherExamples.parentElement.querySelector('.example-btn');
+                        if (otherBtn) otherBtn.textContent = 'Show Examples';
+                    }
+                });
+                // Toggle this section's examples-list
+                if (examples.style.display === 'none' || examples.style.display === '') {
+                    examples.style.display = 'block';
+                    btn.textContent = 'Hide Examples';
+                } else {
+                    examples.style.display = 'none';
+                    btn.textContent = 'Show Examples';
+                }
+            });
+            // Start with examples hidden
+            examples.style.display = 'none';
+            btn.textContent = 'Show Examples';
+        }
+
         // Toggle the burger menu
         function toggleMenu() {
             const navLinks = document.querySelector('.nav-links');
             navLinks.classList.toggle('active');
         }
-    </script>
+    });
+});
+</script>
 </body>
 </html>

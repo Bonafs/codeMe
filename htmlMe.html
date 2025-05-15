@@ -2419,7 +2419,7 @@ HTML Living Standard: https://html.spec.whatwg.org/
 
 
    
-// ...existing code...
+
 <script>
 document.addEventListener('DOMContentLoaded', function () {
     // For each topic-section, add toggle logic for its button and examples-list
@@ -2448,6 +2448,12 @@ document.addEventListener('DOMContentLoaded', function () {
             // Start with examples hidden
             examples.style.display = 'none';
             btn.textContent = 'Show Examples';
+        }
+
+        // Toggle the burger menu
+        function toggleMenu() {
+            const navLinks = document.querySelector('.nav-links');
+            navLinks.classList.toggle('active');
         }
     });
 });
